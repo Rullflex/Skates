@@ -145,6 +145,61 @@
     }
 }
 
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s1 {
+        &__title {
+            width: 26.875rem;
+        }
+        &__ctn {
+            padding-top: 3.4875rem;
+        }
+        &__subtitle {
+            width: 17.7rem;
+        }
+        &__img-children {
+            width: 36.7375rem;
+            left: 28.1375rem; 
+            bottom: 6.6rem;
+        }
+        &__triangle-logo {
+            width: 13.0625rem;
+
+            &-1 {
+                top: 7.1875rem;
+                left: 23.5rem;
+                transform: rotate(-10.64deg);
+            }
+            &-2 {
+                top: 1.6125rem;
+                left: 45.7125rem;
+                transform: rotate(15deg);
+            }
+            &-3 {
+                top: 17.3125rem;
+                left: 56.2rem;
+                transform: rotate(26deg);
+            }
+        }
+        &__bicycle {
+            top: 21.95rem;
+            left: 3.7125rem;
+
+            &-triangle {
+                width: 10.4rem;
+            }
+    
+            &-img {
+                width: 4.125rem;
+            }
+    
+            &-text {
+                font-size: 0.5625rem;
+                margin-top: 0.4ууrem;
+            }
+        }
+    }
+
+}
 .s2 {
     &__ctn {
         padding-top: 3.5rem;
