@@ -80,7 +80,70 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s1 {
+        &__ctn {
+            padding-top: 2.1875rem;
+            padding-bottom: 27.0125rem;
+        }
+    
+        &__title {
+            font-size: 2.4375rem;
+            line-height: 1.195;
+            margin-bottom: 1.125rem;
+        }
+    
+        &__subtitle {
+            margin-left: 0.2rem;
+        }
+    
+        &__bicycle {
+            top: 16.35rem;
+            left: 0.4125rem;
+    
+            &-triangle {
+                width: 10.4rem;
+            }
+    
+            &-img {
+                width: 4.125rem;
+            }
+    
+            &-text {
+                font-size: 0.5625rem;
+                margin-top: 0.1rem;
+            }
+        }
+    
+        &__triangle-logo {
+            width: 12rem;
+    
+            &-1 {
+                top: 13.6875rem;
+                left: 10rem;
+                transform: rotate(-10.64deg);
+            }
+    
+            &-2 {
+                top: 22.6125rem;
+                left: 39.3125rem;
+                transform: rotate(26deg);
+            }
+    
+            &-3 {
+                top: 8.8125rem;
+                left: 30rem;
+                transform: rotate(13deg);
+            }
+        }
+    
+        &__img-children {
+            width: 33.6875rem;
+            left: 13.9375rem;
+            bottom: 0;
+        }
+    }
+}
 
 .s2 {
     &__ctn {
