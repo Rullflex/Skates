@@ -1,0 +1,28 @@
+$relative-link-to-modules: "../../modules/fonts";
+
+
+// open sans
+
+@include font-face("OpenSans", "OpenSans-Light", "300", "normal", $relative-link-to-modules);
+
+@include font-face("OpenSans", "OpenSans-Regular", "400", "normal", $relative-link-to-modules);
+
+@include font-face("OpenSans", "OpenSans-SemiBold", "600", "normal", $relative-link-to-modules);
+
+
+// Montserrat
+
+@include font-face("Montserrat", "Montserrat-Light", "300", "normal", $relative-link-to-modules);
+
+@include font-face("Montserrat", "Montserrat-Regular", "400", "normal", $relative-link-to-modules);
+
+@include font-face("Montserrat", "Montserrat-Medium", "500", "normal", $relative-link-to-modules);
+
+@include font-face("Montserrat", "Montserrat-SemiBold", "600", "normal", $relative-link-to-modules);
+
+@include font-face("Montserrat", "Montserrat-Bold", "700", "normal", $relative-link-to-modules);
+
+
+// PTSans
+
+@include font-face("PTSans", "PTSans-Regular", "400", "normal", $relative-link-to-modules);

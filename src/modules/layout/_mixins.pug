@@ -1,0 +1,209 @@
+include widgets/_menu
+include widgets/_slider
+
+//- POPUP BASE
+
+mixin popup
+	.popup.uk-modal(data-uk-modal)&attributes(attributes)
+		.popup__body.uk-modal-dialog.uk-margin-auto-vertical
+			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
+			block
+
+mixin popup-video-16-9
+	.popup-video.popup.uk-modal(data-uk-modal)&attributes(attributes)
+		.popup__body.uk-modal-dialog.uk-margin-auto-vertical.embed-responsive.embed-responsive-16by9
+			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
+			block
+
+mixin quiz 
+	.quiz 
+
+		h1.title TITLE
+
+		ul.quiz-items 
+			li
+				h2 item 1
+				ul.quiz-radios
+					li
+					li
+					li
+
+			li
+				h2 item 2
+				ul.quiz-options
+					li
+					li
+					li
+			li
+				h2 item 3
+				input.quiz-input
+		ul.quiz-nav 
+		a.quiz-prev(href="#") PREV
+		a.quiz-next(href="#") NEXT
+		
+		progress.quiz-progress.uk-progress(value="0" max="100")
+
+//- ICONSET
+
+mixin icon(icon, filler = 'currentColor')
+	case icon
+		when 'angle-down'
+			svg(width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M21.0206 1.66657L11.5114 9.67432L2.0022 1.66657" stroke=filler stroke-width="4")
+		when 'angle-left'
+			svg(width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M11.8093 22.3843L1.61725 12.1922L11.8093 2.00012" stroke=filler stroke-width="3" stroke-linejoin="round")
+		when 'angle-right'
+			svg(width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M1.19214 22.3843L11.3842 12.1922L1.19214 2.00012" stroke=filler stroke-width="3" stroke-linejoin="round")
+		when 'angle-left-sm'
+			svg(width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M7.78778 1.11401L1.34934 7.55246L7.78778 13.9909" stroke=filler)
+		when 'angle-right-sm'
+			svg(width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M0.787109 13.991L7.22555 7.55252L0.787108 1.11408" stroke=filler)
+		
+
+//- PICTURE
+
+//- type: `jpg`/ `png` or jpg/ png if so-called var exsist
+	src: `${path}/to/img`  - without postfixes and dimensions
+	dimentions: `s`/ `sml`/ `sl`/ `smlx`/ `sx`....
+	retina: true/ false
+
+	Атрибуты типа class, alt записываются как обычно в скобках сразу за миксином  --> +picture(jpg, 'tmp')(class="pic" alt="lev")
+
+	Называть картинку так --> any-name-sm.jpg / any-name-lg@2x.png
+
+- var jpg = `jpg`, png = `png`, svg = `svg` //- для удобства
+
+-
+	var breakpointsLetterCollation = {
+		'S': 'xs',
+		's': 'sm',
+		'm': 'md',
+		'l': 'lg',
+		'L': 'xl',
+		'x': 'xxl',
+	}
+
+mixin picture()
+	+picture-constructor()
+
+
+mixin picture-constructor(imageExtension, imageSrc, imageDataSrc, breakpointsLetters = '', retinaLetters = '', useRetina = false, includeWebp = true, usePreloadImage = false)
+		picture
+			- const reversedBreakpointsLetters = breakpointsLetters.split('').reverse().join('')
+
+			each letter in reversedBreakpointsLetters
+				- const dimention = breakpointsLetterCollation[letter]
+
+				-
+					const sourceParameters = [
+						breakpoints[dimention],
+						(usePreloadImage && imageSrc !== imagePlaceholder) ? `${imageSrc}-${dimention}` : imagePlaceholder,
+						`${imageDataSrc}-${dimention}`,
+						imageExtension,
+						(useRetina && retinaLetters.includes(letter)) ? true : false,
+						includeWebp
+					]
+
+				+picture-source(...sourceParameters)
+
+			else
+				+picture-source(0, imageSrc, imageDataSrc, imageExtension, useRetina)
+
+			img(src!=imageSrc data-src!=`${imageDataSrc}` alt='' class=`lazyload`)&attributes(attributes)
+
+
+mixin picture-source(media = 0, srcset, dataSrcsetBase, type, useRetina = false, includeWebp = false)
+	- const postfixRetina = '@2x'
+
+	if includeWebp === true && (type === 'jpg' || type === 'png')
+		if useRetina
+			source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}${postfixRetina}.webp 2x, ${dataSrcsetBase}.webp 1x` type=`image/webp`)
+		else
+			source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}.webp` type=`image/webp`)
+
+	if useRetina
+		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}${postfixRetina}.${type} 2x, ${dataSrcsetBase}.${type} 1x` type=`image/${type}`)
+	else
+		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}.${type}` type=`image/${type}`)
+
+
+mixin picture-default(type, imageName, dimensions)
+	+picture-constructor(type, imagePlaceholder, `${assets}${imageName}`, dimensions)
+
+mixin picture-svg(imageName, dimensions)
+	+picture-constructor('svg', `${assets}${imageName}`, dimensions)
+
+mixin picture-icon(type, imageName)
+	+picture-constructor(type, `${assetsIco}${imageName}`)
+		
+
+mixin picture(type, src, dimentions, retina = '')
+	picture
+		if type != 'jpg' && type != 'png'
+			+picture-source(type, src, dimentions)
+			if dimentions.includes(`n`)
+				source(srcset=ipl data-srcset!=`${src}.${type}`)
+				img.lazyload(src!=ipl data-src!=`${src}.${type}` alt='')&attributes(attributes)
+			else
+				if dimentions.includes(`x`)
+					source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset!=`${src + postfix.xl}.${type}`)
+				if dimentions.includes(`l`)
+					source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset!=`${src + postfix.lg}.${type}`)
+				if dimentions.includes(`m`)
+					source(media=`(min-width: ${md}px)` srcset=ipl data-srcset!=`${src + postfix.md}.${type}`)
+				if dimentions.includes(`s`)
+					source(media=`(min-width: 0px)` srcset=ipl data-srcset!=`${src + postfix.sm}.${type}`)
+				if dimentions.includes(`l`)
+					img.lazyload(src!=ipl data-src!=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+				else
+					img.lazyload(src!=ipl data-src!=`${src + postfix.md}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`n`)
+				source(srcset=ipl data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x, ` : ``}${src}.webp${retina.includes(`n`) ? ` 1x` : ``}` type=`image/webp`)
+				source(srcset=ipl data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x, ` : ``}${src}.${type}${retina.includes(`n`) ? ` 1x` : ``}` type=`image/${type}`)
+				img.lazyload(src!=ipl data-src!=`${src}.${type}` alt='')&attributes(attributes)
+			else
+				if dimentions.includes(`x`)
+					source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x, ` : ``}${src + postfix.xl}.webp${retina.includes(`x`) ? ` 1x` : ``}` type=`image/webp`)
+					source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x, ` : ``}${src + postfix.xl}.${type}${retina.includes(`x`) ? ` 1x` : ``}` type=`image/${type}`)
+				if dimentions.includes(`l`)
+					source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x, ` : ``}${src + postfix.lg}.webp${retina.includes(`l`) ? ` 1x` : ``}` type=`image/webp`)
+					source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x, ` : ``}${src + postfix.lg}.${type}${retina.includes(`l`) ? ` 1x` : ``}` type=`image/${type}`)
+				if dimentions.includes(`m`)
+					source(media=`(min-width: ${md}px)` srcset=ipl data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x, ` : ``}${src + postfix.md}.webp${retina.includes(`m`) ? ` 1x` : ``}` type=`image/webp`)
+					source(media=`(min-width: ${md}px)` srcset=ipl data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x, ` : ``}${src + postfix.md}.${type}${retina.includes(`m`) ? ` 1x` : ``}` type=`image/${type}`)
+				if dimentions.includes(`s`)
+					source(media=`(min-width: 0px)` srcset=ipl data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x, ` : ``}${src + postfix.sm}.webp${retina.includes(`s`) ? ` 1x` : ``}` type=`image/webp`)
+					source(media=`(min-width: 0px)` srcset=ipl data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x, ` : ``}${src + postfix.sm}.${type}${retina.includes(`s`) ? ` 1x` : ``}` type=`image/${type}`)
+				if dimentions.includes(`l`)
+					img.lazyload(src!=ipl data-src!=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+				else
+					img.lazyload(src!=ipl data-src!=`${src + postfix.md}.${type}` alt='')&attributes(attributes)
+			
+mixin picture-min(type, src, minSrc,  dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
+	picture
+		if dimentions.includes(`n`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x, ` : ``}${src}.webp${retina.includes(`n`) ? ` 1x` : ``}` type=`image/webp`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x, ` : ``}${src}.${type}${retina.includes(`n`) ? ` 1x` : ``}` type=`image/${type}`)
+			img.lazyload.lazymin(src!=`${minSrc}-min.${type}` data-src!=`${src}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`x`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x, ` : ``}${src + postfix.xl}.webp${retina.includes(`x`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x, ` : ``}${src + postfix.xl}.${type}${retina.includes(`x`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x, ` : ``}${src + postfix.lg}.webp${retina.includes(`l`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x, ` : ``}${src + postfix.lg}.${type}${retina.includes(`l`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`m`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x, ` : ``}${src + postfix.md}.webp${retina.includes(`m`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x, ` : ``}${src + postfix.md}.${type}${retina.includes(`m`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`s`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x, ` : ``}${src + postfix.sm}.webp${retina.includes(`s`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x, ` : ``}${src + postfix.sm}.${type}${retina.includes(`s`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				img.lazyload.lazymin(src!=`${minSrc + postfix.lg}-min.${type}` data-src!=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			else
+				img.lazyload.lazymin(src!=`${minSrc + postfix.md}-min.${type}` data-src!=`${src + postfix.md}.${type}` alt='')&attributes(attributes)

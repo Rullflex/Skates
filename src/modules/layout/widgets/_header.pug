@@ -1,0 +1,44 @@
+-
+    var linksList = [
+        {
+            label: 'Услуги',
+            href: '#',
+        },
+        {
+            label: 'Цены',
+            href: '#',
+        },
+        {
+            label: 'О нас',
+            href: '#',
+        },
+        {
+            label: 'Отзывы',
+            href: '#',
+        },
+        {
+            label: 'Достижения',
+            href: '#',
+        },
+        {
+            label: 'Наши залы',
+            href: '#',
+        },
+        {
+            label: 'Контакты',
+            href: '#',
+        },
+    ]
+
+mixin header-menu 
+    .menu&attributes(attributes)
+        a.menu-icon(href="#") #[i]#[i]#[i]#[i]
+        .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
+            block
+
+//- Template
+
+header.header 
+    .container 
+        .header__row 
+            a.
