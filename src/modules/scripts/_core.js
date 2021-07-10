@@ -69,12 +69,15 @@ export const app = {
     },
 
     // все потомки первого уровня для списка будут менять активность по клику
-    letListClickActive(listElement, activeClass = `active`) {
+    letListClickActive(listElement, activeClass = `active`, callback = (ev) => undefined) {
         listElement.addEventListener('click', (ev) => {
+            ev.preventDefault();
             const path = ev.path;
             if (path[0] !== listElement) {
                 const listIndex = path.findIndex((el) => el === listElement);
                 this.changeActivityElement(path[listIndex - 1], activeClass);
+
+                callback(path[listIndex - 1]);
             }
         });
     },
@@ -474,7 +477,6 @@ export const form = {
         // UIkit.modal(`#thanks`).show();
 
         this.sendFormData(form);
-        setTimeout('location="https://romangordin.ru/thanks/index.html";', 500);
     },
 
     sendFormData(form, phpSrc = `${app.apiSrc}mail.php`) {

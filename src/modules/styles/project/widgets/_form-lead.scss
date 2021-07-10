@@ -1,3 +1,110 @@
 .form-lead {
-    
+    padding: 2.8125rem 1.25rem;
+    width: 20rem;
+    background: white;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08);
+    @include center-item-x('relative');
+
+    &__title {
+        font-family: $font-family-headings;
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.3;
+        margin-bottom: 0.9375rem;
+    }
+
+    &__label {
+        font-weight: 300;
+        font-size: 0.8125rem;
+        color: #565656;
+        margin-bottom: 0.625rem;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.9375rem;
+    }
+
+    &__options-button {
+        @include btn;
+
+        width: 5.5rem;
+        height: 2.3125rem;
+
+        border: 0.0625rem solid #DEDEDE;
+        border-radius: 0.4375rem;
+
+        color: #CACACA;
+        font-size: 0.75rem;
+
+        svg {
+            display: block;
+            width: 0.8rem;
+            margin-right: 0.375rem;
+        }
+
+        &:focus-visible {
+            color: $dark;
+            border-color: $dark;
+        }
+
+        &.active {
+            color: $text-light;
+            border-color: transparent;
+        }
+
+        &--mobile {
+            &.active {
+                background: linear-gradient(180deg, #C277DF 0%, #8A4FA2 100%);
+            }
+        }
+
+        &--whatsapp {
+            &.active {
+                background: linear-gradient(180deg, #A0E79F 0%, #57BB55 100%);
+            }
+        }
+
+        &--telegram {
+            &.active {
+                background: linear-gradient(180deg, #5CA7FF 0%, #0A85DE 100%);
+            }
+        }
+    }
+
+    &__input-wrap {
+        margin-bottom: 0.875rem;
+    }
+
+    &__input {
+        width: 100%;
+        height: 4.0625rem;
+        background: #F5F5F5;
+        border-radius: 0.4375rem;
+        
+        text-align: center;
+        font-weight: 300;
+        font-size: 0.875rem;
+    }
+
+    &__submit-btn {
+        width: 100%;
+        line-height: 4.0625rem;
+        left: 0px;
+        top: 0px;
+        
+        background: #FFBA0C;
+        box-shadow: 0px 0.25rem 0px #FF922F;
+        border-radius: 0.4375rem;
+
+        font-size: 1rem;
+        color: $text-light;
+
+        margin-bottom: 2.5rem;
+    }
+
+    &__agreement {
+
+    }
 }

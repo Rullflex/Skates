@@ -10,14 +10,12 @@
         &.has-error {
             #{$self} {
                 border-color: $danger !important;
-                box-shadow: 0px 0px 0.5rem 0.1875rem rgba($danger, 0.19);
                 color: $danger;
             }
         }
         &.has-success {
             #{$self} {
                 border-color: $success !important;
-                box-shadow: 0px 0px 0.5rem 0.1875rem rgba($success, 0.19);
                 color: $success;
             }
         }

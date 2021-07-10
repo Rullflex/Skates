@@ -4,4 +4,26 @@ mixin form-lead
         p.form-lead__label Выберите удобный способ связи:
 
         .form-lead__options
-            button.form-lead__options-button.form-lead__options-button--
+            button(type="button" data-value="Мобильный").form-lead__options-button.form-lead__options-button--mobile
+                +icon('mobile')
+                span Моб.
+            button(type="button" data-value="Whatsapp").form-lead__options-button.form-lead__options-button--whatsapp
+                +icon('whatsapp')
+                span Whatsapp
+            button(type="button" data-value="Telegram").form-lead__options-button.form-lead__options-button--telegram.active
+                +icon('telegram')
+                span Telegram
+            input(type="hidden" name="Способ сввязи" value="Telegram").form-lead__options-input
+
+        .form-lead__input-wrap.input-wrap
+            input.form-lead__input.input(type="text" name="Имя" placeholder="Введите имя")
+
+        .form-lead__input-wrap.input-wrap
+            input.form-lead__input.input.phone(type="tel" name="Телефон" placeholder="Ваш номер телефона")
+
+        button.form-lead__submit-btn(type="submit") Отправить заявку
+
+        .form-lead__agreement
+            input.form-lead__agreement-check(type="checkbox", name="Согласие с условиями политики")
+            .form-lead__agreement-text я соглашаюсь с условиями #[a.form-lead__agreement-text-link(href=privacyLink) политики конфиденциальности]
+            
