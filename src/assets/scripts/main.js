@@ -7,6 +7,14 @@ UIkit.util.ready(function () {
     // FORM
     form.init(`form`);
 
+    if (document.querySelector(`.form-lead`)) {
+        document.querySelectorAll(`.form-lead__options`).forEach((el) => {
+            app.letListClickActive(el, 'active', (item) => {
+                el.querySelector('.form-lead__options-input').value = item.dataset.value;
+            });
+        });
+    }
+
     // app.letListClickActive(document.querySelector(`ul.list`))
     // app.dynamicVideo()
     // app.videoSpy(`#video .popup__body`, 'fmT2FFVuWDA')
