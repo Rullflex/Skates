@@ -5,5 +5,39 @@ prepend head
 	meta(name="description", content="Описание страницы")
 
 block content
-	main.main
-	
+	section.s1 
+		.container.s1__ctn 
+			h1.s1__title Профессиональная роллер школа Skate&nbsp;Town 
+			p.s1__subtitle Наполняем жизнь людей радостью, приобщая их к роллер спорту 
+
+			+icon('triangle-logo', '#CCEEFF').s1__triangle-logo.s1__triangle-logo-1
+			+icon('triangle-logo', '#FFDC85').s1__triangle-logo.s1__triangle-logo-2
+			+icon('triangle-logo', '#E3B8F4').s1__triangle-logo.s1__triangle-logo-3
+
+			.s1__bicycle
+				+icon('triangle', '#D1F0FF').s1__bicycle-triangle
+				+picture(png, 's1-bicycle').s1__bicycle-img
+				.s1__bicycle-text Для детей 2-4#[br] года доступно#[br] обучение на беговелах
+
+			+picture-min(png, 's1-children').s1__img-children
+
+	section.s2
+		.s2__ctn.container 
+			h2.s2__title За 3 месяца занятий#[br] в роллер-школе: 
+
+			ul.s2__list
+				li.s2__list-item 
+					.s2__list-number 01
+					.s2__list-text Ребенок полюбит спорт и будет заниматься им с удовольствием
+				li.s2__list-item 
+					.s2__list-number 02
+					.s2__list-text Родитель будет уверен в&nbsp;гармоничном развитии своего ребенка
+				li.s2__list-item 
+					.s2__list-number 03
+					.s2__list-text Ребенок и взрослый найдут новых друзей и хорошую компанию
+				li.s2__list-item 
+					.s2__list-number 04
+					.s2__list-text Общее увлечение для всей семьи полезное для здоровья и применимое в&nbsp;жизни
+
+			+form-lead
+				

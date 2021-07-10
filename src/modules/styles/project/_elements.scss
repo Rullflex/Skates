@@ -3,3 +3,14 @@
 @import "./elements/slider";
 @import "./elements/loader";
 @import "./elements/menu";
+
+.container {
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-family-headings;
+}

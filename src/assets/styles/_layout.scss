@@ -1,0 +1,175 @@
+.s1 {
+    &__ctn {
+        padding-top: 1.25rem;
+        padding-bottom: 20.3125rem;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.5625rem;
+        line-height: 1.3;
+        color: $primary;
+        margin-bottom: 0.125rem;
+    }
+
+    &__subtitle {
+        width: 11.6125rem;
+        line-height: 1.5;
+        color: #545454;
+    }
+
+    &__bicycle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 5.75rem;
+        left: 13.3125rem;
+        transform: rotate(345deg);
+        z-index: 10;
+
+        &-triangle {
+            width: 7.5rem;
+            z-index: -2;
+            @include center-item;
+        }
+
+        &-img {
+            width: 3.125rem;
+        }
+
+        &-text {
+            font-family: $font-family-headings;
+            font-weight: 500;
+            font-size: 0.42rem;
+            line-height: 1.4;
+            text-align: center;
+            letter-spacing: 0.082em;
+            margin-top: 0.1rem;
+        }
+    }
+
+    &__triangle-logo {
+        width: 7rem;
+        position: absolute;
+
+        &-1 {
+            top: 15.6875rem;
+            left: -2.5rem;
+            transform: rotate(-10.64deg);
+        }
+
+        &-2 {
+            top: 12.8125rem;
+            left: 9.8125rem;
+            transform: rotate(13.8deg);
+        }
+
+        &-3 {
+            top: 21.3125rem;
+            left: 15.5rem;
+            transform: rotate(26deg);
+        }
+    }
+
+    &__img-children {
+        position: absolute;
+        width: 20.4rem;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+.s2 {
+    &__ctn {
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+    }
+    
+    &__title {
+        font-weight: 600;
+        font-size: 1.5625rem;
+        line-height: 1.065;
+        margin-bottom: 1.7rem;
+    }
+
+    &__list {
+
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.1rem;
+    }
+
+    &__list-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.875rem;
+
+        font-family: $font-family-headings;
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 1;
+        letter-spacing: 0.06em;
+        color: #E6CEEF;
+        -webkit-text-stroke: 0.514362px #BAA3BF;
+
+        margin-right: 1rem;
+    }
+
+    &__list-text {
+        width: 12.325rem;
+        font-size: 0.9375rem;
+        line-height: 1.355;
+        letter-spacing: -0.309001px;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}
+
+@media (min-width: map-get($grid-breakpoints, md)) {}

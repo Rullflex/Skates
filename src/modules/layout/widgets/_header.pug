@@ -1,5 +1,5 @@
 -
-    var linksList = [
+    const linksList = [
         {
             label: 'Услуги',
             href: '#',
@@ -30,15 +30,45 @@
         },
     ]
 
+mixin header-links-list 
+    ul.header__links-list 
+        li.header__list-item: a.header__list-link(href="/")
+            +icon('home').header__list-home-icon
+        each link, idx in linksList
+            li.header__list-item: a.header__list-link(href=link.href)= link.label
+
+
 mixin header-menu 
     .menu&attributes(attributes)
         a.menu-icon(href="#") #[i]#[i]#[i]#[i]
         .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
             block
 
+mixin header-logo
+    a(href="/").header__logo
+        +icon('logo')
 //- Template
 
 header.header 
     .container 
-        .header__row 
-            a.
+        //- SM
+        .header__row.d-md-none
+            +header-menu.header__menu 
+
+            .header__vert-divider
+
+            +header-logo
+
+            button.btn-solid-primary.header__btn Записаться
+
+        //- MD
+        .header__row.d-none.d-md-block
+            .header__top-row
+                .header__logo-block
+                    +header-logo
+                    .header__vert-divider
+                    .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
+
+
+            .header__bot-row
+                +header-links-list

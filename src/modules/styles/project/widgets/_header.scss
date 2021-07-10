@@ -1,0 +1,116 @@
+.header {
+    &__row {
+        display: flex;
+        align-items: center;
+        height: 3.125rem;
+    }
+
+    &__menu {}
+
+    &__vert-divider {
+        width: 0.0625rem;
+        height: 1.875rem;
+        background: #B7B7B7;
+        margin: auto 0.625rem;
+    }
+
+    &__logo {
+        margin-right: 1.3125rem;
+        svg {
+            width: 6.4375rem;
+            color: #763287;
+        }
+    }
+
+    &__btn {
+        width: 7.5625rem;
+        line-height: 2.1875rem;
+        font-size: 0.875rem;
+        margin-top: 0.3rem;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    
+    .header {
+        &__row {
+            height: 7.5rem;
+        }
+
+        &__top-row {
+            padding: 0 0 0 0.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4.3125rem;
+        }
+
+        &__bot-row {
+            height: 3.1875rem;
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            &::after,
+            &::before {
+                content: '';
+                display: block;
+                width: 100vw;
+                height: 1px;
+                background: #EDEDED;
+                @include center-item-x;
+            }
+
+            &::after {top: 0}
+            &::before {bottom: 0}
+        }
+    
+        &__menu {}
+    
+        &__vert-divider {
+            height: 2.0625rem;
+            margin: auto 1.3rem;
+        }
+        
+        &__logo-block {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+            margin-right: 0;
+            svg {
+                width: 7.8125rem;
+            }
+        }
+
+        &__logo-descr {
+            width: 10.65rem;
+            font-size: 0.75rem;
+            line-height: 1.21;
+        }
+    
+        &__btn {}
+
+        &__links-list {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        &__list-item {
+            padding: 0 0.3rem;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__list-link {
+            padding: 0.4rem 0.5rem;
+            font-size: 0.875rem;
+            color: #252525;
+        }
+    }
+}
