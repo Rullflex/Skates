@@ -1,0 +1,20 @@
+mixin tab-switcher(labelSet = [])
+    .tab-switcher&attributes(attributes)
+        button.tab-switcher__btn-drop.btn-solid-primary(type="button").d-md-none
+            span= labelSet[0]
+            +icon('angle-down').tab-switcher__btn-drop-angle
+
+        ul.tab-switcher__tab.tab-switcher__tab-drop.d-md-none
+            each item in labelSet
+                li: a(href="#")= item
+
+        ul.tab-switcher__tab.d-none.d-md-flex
+            each item in labelSet
+                li: a(href="#")= item
+
+        ul.tab-switcher__content-block.uk-switcher
+            block
+
+mixin tab-switcher-item
+    li.tab-switcher__content-item&attributes(attributes)
+        block

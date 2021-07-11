@@ -30,7 +30,7 @@
  * Hide not active items
  */
 
-.uk-switcher > :not(.uk-active) { display: none; }
+.uk-switcher > :not(.switcher-active) { display: none; }
 
 /*
  * Remove margin from the last-child

@@ -15,6 +15,36 @@ UIkit.util.ready(function () {
         });
     }
 
+    let switcherDrop;
+    app.matchMediaListener(
+        app.md,
+        () => {
+            switcherDrop = UIkit.drop('.s3__tab-drop', {
+                mode: 'click',
+            });
+        },
+        () => {
+            switcherDrop?.$destroy();
+        },
+    );
+
+    UIkit.switcher(`.tab-switcher__tab`, {
+        connect: `.tab-switcher__content-block`,
+        cls: `switcher-active`,
+        animation: 'uk-animation-fade',
+    });
+    document.querySelectorAll(`li.tab-switcher__content-item`).forEach((el, idx) => {
+        el.addEventListener(`beforeshow`, (event) => {
+            if (window.innerWidth < app.md) {
+                const $tabSwitcher = el.closest('.tab-switcher');
+                $tabSwitcher.querySelector('.tab-switcher__btn-drop span').innerText = $tabSwitcher.querySelector(
+                    `.tab-switcher__tab li.switcher-active a`,
+                ).innerText;
+                UIkit.drop('.tab-switcher__tab-drop').hide(0);
+            }
+        });
+    });
+
     // app.letListClickActive(document.querySelector(`ul.list`))
     // app.dynamicVideo()
     // app.videoSpy(`#video .popup__body`, 'fmT2FFVuWDA')

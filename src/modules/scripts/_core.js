@@ -17,7 +17,7 @@ export const app = {
             this.isMobile.Windows(),
     },
     md: 768,
-    lg: 1280,
+    lg: 1200,
     apiSrc: '/api/',
     loaderHtml: `<div class="loader-wrap">
         <div class="loader">
