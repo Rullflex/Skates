@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.12.7",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "babel-loader": "^8.2.1",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.27.4",
     "chrome-launcher": "^0.13.4",
     "circular-dependency-plugin": "^5.2.2",
     "del": "^5.1.0",
@@ -74,7 +74,7 @@
     "lazysizes": "^5.2.2",
     "lightgallery": "^1.10.0",
     "normalize.css": "^8.0.1",
-    "swiper": "^6.3.5",
+    "swiper": "^6.7.5",
     "validate.js": "^0.13.1"
   },
   "editorconfig-cli": [
