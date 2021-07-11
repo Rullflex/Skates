@@ -262,7 +262,7 @@
     .s2 {
         &__ctn {
             padding-top: 2.4rem;
-            padding-bottom: 1rem;
+            padding-bottom: 4.9rem;
         }
         &__boy {
             width: 360px;
@@ -285,7 +285,7 @@
         }
     
         &__list {
-            margin-bottom: 2.9rem;
+            margin-bottom: 7.3rem;
             background: #FFFFFF;
             border: 1px solid #D7D7D7;
             border-radius: 6.18001px;
@@ -338,10 +338,7 @@
         }
     
         &__form {
-            left: 7.6rem;
-            transform: unset;
-            right: 0;
-            top: 4.2rem;
+
         }
     }
 }
@@ -352,6 +349,7 @@
         &__triangle-logo {
             width: 13.0625rem;
             position: absolute;
+            z-index: -1;
             &-1 {
                 top: 30.4rem;
                 left: -6.2rem;
@@ -365,7 +363,8 @@
         }
         &__ctn {
             padding-top: 4rem;
-            padding-bottom: 1rem;
+            padding-bottom: 7.6rem;
+            position: relative;
         }
         &__boy {
             top: 14.5rem;
@@ -435,7 +434,8 @@
         }
     
         &__form {
-            top: -36.3rem;
+            top: 4.6rem;
+            position: absolute;
             left: 41.2rem;
         }
     }
