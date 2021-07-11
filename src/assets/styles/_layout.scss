@@ -145,21 +145,22 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {
+@media (min-width: map-get($grid-breakpoints, lg)) {
     .s1 {
         &__title {
             width: 26.875rem;
         }
         &__ctn {
             padding-top: 3.4875rem;
+            padding-bottom: 21.1rem;
         }
         &__subtitle {
-            width: 17.7rem;
+            width: 20rem;
         }
         &__img-children {
-            width: 36.7375rem;
-            left: 28.1375rem; 
-            bottom: 6.6rem;
+            width: 37.8375rem;
+            left: 27.5375rem;
+            bottom: 0;
         }
         &__triangle-logo {
             width: 13.0625rem;
@@ -181,25 +182,29 @@
             }
         }
         &__bicycle {
-            top: 21.95rem;
-            left: 3.7125rem;
+            top: 21.65rem; 
+            left: 3.7125rem; 
+            padding-top: 0.3rem;
 
             &-triangle {
                 width: 10.4rem;
             }
     
             &-img {
-                width: 4.125rem;
+                width: 4.325rem;
             }
     
             &-text {
                 font-size: 0.5625rem;
-                margin-top: 0.4rem;
+                margin-top: 0.2rem;
             }
         }
     }
 
 }
+
+
+
 .s2 {
     &__ctn {
         padding-top: 3.5rem;
@@ -215,6 +220,9 @@
 
     &__list {
         margin-bottom: 2.9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__list-item {
@@ -250,8 +258,188 @@
     &__form {}
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s2 {
+        &__ctn {
+            padding-top: 2.4rem;
+            padding-bottom: 1rem;
+        }
+        &__boy {
+            width: 360px;
+            position: absolute;
+            top: 12.3rem;
+            left: 26.2rem;
+        }
+        &__circle {
+            width: 25.9375rem;
+            position: absolute;
+            z-index:-1;
+            top: 19.4rem;
+            left: 26rem;
+        }
+        &__title {
+            font-size: 2.4375rem;
+            margin-bottom: 1.7rem;
+            margin-left: 2.8rem;
+            line-height: 1.08;
+        }
+    
+        &__list {
+            margin-bottom: 2.9rem;
+            background: #FFFFFF;
+            border: 1px solid #D7D7D7;
+            border-radius: 6.18001px;
+            width: 33.5625rem;
+            height: 26.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            :nth-child(4) {
+                :nth-child(2) {
+                    width: 19.5625rem;
+                }
+            }
+        }
+    
+        &__list-item {
+            height: 6.71875rem;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0;
+            border-bottom: 1px solid #EBEBEB;
+            padding-left: 4rem;
+            padding-top: 1.2rem;
+        }
+    
+        &__list-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.875rem;
+    
+            font-family: $font-family-headings;
+            font-weight: bold;
+            font-size: 4.875rem;
+            line-height: 1;
+            letter-spacing: 0.06em;
+            color: #E6CEEF;
+            -webkit-text-stroke: 0.514362px #BAA3BF;
+    
+            margin-right: 0.9rem;
+        }
+    
+        &__list-text {
+            font-size: 0.9375rem;
+            line-height: 1.355;
+            letter-spacing: -0.309001px;
+            width: 18.1875rem;
+            margin-left: 1.8rem; 
+            margin-top: 0.4rem;
+        }
+    
+        &__form {
+            left: 7.6rem;
+            transform: unset;
+            right: 0;
+            top: 4.2rem;
+        }
+    }
+}
 
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s2 {
+        &__triangle-logo {
+            width: 13.0625rem;
+            position: absolute;
+            &-1 {
+                top: 30.4rem;
+                left: -6.2rem;
+                transform: rotate(-13deg);
+            }
+            &-2 {
+                top: 17.6rem;
+                left: 67.4rem;
+                transform: rotate(26deg);
+            }
+        }
+        &__ctn {
+            padding-top: 4rem;
+            padding-bottom: 1rem;
+        }
+        &__boy {
+            top: 14.5rem;
+            left: 22.9rem;
+            z-index:2;
+        }
+        &__circle {
+            width: 25.9375rem;
+            position: absolute;
+            z-index:-1;
+            top: 19.4rem;
+            left: 26rem;
+        }
+        &__title {
+            font-size: 2.4375rem;
+            margin-bottom: 1.7rem;
+            margin-left: 3rem;
+            line-height: 1.08;
+        }
+    
+        &__list {
+            margin-bottom: 2.9rem;
+            background: #FFFFFF;
+            border: 1px solid #D7D7D7;
+            border-radius: 6.18001px;
+            width: 33.5625rem;
+            height: 26.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            :nth-child(1) {
+                :nth-child(2) {
+                    width: 13.25rem;
+                }
+            }
+            :nth-child(2) {
+                :nth-child(2) {
+                    width: 16.1875rem;
+                }
+            }
+            :nth-child(3) {
+                :nth-child(2) {
+                    width: 12.5rem;
+                }
+            }
+            :nth-child(4) {
+                :nth-child(2) {
+                    width: 16.75rem;
+                }
+            }
+        }
+    
+        &__list-item {
+            padding-left: 3.7rem;
+            padding-top: 1.2rem;
+        }
+    
+
+    
+        &__list-text {
+            font-size: 1rem;
+            line-height: 1.4;
+            letter-spacing: -0.009001px;
+            width: 18.1875rem;
+            margin-left: 1.9rem;
+            margin-top: 0.6rem;
+        }
+    
+        &__form {
+            top: -36.1rem;
+            left: 41.2rem;
+        }
+    }
+}
 .s3 {
     @include bg(#EDEEF0);
 
