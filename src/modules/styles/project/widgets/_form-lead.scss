@@ -101,10 +101,106 @@
         font-size: 1rem;
         color: $text-light;
 
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.2rem;
     }
 
     &__agreement {
+        display: flex;
+        align-items: flex-start;
 
+        &-check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0.9375rem;
+            height: 0.9375rem;
+            background: #ECECEC;
+            border-radius: 0.1875rem;
+            position: relative;
+
+            margin: 0.125rem 0.625rem 0 0;
+
+            &::after {
+                content: '';
+                width: 0.5rem;
+                height: 0.5rem;
+                background: #969696;
+                border-radius: 50%;
+                opacity: 0;
+            }
+        }
+
+        &-check-input {
+            display: none;
+
+            &:checked + .form-lead__agreement-check::after {
+                opacity: 1;
+            }
+        }
+
+        &-text {
+            width: 15.5625rem;
+            font-weight: 300;
+            font-size: 0.8125rem;
+            line-height: 1.125rem;
+            color: #A9A9A9;
+        }
+
+        &-text-link {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .form-lead {
+        padding: 2.625rem 2.8125rem;
+        width: 31.25rem;
+        height: 33.75rem;
+        @include center-item-x('relative');
+    
+        &__title {
+            font-size: 1.5rem;
+            margin-bottom: 1.0625rem;
+        }
+    
+        &__label {
+            margin-bottom: 0.8125rem;
+        }
+    
+        &__options {
+            width: 19.0625rem;
+        }
+    
+        &__options-button {
+            width: 5.9375rem;
+            font-size: 0.8125rem;
+        }
+    
+        &__input-wrap {
+            margin-bottom: 0.875rem;
+        }
+    
+        &__input {
+            padding-left: 1.8125rem;
+            text-align: left;
+            margin-bottom: 0.9375rem;
+        }
+    
+        &__submit-btn {
+            margin-bottom: 0.9375rem;
+        }
+    
+        &__agreement {
+            &-text {
+                width: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .form-lead {
+        @include center-item-undo;
     }
 }

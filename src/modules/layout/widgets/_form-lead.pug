@@ -1,6 +1,6 @@
 mixin form-lead
-    form.form-lead
-        h3.form-lead__title Запишитесь на первое индивидуальное занятие со скидкой 50%!
+    form.form-lead&attributes(attributes)
+        h3.form-lead__title Запишитесь на первое индивидуальное занятие со&nbsp;скидкой 50%!
         p.form-lead__label Выберите удобный способ связи:
 
         .form-lead__options
@@ -23,7 +23,8 @@ mixin form-lead
 
         button.form-lead__submit-btn(type="submit") Отправить заявку
 
-        .form-lead__agreement
-            input.form-lead__agreement-check(type="checkbox", name="Согласие с условиями политики")
-            .form-lead__agreement-text я соглашаюсь с условиями #[a.form-lead__agreement-text-link(href=privacyLink) политики конфиденциальности]
+        label.form-lead__agreement
+            input.form-lead__agreement-check-input(type="checkbox", name="Согласие с условиями политики" checked)
+            span.form-lead__agreement-check
+            span.form-lead__agreement-text я соглашаюсь с условиями #[a.form-lead__agreement-text-link(href=privacyLink) политики конфиденциальности]
             
