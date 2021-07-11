@@ -619,7 +619,16 @@
         }
     }
 }
-
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s3 {
+        &__title {
+            padding-top: 3rem;     
+            margin-left: 3.1rem;     
+            word-spacing: -0.3rem;
+            margin-bottom: 1.9rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
