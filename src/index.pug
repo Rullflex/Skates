@@ -23,6 +23,9 @@ block content
 
 	section.s2
 		.s2__ctn.container 
+			+picture(svg, 's2-boy').d-none.d-md-block
+			+picture(svg, 's2-circle').d-none.d-md-block.d-lg-none
+
 			h2.s2__title За 3 месяца занятий#[br] в роллер-школе: 
 
 			ul.s2__list
@@ -39,5 +42,34 @@ block content
 					.s2__list-number 04
 					.s2__list-text Общее увлечение для всей семьи полезное для здоровья и применимое в&nbsp;жизни
 
-			+form-lead
+			+form-lead.s2__form
+
+	section.s3
+		.s3__ctn.container 
+			h2.s3__title Кому подходят наши тренировки?
+			p.s3__subtitle Выберите уровень подготовки:
+
+			+tab-switcher([
+					'Дети от 3-х лет',
+					'Взрослые с опытом и без',
+					'Профессиональные роллеры',
+				]).s3__switcher
+				+tab-switcher-item.s3__switcher-item
+					+picture(svg, 's3-girl', 'Sl').s3__img-girl
+
+					.s3__list-block
+						.s3__list-block-item Укрепляется все тело благодаря комплексной нагрузке
+							.s3__list-block-item-number 1
+						.s3__list-block-item Ребёнок учится преодолетвать комплексы и&nbsp;становиться более уверенным в&nbsp;себе
+							.s3__list-block-item-number 2
+						.s3__list-block-item Благодаря развитию соревновательного духа ребенок учится формировать цели и достигать их
+							.s3__list-block-item-number 3
+
+					.s3__block-blue Благодаря всем этим факторам у&nbsp;ребенка увеличивается уверенность в себе и физические способности, что точно поможет ему стать популярее и проявлять лидерские качества в компании сверстников
+
+				+tab-switcher-item.s3__switcher-item
+					span content 2
+				+tab-switcher-item.s3__switcher-item
+					span content 3
+			
 				

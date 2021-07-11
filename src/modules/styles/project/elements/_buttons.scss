@@ -33,32 +33,60 @@
         padding: 0;
     }
 }
+
+@mixin btn-solid-primary {
+    @include btn;
+
+    background: $primary;
+    border-radius: 0.4375rem;
+    
+    color: $text-light;
+
+    &:active,
+    &:focus-visible {
+
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        &:hover {}
+    }
+}
+
+@mixin btn-outline-primary {
+    @include btn;
+
+    border: 1px solid $primary;
+    border-radius: 0.4375rem;
+
+    color: #000000;
+
+    &:active,
+    &:focus-visible {
+        background: link-hover($primary);
+        border-color: link-hover($primary);
+        color: $text-light;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        &:hover {
+            background: link-hover($primary);
+            border-color: link-hover($primary);
+            color: $text-light;
+        }
+    }
+}
+
+@mixin btn-outline-primary--active {
+    background: $primary;
+    color: $text-light;
+}
+
 .btn {
     &-solid-primary {
-        @include btn;
-
-        background: $primary;
-        border-radius: 7px;
-        
-        color: $text-light;
-        &:active,
-        &:focus-visible {
-
-        }
-        @media (min-width: map-get($grid-breakpoints, lg)) {
-            &:hover {}
-        }
+        @include btn-solid-primary;
     }
 
     &-outline-primary {
-        @include btn;
-
-        &:active,
-        &:focus-visible {
-            
-        }
-        @media (min-width: map-get($grid-breakpoints, lg)) {
-            &:hover {}
-        }
+        @include btn-outline-primary;
     }
 }

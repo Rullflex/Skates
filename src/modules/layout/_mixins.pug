@@ -1,4 +1,5 @@
 include widgets/_form-lead
+include widgets/_tab-switcher
 include widgets/_slider
 
 //- POPUP BASE
@@ -353,6 +354,6 @@ mixin picture-source(media = 0, srcset, dataSrcsetBase, type, useRetina = false,
 			source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}.webp` type=`image/webp`)
 
 	if useRetina
-		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}${postfixRetina}.${type} 2x, ${dataSrcsetBase}.${type} 1x` type=`image/${type}`)
+		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}${postfixRetina}.${type} 2x, ${dataSrcsetBase}.${type} 1x` type=`image/${type === 'svg' ? 'svg+xml' : type}`)
 	else
-		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}.${type}` type=`image/${type}`)
+		source(media=`(min-width: ${media}px)` srcset!=srcset data-srcset!=`${dataSrcsetBase}.${type}` type=`image/${type === 'svg' ? 'svg+xml' : type}`)
