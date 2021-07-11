@@ -81,6 +81,13 @@
     color: $text-light;
 }
 
+@mixin btn-yellow {
+    background: #FFBA0C;
+    box-shadow: 0px 0.25rem 0px #FF922F;
+    border-radius: 0.4375rem;
+    color: $text-light;
+}
+
 .btn {
     &-solid-primary {
         @include btn-solid-primary;
@@ -88,5 +95,9 @@
 
     &-outline-primary {
         @include btn-outline-primary;
+    }
+
+    &-yellow {
+        @include btn-yellow;
     }
 }
