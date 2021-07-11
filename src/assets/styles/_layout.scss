@@ -208,7 +208,6 @@
 .s2 {
     &__ctn {
         padding-top: 3.5rem;
-        padding-bottom: 1rem;
     }
     
     &__title {
@@ -219,10 +218,10 @@
     }
 
     &__list {
-        margin-bottom: 2.9rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 1.8rem;
     }
 
     &__list-item {
@@ -445,7 +444,7 @@
     @include bg(#EDEEF0);
 
     &__ctn {
-        padding-top: 2rem;
+        padding-top: 2.9rem;
         padding-bottom: 3.1rem;
     }
 
@@ -467,6 +466,15 @@
         position: absolute;
         right: -1.25rem;
         bottom: 0;
+    }
+
+    &__switcher {
+    }
+
+    &__switcher-item {
+        &-1 {
+            padding-bottom: 14.2875rem;
+        }
     }
 
     &__list-block {}
@@ -522,7 +530,7 @@
     
         &__ctn {
             padding-top: 2rem;
-            padding-bottom: 3.1rem;
+            padding-bottom: 5rem;
         }
     
         &__title {
@@ -541,12 +549,20 @@
             margin-bottom: 0.5rem;
             text-align: center;
         }
+        &__switcher {
+        }
+    
+        &__switcher-item {
+            &-1 {
+                padding-bottom: 3.1875rem;
+            }
+        }
     
         &__img-girl {
             width: 17.875rem;
             position: absolute;
             right: 1.85rem;
-            bottom: 11rem;
+            bottom: 0;
             z-index: 2;
         }
     
