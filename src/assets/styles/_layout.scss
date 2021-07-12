@@ -688,9 +688,55 @@
         border-radius: 0.4375rem;
 
         margin-bottom: 3.125rem;
+
+        &-number {
+            font-family:$font-family-headings; 
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50.8454px;
+            line-height: 116%;
+            
+            letter-spacing: -0.614773px;
+            
+            color: #A86BC0;
+        }
+        &-value {
+            font-family:$font-family-headings; 
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 106.5%;
+            
+            letter-spacing: -0.614773px;
+            
+            color: #A86BC0;
+        }
+        &-text {
+            font-family: $font-family-headings;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 106.5%;
+            
+            letter-spacing: -0.187732px;
+            
+            color: #484848;
+
+            &-2 {
+                
+                font-size: 14px;
+                line-height: 129%;
+                
+                letter-spacing: -0.157378px;
+                
+                color: #787878;
+            }
+        }
     }
 
     &__numbers-block-item {
+        padding-left: 1.3rem;
+        padding-top: 1.2rem;
         width: 100%;
 
         &:not(:last-child) {
@@ -703,6 +749,9 @@
 
         &-2 {
             height: 8.0625rem;
+            .s4__numbers-block-text {
+                margin-top: 0.3rem;
+            }
         }
 
         &-3 {
@@ -711,10 +760,25 @@
 
         &-4 {
             height: 7rem;
+            display: flex;
+            .s4__numbers-block-text {
+                margin-top: 0.7rem;
+                margin-left: 0.8rem;
+                width: 10rem;
+                &-2 {
+                    line-height: 181%;
+                }
+            }
         }
 
         &-5 {
             height: 6.5rem;
+            display: flex;
+            .s4__numbers-block-text {
+                width: 5rem;
+                margin-left: 0.7rem;
+                margin-top: 0.9rem;
+            }
         }
 
     }
@@ -763,7 +827,18 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s4 {
+        &__title {
+            margin-bottom: 1.9625rem;
+            text-align: center;
+            font-size: 2.4375rem;
+        }
+        &__ctn {
+            padding-top: 4.4rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
