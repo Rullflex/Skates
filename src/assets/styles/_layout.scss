@@ -688,6 +688,11 @@
         border-radius: 0.4375rem;
 
         margin-bottom: 3.125rem;
+        position: relative;
+
+        &-list {
+            margin-top: 0.4rem;
+        }
 
         &-number {
             font-family:$font-family-headings; 
@@ -745,6 +750,12 @@
 
         &-1 {
             height: 17.75rem;
+            .s4__numbers-block-value {
+                position: absolute;
+                top: 9.625rem;
+                left: 6rem;
+            }
+            border-bottom: .0625rem solid #d7d7d7;
         }
 
         &-2 {
@@ -829,6 +840,16 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s4 {
+        &__numbers-block-item:not(:last-child) {
+            border-bottom:none;
+        }
+        &__triangle {
+            width: 209px;
+            position: absolute;
+            top: 2.8rem;
+            left: 37rem;
+            transform: rotate(15deg);
+        }
         &__title {
             margin-bottom: 1.9625rem;
             text-align: center;
@@ -837,10 +858,121 @@
         &__ctn {
             padding-top: 4.4rem;
         }
+        &__numbers-block {
+            &-number {
+                font-size: 5.1875rem;
+                position: absolute;
+            }
+            &-text {
+                font-size: 1.34375rem;
+            }
+            &-item {
+                &-1 {
+                    border-bottom: .0625rem solid #d7d7d7;
+                    .s4__numbers-block-number {
+                        font-size: 6.625rem;
+                        top: 2.6rem;
+                        left: 1.8rem;
+                    }
+                    .s4__numbers-block-value {
+                        font-size: 21.5px;
+                        top: 9.725rem;
+                        left: 2.2rem;
+                    }
+                    .s4__numbers-block-list {
+                        margin-left: 11.1rem;
+                        margin-top: 2.9rem;
+                        width: 18rem;
+                        line-height: 1.8rem;
+                    }
+                }
+                &-2 {
+                    .s4__numbers-block-text {
+                        margin-top: 7.1rem;
+                        margin-left: 0.4rem;
+                    }
+                    .s4__numbers-block-number {
+                        top: 19.8rem;
+                        left: 1.6rem;
+                    }
+                }
+                &-3 {
+                    .s4__numbers-block-number {
+                        top: 34rem;
+                        left: 1.6rem;
+                    }
+                    .s4__numbers-block-text {
+                        width: 17rem;
+                        margin-top: 13.8rem;
+                        margin-left: 1rem;
+                    }
+                }
+                &-4 {
+                    .s4__numbers-block-number {
+                        top: 34rem;
+                        left: 29.1rem;
+                    }
+                    .s4__numbers-block-text {
+                        margin-top: 4.6rem;
+                        margin-left: 27.8rem;
+                        width: 12rem;
+                        line-height: 1.5rem;
+                        &-2 {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                &-5 {
+                    .s4__numbers-block-number {
+                        top: 19.8rem;
+                        left: 29.3rem;
+                    }
+                    .s4__numbers-block-number {
+                        width: 5rem;
+                        margin-left: 28.4rem;
+                        margin-top: -16.6rem;
+                    }
+                }
+            }
+        }
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s4 {
+        &__title {
+            margin-bottom: 3.3625rem;
+        }
+        &__numbers-block {
+            height: 30rem;
+
+            &-item {
+                border: 1px solid #D7D7D7;
+                &-1 {
+                    width: 36.625rem;
+                    height: 17.625rem;
+                }
+                &-2 {
+                    width: 36.625rem;
+                }
+                &-3 {
+                    width: 35.875rem;
+                }
+                &-4 {
+                    width: 18.25rem;
+                    height: 17.625rem;
+                }
+                &-5 {
+                    width: 17.625rem;
+                    height: 17.625rem;
+                }
+            }
+            &-number {
+                font-size: 7.1875rem;
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
