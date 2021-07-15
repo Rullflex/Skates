@@ -150,6 +150,179 @@ block content
 
 			a.s5__link-more(href="#") Подробнее про наши залы
 
+	section.s6 
+		.s6__ctn.container 
+			h2.s6__title Чему мы учим?
 
+			.s6__slider
+				.s6__slider-container.uk-slider-container 
+					ul.s6__slider-items.uk-slider-items 
+						-
+							const captures = [
+								'Базовые навыки <br/>катания на роликах',
+								'Слайды на роликах',
+								'Фристайл спалом <br/>на роликах',
+								'Прыжки и катание <br/>по городу',
+								'Скейт и лонгборд',
+								'Посмотрите видео-обзор <br/>нашей школы',
+							]
+
+						each capture, idx in captures
+							li.s6__slider-item
+								.s6__slider-item-wrap
+									.s6__slider-item-image
+										+picture(jpg, `s6-slider-image-${idx + 1}`)
+									.s6__slider-item-capture!= capture
+
+				+slider-arrow-nav('06').s6__slider-nav.d-md-none
+
+	section.s7 
+		.s7__ctn.container 
+			h2.s7__title Путеводная карта
+			p.s7__subtitle Годовой план обучения
+
+			+picture(svg, 's7-skater-1').s7__image-1
+			+picture(svg, 's7-skater-2').s7__image-2
+			+picture(svg, 's7-skater-3').s7__image-3
+			+picture(svg, 's7-trophy').s7__image-4
+
+			.s7__item.s7__item-1
+				.s7__item-title Любитель
+				.s7__item-block
+					.s7__item-block-title 14 занятий
+					ul.s7__item-block-list
+						li.s7__item-block-list-item мы научимся ехать спиной вперед, разворачиваться, ускоряться, проезжать лежачих полицейских;
+						li.s7__item-block-list-item съезжать с горки и с поребрика, преодолевать другие препятствия.
+					.s7__item-block-number 1
+
+			.s7__item.s7__item-2
+				.s7__item-title Новичек
+				.s7__item-block
+					.s7__item-block-title 6 занятий
+					ul.s7__item-block-list
+						li.s7__item-block-list-item мы научимся уверенно чувствовать свое тело;
+						li.s7__item-block-list-item грамотно&nbsp; распределять вес, поворачивать и тормозить;
+						li.s7__item-block-list-item освоим роллерскую стойку и езду лицом вперед.
+					.s7__item-block-number 2
+
+			.s7__item.s7__item-important
+				.s7__item-block.s7__item-block--important
+					.s7__item-block-title.s7__item-block-title--important Важно!
+					.s7__item-block-list.s7__item-block-list--important Первые 20 занятий для детей мы проводим, в основном, в игровой форме, наши методисты разработали специальные игры, в которых каждое задание развивает новый навык или определенную группу мышц.
+					.s7__item-block-number.s7__item-block-number--important !
+
+			.s7__item.s7__item-3
+				.s7__item-title Райдер
+				.s7__item-block
+					.s7__item-block-title 3 месяца регулярных занятий:
+					ul.s7__item-block-list
+						li.s7__item-block-list-item научимся ехать на одной ноге
+						li.s7__item-block-list-item освоим балансы,
+						li.s7__item-block-list-item езду на носках и пятках
+						li.s7__item-block-list-item освоим разворот прыжком
+						li.s7__item-block-list-item хоккейную перебежку
+					.s7__item-block-number 3
+
+			.s7__item.s7__item-4
+				.s7__item-title Опытный райдер
+				.s7__item-block
+					.s7__item-block-title 16 месяцев регулярных занятий:
+					ul.s7__item-block-list
+						li.s7__item-block-list-item научимся 
+						li.s7__item-block-list-item прыгать через препятствия, балансировать
+						li.s7__item-block-list-item спиной вперед, прыгать с разворотом, 
+						li.s7__item-block-list-item резко тормозить и выполнять маневры 
+						li.s7__item-block-list-item на большой скорости.
+					.s7__item-block-number 4
+
+			.s7__item.s7__item-5
+				.s7__item-title Профессионал
+				.s7__item-block
+					.s7__item-block-title 3 месяца регулярных занятий:
+					ul.s7__item-block-list
+						li.s7__item-block-list-item определимся с основным направлением роллер спорта для вас;
+						li.s7__item-block-list-item начнем осваивать профессиональные навыки: прыжки в высоту через планку с места и трамплина;
+						li.s7__item-block-list-item торможения с разгона, фристайл слалом на роликах, скоростной слалом.
+					.s7__item-block-number 5
+
+			.s7__item.s7__item-6
+				.s7__item-title Спортсмен
+				.s7__item-block
+					.s7__item-block-title 12 месяцeв
+					ul.s7__item-block-list
+						li.s7__item-block-list-item участие в первых открытых
+						li.s7__item-block-list-item соревнованиях по прохождению полосы препятствий в зале. 
+					.s7__item-block-number 6
+
+			.s7__item.s7__item-7
+				.s7__item-title Чемпион
+				.s7__item-block
+					.s7__item-block-title 16 месяцeв
+					ul.s7__item-block-list
+						li.s7__item-block-list-item участие в первых соревнованиях по профильной спортивной дисциплине.
+					.s7__item-block-number 7
+
+	section.s8 
+		.s8__ctn.container 
+			h2.s8__title У нас работают только увлечённые люди!
+			p.s8__subtitle Они любят свою работу и знают, как сделать так, чтобы детям никогда не было скучно 
+
+			.s8__slider(data-uk-slider)
+
+				+slider-arrow-nav('03').s8__slider-nav
+
+				.s8__slider-container.uk-slider-container 
+					ul.s8__slider-items.uk-slider-items 
+						li.s8__slider-item
+							.s8__slider-item-wrap
+								.s8__slider-item-image 
+									+picture(png, 's8-kate')
+
+								.s8__slider-item-name Екатерина Афанасикова
+
+								.s8__slider-item-position Действующий совладелец сети роллер школ «Skate Town» в Санкт-Петербурге и Москве
+
+								.s8__slider-item-descr 
+									|- Практикующий психоаналитик
+									|#[br]- Повысила квалификации по направлению: детский психоанализ, психология коммуникации, организационная психотерапия, когнитивно-поведенческие и проективные методики в психотерапии
+									|#[br]- Автор обучений по направлениям – психология взаимодействия с детьми в контексте тренировочного процесса; Коммуникативные диалоги в профессиональной сфере. Автор и ведущий программы в контексте групповой психотерапии для молодых специалистов в сфере предпринимательства
+									|#[br]- Автор книги «Первичная и вторичная психическая травма», адаптированной для практикующих специалистов.
+									|#[br]- 6-ти летний опыт работы с детьми, в том числе с детишками с отставанием в развитии.
 			
-				
+						li.s8__slider-item
+							.s8__slider-item-wrap
+								.s8__slider-item-image 
+									+picture(png, 's8-roma')
+
+								.s8__slider-item-name Роман Гордин
+
+								.s8__slider-item-position Основатель сети роллердромов и роллер школы «Skate Town» в Петербурге
+
+								.s8__slider-item-descr 
+									|Чемпион России по фристайл слалому на роликах. 15 лет в роллер спорте
+									|#[br]-  62 медали на соревнованиях международного и федерального масштаба
+									|#[br]-  12 лет работы тренером по роллер-спорту
+									|#[br]-  Провел больше десяти тысяч занятий
+									|#[br]-  Подготовил 12 призеров соревнований международного и федерального уровня.
+									|#[br]-  Обучил уверенному катанию более 1 000 учеников 
+									|#[br]-  Автор первой методички по фристайл-слалому на роликах 
+									|#[br]-  Руководитель онлайн-школы подготовки инструкторов и руководителей роллер школ
+			
+						li.s8__slider-item
+							.s8__slider-item-wrap
+								.s8__slider-item-image 
+									+picture(png, 's8-kris')
+
+								.s8__slider-item-name Кристина Лысенко
+
+								.s8__slider-item-position Руководитель роллер школы «Skate Town» в Москве
+
+								.s8__slider-item-descr 
+									|- С 3.5 лет занималась фигурным катанием на коньках и затем с 2005 года начала заниматься фристайл-слаломом и спид-слалом. В 2007 начала профессиональную деятельность в области преподавания
+									|#[br]- 6-ти кратная чемпионка России по спид-слалому
+									|#[br]- Вице-чемпион России по фристайл-слалому
+									|#[br]- Вице-чемпион в Париже на этапе кубка мира и бронзовый призёр по спид-слалому в Париже
+									|#[br]- Серебряный и бронзовый призёр чемпионата Европы по спид-слалому
+									|#[br]- Достижения воспитанников:Самая юная чемпионка Европы и Мира, она же 9ти кратная чемпионка Европы и 6ти кратная чемпионка мира — Софья Богданова, 2 бронзовых призера чемпионата Европы, победители и призеры этапов кубка мира по фристайл-слалому.
+												
+													

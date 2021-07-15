@@ -1,3 +1,12 @@
+mixin slider-arrow-nav(numbersAll = '06')
+	.slider-arrow-nav&attributes(attributes)
+		a.slider-arrow-nav__arrow.slider-arrow-nav__arrow--left(href="#" data-uk-slider-item="previous"): +icon('arrow-left')
+
+		.slider-arrow-nav__numbers #[span.slider-arrow-nav__numbers--current 01] / #[span= numbersAll]
+
+		a.slider-arrow-nav__arrow.slider-arrow-nav__arrow--right(href="#" data-uk-slider-item="next"): +icon('arrow-right')
+
+
 mixin slider-dotnav
 	ul.dotnav.uk-slider-nav&attributes(attributes)
 

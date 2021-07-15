@@ -1,3 +1,22 @@
+.slider-arrow-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8.25rem;
+
+    color: $primary;
+
+    &__arrow {
+        width: 1.25rem;
+    }
+
+    &__numbers {
+        font-family: $font-family-headings;
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+}
+
 /* ========================================================================
    Component: Slidenav
  ========================================================================== */
@@ -7,14 +26,18 @@
     display: flex;
     justify-content: space-between;
     pointer-events: none;
-    &__item {}
+    &__item {
+    }
     &__link {
         pointer-events: initial;
         color: $primary;
-        &--prev {}
-        &--next {}
+        &--prev {
+        }
+        &--next {
+        }
     }
-    &__icon {}
+    &__icon {
+    }
 }
 
 /* ========================================================================
@@ -27,7 +50,8 @@
         display: flex;
         &.uk-active {
             .thumbnav {
-                &__link {}
+                &__link {
+                }
             }
         }
     }
@@ -36,8 +60,10 @@
         width: 100px;
         height: 100px;
         background: #eee;
-        &:hover {}
-        &:focus {}
+        &:hover {
+        }
+        &:focus {
+        }
     }
 }
 
@@ -67,7 +93,8 @@
             white-space: nowrap;
 
             /* Hover + Focus */
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background-color: link-hover($primary);
                 outline: none;
             }
@@ -83,10 +110,8 @@
             }
         }
     }
-    &--white {}
-    &--yellow {}
+    &--white {
+    }
+    &--yellow {
+    }
 }
-
-
-
-

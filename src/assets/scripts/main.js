@@ -16,17 +16,28 @@ UIkit.util.ready(function () {
     }
 
     let switcherDrop;
+    let s6Slider;
     app.matchMediaListener(
         app.md,
         () => {
             switcherDrop = UIkit.drop('.s3__tab-drop', {
                 mode: 'click',
             });
+
+            s6Slider = UIkit.slider('.s6__slider');
         },
         () => {
             switcherDrop?.$destroy();
+            s6Slider?.$destroy();
         },
     );
+
+    app.sliderSpy('.s6__slider', (idx) => refreshSliderArrowNav('.s6__slider', idx));
+    app.sliderSpy('.s8__slider', (idx) => refreshSliderArrowNav('.s8__slider', idx));
+
+    function refreshSliderArrowNav(slider, index) {
+        document.querySelector(`${slider} .slider-arrow-nav__numbers--current`).innerText = `0${index + 1}`;
+    }
 
     UIkit.switcher(`.tab-switcher__tab`, {
         connect: `.tab-switcher__content-block`,

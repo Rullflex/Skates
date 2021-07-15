@@ -1120,6 +1120,7 @@
 
         &-browser-top {
             width: 100%;
+            height: 2.5rem;
         }
 
         &-item {
@@ -1197,12 +1198,320 @@
 }
 
 .s6 {
+    &__ctn {
+        padding-top: 2.725rem;
+        padding-bottom: 3.125rem;
+    }
+
+    &__title {
+        margin-bottom: 1.11rem;
+    }
+
+    &__slider {
+        &-container {
+            overflow: visible;
+        }
+
+        &-item {
+            width: 100%;
+            padding-right: 1.25rem;
+            box-sizing: content-box;
+        }
+
+        &-item-wrap {
+            width: 100%;
+        }
+
+        &-item-image {
+            width: 100%;
+            height: 22.25rem;
+            border-radius: 0.375rem;
+
+            @include ibg(#eeeeee);
+
+            margin-bottom: 0.6875rem;
+        }
+
+        &-item-capture {
+            font-family: $font-family-headings;
+            font-weight: 600;
+            font-size: 1.25rem;
+            line-height: 1.15;
+        }
+
+        &-nav {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s6 {
+        &__ctn {
+            padding-top: 3.75rem;
+            padding-bottom: 6.25rem;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 2.4375rem;
+            text-align: center;
+            margin-bottom: 3.625rem;
+        }
+
+        &__slider {
+            &-items {
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &-item {
+                width: 22.125rem;
+                padding-right: 0;
+            }
+
+            &-item-image {
+                height: 28.125rem;
+            }
+        }
+    }
+}
+
+.s7 {
+    &__ctn {
+        padding-top: 3rem;
+        padding-bottom: 18.75rem;
+    }
+
+    &__title {
+        margin-bottom: 0.4rem;
+    }
+
+    &__subtitle {
+        font-family: $font-family-headings;
+
+        margin-bottom: 22.625rem;
+    }
+
+    &__image {
+        &-1 {
+            width: 61rem;
+            position: absolute;
+            top: 9rem;
+            left: -13rem;
+        }
+
+        &-2 {
+            width: 27.3rem;
+            position: absolute;
+            top: 53.375rem;
+            left: 0;
+        }
+
+        &-3 {
+            width: 22rem;
+            position: absolute;
+            top: 148.25rem;
+            left: 1.6875rem;
+        }
+
+        &-4 {
+            width: 18.4rem;
+            position: absolute;
+            bottom: 1.0625rem;
+            left: 0.8125rem;
+        }
+    }
+
+    &__item {
+        &-1 {
+            margin-bottom: 24.7rem;
+        }
+
+        &-2 {
+            margin-bottom: 2.3rem;
+        }
+
+        &-important {
+            margin-bottom: 4rem;
+        }
+
+        &-3 {
+            margin-bottom: 27.2rem;
+        }
+
+        &-4 {
+            margin-bottom: 2.4rem;
+        }
+
+        &-5 {
+            margin-bottom: 2.1rem;
+        }
+
+        &-6 {
+            margin-bottom: 3.2rem;
+        }
+
+        &-7 {
+        }
+    }
+
+    &__item-title {
+        font-family: $font-family-headings;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.15;
+        color: $primary;
+
+        margin-left: 2.625rem;
+        margin-bottom: 0.8125rem;
+    }
+
+    &__item-block {
+        padding: 1.375rem 1rem 4.1875rem 2.625rem;
+        background: #ffffff;
+        box-shadow: 0px 0.25rem 3.125rem rgba(0, 0, 0, 0.08);
+        border-radius: 0.4375rem;
+        position: relative;
+
+        &--important {
+            padding: 1.6rem 0.85rem 3.4375rem 1.9rem;
+            color: #ffffff;
+            background: $primary;
+        }
+
+        &-title {
+            font-family: $font-family-headings;
+            font-weight: 500;
+            line-height: 1.4;
+            color: #000000;
+            margin-bottom: 0.625rem;
+
+            &--important {
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 1.15;
+                color: #ffffff;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        &-list {
+            list-style-type: disc;
+
+            &--important {
+                font-weight: 600;
+                line-height: 1.6;
+            }
+        }
+
+        &-list-item {
+            line-height: 1.4;
+            margin-bottom: 0.3rem;
+        }
+
+        &-number {
+            width: 3rem;
+            text-align: center;
+            font-family: $font-family-headings;
+            font-weight: bold;
+            font-size: 4.6875rem;
+            color: #ffdc85;
+            position: absolute;
+            right: 0.5rem;
+            bottom: -2.4rem;
+
+            &--important {
+                font-size: 3.9375rem;
+                top: -0.5rem;
+                color: #ffba0c;
+            }
+        }
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {
+.s8 {
+    &__ctn {
+        padding-top: 9.1rem;
+        padding-bottom: 2.9rem;
+    }
+
+    &__title {
+        margin-bottom: 0.225rem;
+    }
+
+    &__subtitle {
+        font-family: $font-family-headings;
+        margin-bottom: 0.8rem;
+    }
+
+    &__slider {
+        &-nav {
+            margin-bottom: 2.625rem;
+        }
+
+        &-container {
+            overflow: visible;
+        }
+
+        &-item {
+            width: 100%;
+            padding-right: 1.25rem;
+            box-sizing: content-box;
+        }
+
+        &-item-wrap {
+            width: 100%;
+            font-family: $font-family-headings;
+        }
+
+        &-item-image {
+            width: 100%;
+            height: 25rem;
+
+            border: 0.0625rem solid #c1c1c1;
+            border-radius: 0.375rem;
+
+            position: relative;
+            margin-bottom: 1rem;
+
+            img {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        &-item-name {
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 1.3;
+
+            margin-bottom: 0.425rem;
+        }
+
+        &-item-position {
+            width: 16rem;
+
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 1.6;
+
+            margin-bottom: 1.25rem;
+        }
+
+        &-item-descr {
+            width: 15.5375rem;
+
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #000000;
+        }
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {

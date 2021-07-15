@@ -364,6 +364,19 @@ export const form = {
     } = {}) {
         this.validateSubmit(form, onSuccess, onError);
         this.validateChange(form);
+
+        validate.validators.isMaskComplete = (value, options, key, attributes) => {
+            if (key == 'Телефон' && options == true && value != null) {
+                if (app.phoneMask().checkCompleteness(value)) {
+                    return null;
+                } else {
+                    return 'не корректен';
+                }
+            } else {
+                return null;
+            }
+        };
+
         this.phoneMask(form);
     },
 
