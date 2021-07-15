@@ -107,8 +107,18 @@ block content
 			
 
 			.s4__gift-block
+				+picture(svg, 's4-gift', 'Sml').s4__gift-block-img
+
 				.s4__gift-title Подберите подходящую программу занятий для вашего ребёнка
 				.s4__gift-subtitle Ответьте на 6 вопросов и получите купон на 850₽ в подарок
+
+				.s4__gift-block-advans
+					.s4__gift-block-advans-item
+						+icon('gift').s4__gift-block-advans-icon.s4__gift-block-advans-icon-1
+						p.s4__gift-block-advans-text -50% скидка на первое занятие
+					.s4__gift-block-advans-item
+						+icon('check-list').s4__gift-block-advans-icon.s4__gift-block-advans-icon-2
+						p.s4__gift-block-advans-text Консультация тренера
 
 				+btn-yellow(type="button").s4__gift-btn
 					span Давайте начнем

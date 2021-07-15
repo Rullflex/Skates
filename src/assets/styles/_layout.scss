@@ -86,57 +86,57 @@
             padding-top: 2.1875rem;
             padding-bottom: 27.0125rem;
         }
-    
+
         &__title {
             font-size: 2.4375rem;
             line-height: 1.195;
             margin-bottom: 1.125rem;
         }
-    
+
         &__subtitle {
             margin-left: 0.2rem;
         }
-    
+
         &__bicycle {
             top: 16.35rem;
             left: 0.4125rem;
-    
+
             &-triangle {
                 width: 10.4rem;
             }
-    
+
             &-img {
                 width: 4.125rem;
             }
-    
+
             &-text {
                 font-size: 0.5625rem;
                 margin-top: 0.1rem;
             }
         }
-    
+
         &__triangle-logo {
             width: 12rem;
-    
+
             &-1 {
                 top: 13.6875rem;
                 left: 10rem;
                 transform: rotate(-10.64deg);
             }
-    
+
             &-2 {
                 top: 22.6125rem;
                 left: 39.3125rem;
                 transform: rotate(26deg);
             }
-    
+
             &-3 {
                 top: 8.8125rem;
                 left: 30rem;
                 transform: rotate(13deg);
             }
         }
-    
+
         &__img-children {
             width: 33.6875rem;
             left: 13.9375rem;
@@ -182,34 +182,31 @@
             }
         }
         &__bicycle {
-            top: 21.65rem; 
-            left: 3.7125rem; 
+            top: 21.65rem;
+            left: 3.7125rem;
             padding-top: 0.3rem;
 
             &-triangle {
                 width: 10.4rem;
             }
-    
+
             &-img {
                 width: 4.325rem;
             }
-    
+
             &-text {
                 font-size: 0.5625rem;
                 margin-top: 0.4rem;
             }
         }
     }
-
 }
-
-
 
 .s2 {
     &__ctn {
         padding-top: 3.5rem;
     }
-    
+
     &__title {
         font-weight: 600;
         font-size: 1.5625rem;
@@ -241,8 +238,8 @@
         font-size: 2.5rem;
         line-height: 1;
         letter-spacing: 0.06em;
-        color: #E6CEEF;
-        -webkit-text-stroke: 0.514362px #BAA3BF;
+        color: #e6ceef;
+        -webkit-text-stroke: 0.514362px #baa3bf;
 
         margin-right: 0.9rem;
     }
@@ -254,7 +251,8 @@
         letter-spacing: -0.309001px;
     }
 
-    &__form {}
+    &__form {
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
@@ -272,7 +270,7 @@
         &__circle {
             width: 25.9375rem;
             position: absolute;
-            z-index:-1;
+            z-index: -1;
             top: 19.4rem;
             left: 26rem;
         }
@@ -282,11 +280,11 @@
             margin-left: 2.8rem;
             line-height: 1.08;
         }
-    
+
         &__list {
             margin-bottom: 7.3rem;
-            background: #FFFFFF;
-            border: 1px solid #D7D7D7;
+            background: #ffffff;
+            border: 1px solid #d7d7d7;
             border-radius: 6.18001px;
             width: 33.5625rem;
             height: 26.875rem;
@@ -299,49 +297,47 @@
                 }
             }
         }
-    
+
         &__list-item {
             height: 6.71875rem;
             display: flex;
             align-items: flex-start;
             margin-bottom: 0;
-            border-bottom: 1px solid #EBEBEB;
+            border-bottom: 1px solid #ebebeb;
             padding-left: 4rem;
             padding-top: 1.2rem;
         }
-    
+
         &__list-number {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 3.875rem;
-    
+
             font-family: $font-family-headings;
             font-weight: bold;
             font-size: 4.875rem;
             line-height: 1;
             letter-spacing: 0.06em;
-            color: #E6CEEF;
-            -webkit-text-stroke: 0.514362px #BAA3BF;
-    
+            color: #e6ceef;
+            -webkit-text-stroke: 0.514362px #baa3bf;
+
             margin-right: 0.9rem;
         }
-    
+
         &__list-text {
             font-size: 0.9375rem;
             line-height: 1.355;
             letter-spacing: -0.309001px;
             width: 18.1875rem;
-            margin-left: 1.8rem; 
+            margin-left: 1.8rem;
             margin-top: 0.4rem;
         }
-    
-        &__form {
 
+        &__form {
         }
     }
 }
-
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s2 {
@@ -368,13 +364,13 @@
         &__boy {
             top: 14.5rem;
             left: 22.9rem;
-            z-index:2;
-            pointer-events: none
+            z-index: 2;
+            pointer-events: none;
         }
         &__circle {
             width: 25.9375rem;
             position: absolute;
-            z-index:-1;
+            z-index: -1;
             top: 19.4rem;
             left: 26rem;
         }
@@ -384,11 +380,11 @@
             margin-left: 3rem;
             line-height: 1.08;
         }
-    
+
         &__list {
             margin-bottom: 2.9rem;
-            background: #FFFFFF;
-            border: 1px solid #D7D7D7;
+            background: #ffffff;
+            border: 1px solid #d7d7d7;
             border-radius: 6.18001px;
             width: 41.5625rem;
             height: 26.875rem;
@@ -416,14 +412,12 @@
                 }
             }
         }
-    
+
         &__list-item {
             padding-left: 3.7rem;
             padding-top: 1rem;
         }
-    
 
-    
         &__list-text {
             font-size: 1rem;
             line-height: 1.4;
@@ -432,7 +426,7 @@
             margin-left: 1.9rem;
             margin-top: 0.6rem;
         }
-    
+
         &__form {
             top: 4.6rem;
             position: absolute;
@@ -441,7 +435,7 @@
     }
 }
 .s3 {
-    @include bg(#EDEEF0);
+    @include bg(#edeef0);
 
     &__ctn {
         padding-top: 2.9rem;
@@ -477,15 +471,16 @@
         }
     }
 
-    &__list-block {}
+    &__list-block {
+    }
 
     &__list-block-item {
         padding: 1.3125rem 2rem 2.1875rem 1.4375rem;
         width: 17.5rem;
         height: 9.0625rem;
 
-        background: #FFFFFF;
-        border: 0.0625rem solid #D7D7D7;
+        background: #ffffff;
+        border: 0.0625rem solid #d7d7d7;
         border-radius: 0.375rem;
 
         line-height: 1.4;
@@ -500,7 +495,7 @@
         display: flex;
         justify-content: center;
 
-        color: #FFDC85;
+        color: #ffdc85;
         font-size: 4.6rem;
         font-weight: 700;
         font-family: $font-family-headings;
@@ -514,9 +509,9 @@
         padding: 1.0625rem 0.25rem 0 1.5rem;
         width: 17.5rem;
         height: 21.1875rem;
-        
-        background: #CCEEFF;
-        border: 0.0625rem solid #D7D7D7;
+
+        background: #cceeff;
+        border: 0.0625rem solid #d7d7d7;
         border-radius: 0.375rem;
 
         line-height: 1.6;
@@ -526,13 +521,13 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s3 {
-        @include bg(#EDEEF0);
-    
+        @include bg(#edeef0);
+
         &__ctn {
             padding-top: 2rem;
             padding-bottom: 5rem;
         }
-    
+
         &__title {
             font-size: 2.4375rem;
             text-align: center;
@@ -541,7 +536,7 @@
             padding-top: 2.2rem;
             margin-left: 1rem;
         }
-    
+
         &__subtitle {
             font-family: $font-family-headings;
             font-weight: 300;
@@ -551,13 +546,13 @@
         }
         &__switcher {
         }
-    
+
         &__switcher-item {
             &-1 {
                 padding-bottom: 3.1875rem;
             }
         }
-    
+
         &__img-girl {
             width: 17.875rem;
             position: absolute;
@@ -565,11 +560,11 @@
             bottom: 0;
             z-index: 2;
         }
-    
+
         &__list-block {
             margin-top: 1.4rem;
         }
-    
+
         &__list-block-item {
             padding: 1.3125rem 2rem 2.1875rem 1.4375rem;
             width: 22.2rem;
@@ -587,13 +582,12 @@
                 padding: 1.6125rem 4.4rem 2.1875rem 1.6375rem;
             }
         }
-    
+
         &__list-block-item-number {
             width: 2.5625rem;
             display: flex;
             justify-content: center;
 
-    
             position: absolute;
             right: 0.5rem;
             bottom: -1.6rem;
@@ -663,7 +657,6 @@
             transform: rotate(-11deg);
         }
     }
-
 }
 
 .s4 {
@@ -684,7 +677,7 @@
         display: flex;
         flex-wrap: wrap;
 
-        border: 0.0625rem solid #D7D7D7;
+        border: 0.0625rem solid #d7d7d7;
         border-radius: 0.4375rem;
 
         margin-bottom: 3.125rem;
@@ -695,26 +688,26 @@
         }
 
         &-number {
-            font-family:$font-family-headings; 
+            font-family: $font-family-headings;
             font-style: normal;
             font-weight: normal;
             font-size: 50.8454px;
             line-height: 116%;
-            
+
             letter-spacing: -0.614773px;
-            
-            color: #A86BC0;
+
+            color: #a86bc0;
         }
         &-value {
-            font-family:$font-family-headings; 
+            font-family: $font-family-headings;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
             line-height: 106.5%;
-            
+
             letter-spacing: -0.614773px;
-            
-            color: #A86BC0;
+
+            color: #a86bc0;
         }
         &-text {
             font-family: $font-family-headings;
@@ -722,18 +715,17 @@
             font-weight: normal;
             font-size: 16px;
             line-height: 106.5%;
-            
+
             letter-spacing: -0.187732px;
-            
+
             color: #484848;
 
             &-2 {
-                
                 font-size: 14px;
                 line-height: 129%;
-                
+
                 letter-spacing: -0.157378px;
-                
+
                 color: #787878;
             }
         }
@@ -745,17 +737,17 @@
         width: 100%;
 
         &:not(:last-child) {
-            border-bottom: 0.0625rem solid #D7D7D7;
+            border-bottom: 0.0625rem solid #d7d7d7;
         }
 
         &-1 {
             height: 17.75rem;
             .s4__numbers-block-value {
                 position: absolute;
-                top: 9.625rem;
-                left: 6rem;
+                top: 3.125rem;
+                left: 4.7rem;
             }
-            border-bottom: .0625rem solid #d7d7d7;
+            border-bottom: 0.0625rem solid #d7d7d7;
         }
 
         &-2 {
@@ -791,9 +783,7 @@
                 margin-top: 0.9rem;
             }
         }
-
     }
-
 
     &__gift-block {
         padding: 2.8125rem 0 3.3125rem;
@@ -808,12 +798,19 @@
             display: block;
             width: 20rem;
             height: 100%;
-            background: linear-gradient(180deg, #C277DF 0%, #8A4FA2 100%);
+            background: linear-gradient(180deg, #c277df 0%, #8a4fa2 100%);
             border-radius: 0.4375rem;
             @include center-item-x;
             top: 0;
             z-index: -2;
         }
+    }
+
+    &__gift-block-img {
+        position: absolute;
+        width: 10.9rem;
+        right: -1.25rem;
+        top: 10.9375rem;
     }
 
     &__gift-title {
@@ -832,6 +829,34 @@
         margin-bottom: 7.1875rem;
     }
 
+    &__gift-block-advans {
+        margin-bottom: 2.4rem;
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        &-icon {
+            color: #91c7e2;
+            margin-right: 0.625rem;
+
+            &-1 {
+                width: 1.9rem;
+            }
+
+            &-2 {
+                width: 2.2rem;
+            }
+        }
+
+        &-text {
+            width: 7.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.16;
+        }
+    }
+
     &__gift-btn {
         width: 100%;
         line-height: 4.0625rem;
@@ -840,8 +865,11 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s4 {
+        &__ctn {
+            padding-bottom: 6.25rem;
+        }
         &__numbers-block-item:not(:last-child) {
-            border-bottom:none;
+            border-bottom: none;
         }
         &__triangle {
             width: 209px;
@@ -859,16 +887,19 @@
             padding-top: 4.4rem;
         }
         &__numbers-block {
+            height: 47.125rem;
+            margin-bottom: 5rem;
             &-number {
                 font-size: 5.1875rem;
                 position: absolute;
             }
             &-text {
                 font-size: 1.34375rem;
+                line-height: 1.3;
             }
             &-item {
                 &-1 {
-                    border-bottom: .0625rem solid #d7d7d7;
+                    border-bottom: 0.0625rem solid #d7d7d7;
                     .s4__numbers-block-number {
                         font-size: 6.625rem;
                         top: 2.6rem;
@@ -919,6 +950,8 @@
                         line-height: 1.5rem;
                         &-2 {
                             font-size: 1rem;
+                            line-height: 1.4;
+                            margin-top: 0.4rem;
                         }
                     }
                 }
@@ -927,13 +960,83 @@
                         top: 19.8rem;
                         left: 29.3rem;
                     }
-                    .s4__numbers-block-number {
-                        width: 5rem;
-                        margin-left: 28.4rem;
-                        margin-top: -16.6rem;
+                    .s4__numbers-block-text {
+                        width: 11rem;
+                        position: absolute;
+                        top: 25.2rem;
+                        left: 29rem;
                     }
                 }
             }
+        }
+
+        &__gift-block {
+            padding: 2.5rem 0 0 2.65rem;
+            height: 27.125rem;
+
+            color: $text-light;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: #dccee1;
+                border-radius: 0.4375rem;
+                @include center-item-x;
+                top: 0.9375rem;
+                z-index: -3;
+            }
+
+            &::after {
+                width: 48rem;
+            }
+        }
+
+        &__gift-block-img {
+            width: 32.6rem;
+            right: -1.25rem;
+            top: unset;
+            bottom: 0;
+        }
+
+        &__gift-title {
+            width: 39.375rem;
+            font-size: 1.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        &__gift-subtitle {
+            width: 25rem;
+            font-size: 1.25rem;
+            line-height: 1.3;
+            margin-bottom: 1.5625rem;
+        }
+
+        &__gift-block-advans {
+            margin-bottom: 2.1875rem;
+
+            &-item {
+                margin-bottom: 1.15rem;
+            }
+
+            &-icon {
+                &-1 {
+                }
+
+                &-2 {
+                }
+            }
+
+            &-text {
+                width: 7.7rem;
+                font-size: 1rem;
+                line-height: 1.1;
+            }
+        }
+
+        &__gift-btn {
+            width: 16.6875rem;
         }
     }
 }
@@ -947,7 +1050,7 @@
             height: 30rem;
 
             &-item {
-                border: 1px solid #D7D7D7;
+                border: 1px solid #d7d7d7;
                 &-1 {
                     width: 36.625rem;
                     height: 17.625rem;
@@ -971,41 +1074,80 @@
                 font-size: 7.1875rem;
             }
         }
+
+        &__gift-block {
+            padding: 2.5rem 0 0 3.65rem;
+            width: 60.9375rem;
+            height: 27.125rem;
+
+            margin: 0 auto;
+
+            &::before {
+                width: 58rem;
+            }
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &__gift-block-img {
+            width: 38.3rem;
+            right: 2.1875rem;
+        }
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+}
