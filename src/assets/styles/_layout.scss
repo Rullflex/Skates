@@ -307,6 +307,7 @@
             margin-bottom: 1.7rem;
             margin-left: 2.8rem;
             line-height: 1.08;
+            text-align: left;
         }
 
         &__list {
@@ -1459,6 +1460,9 @@
                 width: 22.125rem;
                 padding-right: 0;
                 margin-bottom: 3.9375rem;
+                &-play{
+                  top: 46%;
+                }
             }
 
             &-item-image {
@@ -1634,70 +1638,87 @@
 
     &__subtitle {
         font-family: $font-family-headings;
-
-        margin-bottom: 22.625rem;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 6.625rem;
     }
 
     &__image {
         &-1 {
             width: 61rem;
             position: absolute;
-            top: 9rem;
-            left: -13rem;
+            top: 17.1rem;
+            left: -9.5rem;
         }
 
         &-2 {
-            width: 27.3rem;
+            width: 30rem;
             position: absolute;
-            top: 53.375rem;
-            left: 0;
+            top: 40.375rem;
+            left: unset;
+            right: -8rem;
         }
 
         &-3 {
             width: 22rem;
             position: absolute;
-            top: 148.25rem;
-            left: 1.6875rem;
+            top: 93.15rem;
+            left: 0.1875rem;
         }
 
         &-4 {
-            width: 18.4rem;
+            width: 22rem;
             position: absolute;
-            bottom: 1.0625rem;
-            left: 0.8125rem;
+            bottom: 6.6625rem;
+            left: unset;
+            right: 0rem;
         }
     }
 
     &__item {
+      max-width: 22.125rem;
         &-1 {
-            margin-bottom: 24.7rem;
+            margin-bottom: 5.7rem;
+            margin-left: auto;
         }
 
         &-2 {
-            margin-bottom: 2.3rem;
+            margin-bottom: 11.1rem;
         }
 
         &-important {
-            margin-bottom: 4rem;
+          margin-bottom: -21.1rem;
         }
 
         &-3 {
-            margin-bottom: 27.2rem;
+            margin-bottom: 9.8rem;
+            margin-left: auto;
         }
 
         &-4 {
-            margin-bottom: 2.4rem;
+            margin-bottom: 6.3rem;
+            margin-left: auto;
+            .s7__item-block{
+              padding: 1.375rem 1rem 2.0875rem 3.225rem;
+            }
         }
 
         &-5 {
-            margin-bottom: 2.1rem;
+            margin-bottom: -23.6rem;
         }
 
         &-6 {
-            margin-bottom: 3.2rem;
+            margin-bottom: 11.4rem;
+            margin-left: auto;
+            .s7__item-block{
+              padding: 1.375rem 1rem 3.3875rem 3.225rem;
+            }
         }
 
         &-7 {
+          .s7__item-block{
+            padding: 1.175rem 1rem 1.7875rem 3.225rem;
+          }
         }
     }
 
@@ -1705,22 +1726,22 @@
         font-family: $font-family-headings;
         font-weight: 600;
         font-size: 1.5rem;
-        line-height: 1.15;
+        line-height: 1.55;
         color: $primary;
 
-        margin-left: 2.625rem;
-        margin-bottom: 0.8125rem;
+        margin-left: 3.025rem;
+        margin-bottom: 1.0125rem;
     }
 
     &__item-block {
-        padding: 1.375rem 1rem 4.1875rem 2.625rem;
+        padding: 1.375rem 1rem 2.8875rem 3.225rem;
         background: #ffffff;
         box-shadow: 0px 0.25rem 3.125rem rgba(0, 0, 0, 0.08);
         border-radius: 0.4375rem;
         position: relative;
 
         &--important {
-            padding: 1.6rem 0.85rem 3.4375rem 1.9rem;
+            padding: 1.6rem 0.85rem 2.0375rem 1.9rem;
             color: #ffffff;
             background: $primary;
         }
@@ -1730,7 +1751,7 @@
             font-weight: 500;
             line-height: 1.4;
             color: #000000;
-            margin-bottom: 0.625rem;
+            margin-bottom: 0.825rem;
 
             &--important {
                 font-weight: 600;
@@ -1747,12 +1768,13 @@
             &--important {
                 font-weight: 600;
                 line-height: 1.6;
+                font-size: 1.2rem;
             }
         }
 
         &-list-item {
             line-height: 1.4;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0rem;
         }
 
         &-number {
@@ -1763,13 +1785,35 @@
             font-size: 4.6875rem;
             color: #ffdc85;
             position: absolute;
-            right: 0.5rem;
-            bottom: -2.4rem;
+            right: 3.7rem;
+            bottom: -2.5rem;
 
             &--important {
                 font-size: 3.9375rem;
-                top: -0.5rem;
+                top: -0.9rem;
                 color: #ffba0c;
+                right: 0rem;
+            }
+            &-2{
+              right: 1.2rem;
+              bottom: -3.3rem;
+            }
+            &-3{
+              right: 1rem;
+            }
+            &-4{
+              right: 1rem;
+              bottom: -2.7rem;
+            }
+            &-5{
+              right: 1rem;
+            }
+            &-7{
+              right: 1rem;
+              bottom: -3rem;
+            }
+            &-6{
+              right: 1rem;
             }
         }
     }
