@@ -1,0 +1,215 @@
+extends modules/layout/_layout
+
+prepend head
+	title Услуги
+	meta(name="description", content="Услуги")
+
+block content
+	section.s13
+		.s13__ctn.container 
+			h2.s13__title Тренировки подойдут для учеников любого возраста
+
+			.s13__slider
+				.s13__slider-container.uk-slider-container 
+					ul.s13__slider-items.uk-slider-items 
+						li.s13__slider-item
+							.s13__slider-item-wrap
+								.s13__slider-item-title Для детей от 3-х лет
+								+picture(svg, 's13-i1').s13__slider-item-image
+
+						li.s13__slider-item
+							.s13__slider-item-wrap
+								.s13__slider-item-title Для взрослых #[br.d-lg-none]с&nbsp;опытом&nbsp;и&nbsp;без
+								+picture(svg, 's13-i2').s13__slider-item-image
+
+						li.s13__slider-item
+							.s13__slider-item-wrap
+								.s13__slider-item-title Для профессиональных #[br]роллеров
+								+picture(svg, 's13-i3').s13__slider-item-image
+
+				+slider-arrow-nav('03').s13__slider-nav
+
+	section.s14 
+		.s14__ctn.container
+			h2.s14__title Занимайтесь в удобном Вам режиме
+
+			+tab-switcher([
+					'Индивидуальные',
+					'Групповые',
+					'Профессиональные',
+				], 'Выберите тип занятия').s14__switcher
+				+tab-switcher-item.s14__switcher-item.s14__switcher-item-1
+					.s14__switcher-image-block
+						+picture-min(jpg, 's14-i1')
+
+					.s14__switcher-title Индивидуальные занятия с инструктором для детей и взрослых.
+					.s14__switcher-discount-block
+						.s14__switcher-discount-num -50% 
+						.s14__switcher-discount-text на первое #[br]занятие
+
+					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+
+				+tab-switcher-item.s14__switcher-item.s14__switcher-item-2
+					.s14__switcher-image-block
+						+picture-min(jpg, 's14-i2')
+
+					.s14__switcher-title Групповые занятия для детей и взрослых (от 3 человек)
+
+					ul.s14__switcher-list
+						li.s14__switcher-list-item группы с комфортным разделением по возрасту и уровню
+						li.s14__switcher-list-item интересные задания
+						li.s14__switcher-list-item много общения
+					
+					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+
+				+tab-switcher-item.s14__switcher-item.s14__switcher-item-3
+					.s14__switcher-image-block
+						+picture-min(jpg, 's14-i3')
+
+					.s14__switcher-title Занятия с тренерами мирового уровня 
+				
+					ul.s14__switcher-list
+						li.s14__switcher-list-item быстрый прогресс
+						li.s14__switcher-list-item подготовка к соревнованиям
+						li.s14__switcher-list-item много общения
+
+					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]профессиональное занятие
+
+	section.s15 
+		.s15__ctn.container 
+			.s15__top-block 
+				+picture-min(png, 's15-skates', 'Sml').s15__top-block-skates
+				h2.s15__top-block-title Во всех наших залах вы можете взять всю необходимую экипировку в прокат
+				a.s15__top-block-link-more 
+					span Подробнее
+					+icon('arrow-right')
+
+			h2.s15__title Вы можете заниматься по абонементу или брать разовые занятия
+
+			+tab-switcher([
+					'Индивидуальные',
+					'Групповые',
+				], 'Выберите тип занятия').s15__switcher
+				+tab-switcher-item.s15__switcher-item.s15__switcher-item-1
+					.s15__switcher-content 
+						.s15__switcher-content-item
+							.s15__switcher-content-number 1600 ₽
+							.s15__switcher-content-times 1 занятие 60 минут 
+						.s15__switcher-content-item
+							.s15__switcher-content-number 8600 ₽
+							.s15__switcher-content-times Абонемет 6 занятий
+
+					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+
+				+tab-switcher-item.s15__switcher-item.s15__switcher-item-2
+					
+
+					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+
+	section.s16 
+		.s16__ctn.container 
+			h2.s16__title Как проходят занятия
+
+			.s16__items-block 
+				.s16__item
+					.s16__item-title Приносите ролики и комфортную одежду
+					.s16__item-image: +picture-min(jpg, 's16-i1')
+					.s16__item-number 1
+				.s16__item
+					.s16__item-title Вас встречает ваш инструктор
+					.s16__item-image: +picture-min(jpg, 's16-i2')
+					.s16__item-number 2
+				.s16__item
+					.s16__item-title 60 минут под руководством тренера изучаете интересные элементы
+					.s16__item-image: +picture-min(jpg, 's16-i3')
+					.s16__item-number 3
+				.s16__item
+					.s16__item-title Получаете обратную связь и составляете расписание дальнейших тренировок
+					.s16__item-image: +picture-min(jpg, 's16-i4')
+					.s16__item-number 4
+
+	+s5-hall(style="background: #EDEEF0")
+
+	+s10-form-lead
+	
+	section.s17 
+		.s17__ctn.container 
+			h2.s17__title Дополнительные услуги
+
+			+tab-switcher([
+					'Детские дни рождения',
+					'Городской детский лагерь',
+					'Бесплатные занятия',
+					'Скейт и лонгборд',
+					'Беговелы',
+					'Профессиональный спорт',
+				], 'Выберите тип услуги:').s17__switcher
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-1
+					.s17__switcher-descr 
+						.s17__switcher-descr-title «Дни рождения»
+						.s17__switcher-descr-text Спортивно развлекательное мероприятие для детей и их родителей. Программа рассчитана на компанию до 14 человек и&nbsp;включает в себя всё необходимое: программа, прокат, проводящие, аренда зала и украшения. Идеально подойдет, чтобы сделать праздник запоминающимся!
+
+					.s17__switcher-image: +picture-min(jpg, 's17-i1')
+
+					.s17__switcher-prices-block
+						.s17__switcher-prices-item
+							.s17__switcher-prices-time Будние дни #[br.d-md-none]до 17:00
+							.s17__switcher-prices-sub 1-14 детей, прокат включен в стоимость
+							.s17__switcher-prices-number 14 000 ₽
+						.s17__switcher-prices-item
+							.s17__switcher-prices-time Выходные #[br.d-md-none]дни
+							.s17__switcher-prices-sub 1-14 детей, прокат включен в стоимость
+							.s17__switcher-prices-number 18 000 ₽
+						.s17__switcher-prices-item
+							.s17__switcher-prices-time Фотосессия
+							.s17__switcher-prices-sub по желанию
+							.s17__switcher-prices-number 3 000 ₽
+
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-2
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-3
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-4
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-5
+
+				+tab-switcher-item.s17__switcher-item.s17__switcher-item-6
+
+	section.s18
+		.s18__ctn.container 	
+			h2.s18__title Мы помогаем детям провести время с пользой во время летних каникул
+
+			.s18__slider(data-uk-slider)
+				+picture(svg, 'browser-panel-gray', 'Sml').s18__slider-browser-top
+				.uk-slider-container
+					ul.s18__slider-items.uk-slider-items
+						- for(let i = 1; i <= 3; i++)
+							li.s18__slider-item 
+								.s18__slider-item-wrap
+									+picture(jpg, 's18-slider-image', 'Sml')
+
+				+slider-arrow-nav('03').s18__slider-nav
+
+			.s18__badge-block
+				.s18__badge-block-title В детском лагере детей ждёт более 60+ часов мастер-классов и тренировок 
+				+picture(svg, 's18-svg', 'Sm').s18__badge-block-img
+
+	section.s19 
+		.s19__ctn.container
+			h2.s19__title Отзывы родителей
+
+			.s19__avatar 
+
+			.s19__review
+				.s19__review-block
+					.s19__review-name Полина Афанасьева
+					.s19__review-date 1 апр 2021 в 10:11
+					.s19__review-text Дочке 5 лет,всегда ходим на каникулах в скейт таун в лагерь! #[br]Очень довольны! Не смотря на то что дочка ещё сама не может переодеть ролики проблем с этим нет некогда-всегда помогут! и отвлечься ,и поиграть , и конечно потренироваться! Тренеры всегда рядом ,всегда помогут!  #[br]Ребенок счастлив и уходить к концу дня не хочет))))
+						
+				+btn-yellow.s19__review-btn: span Забронируйте заранее
+				a.s19__review-link-more(href="#") Посмотреть еще отзывы #[+icon('arrow-right')]
+
+	+s11-map
+	

@@ -95,6 +95,7 @@ export const app = {
     // поздагрузка YouTube видео внутрь блока только при его появлении
     videoSpy(videoWrapper, YTid) {
         const $videoWrapper = document.querySelector(videoWrapper);
+
         UIkit.scrollspy($videoWrapper);
         $videoWrapper.addEventListener(`inview`, (event) => {
             $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);
@@ -108,6 +109,8 @@ export const app = {
     // поздагрузка Google карты внутрь блока только при его появлении
     mapSpy(mapWrapper, mapSrc) {
         const $mapWrapper = document.querySelector(mapWrapper);
+        mapSrc = mapSrc || $mapWrapper.dataset.src;
+        console.log(mapSrc);
         UIkit.scrollspy($mapWrapper);
         $mapWrapper.addEventListener(`inview`, (event) => {
             $mapWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);

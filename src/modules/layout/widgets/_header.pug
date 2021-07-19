@@ -2,19 +2,19 @@
     const linksList = [
         {
             label: 'Услуги',
-            href: '#',
+            href: '/uslugi.html',
         },
         {
             label: 'Цены',
-            href: '#',
+            href: '/prices.html',
         },
         {
             label: 'О нас',
-            href: '#',
+            href: '/team.html',
         },
         {
             label: 'Отзывы',
-            href: '#',
+            href: '/reviews.html',
         },
         {
             label: 'Достижения',
@@ -22,7 +22,7 @@
         },
         {
             label: 'Наши залы',
-            href: '#',
+            href: '/halls.html',
         },
         {
             label: 'Контакты',
@@ -45,8 +45,7 @@ mixin header-menu
             block
 
 mixin header-logo
-    a(href="/").header__logo
-        +icon('logo')
+    a(href="/").header__logo: +icon('logo')
 //- Template
 
 header.header 

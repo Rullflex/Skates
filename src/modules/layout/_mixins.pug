@@ -1,6 +1,19 @@
+//- sections
+include widgets/_s5-hall
+include widgets/_s10-form-lead
+include widgets/_s11-map
+include widgets/_s12-faq
+
+//- widgets
 include widgets/_form-lead
 include widgets/_tab-switcher
 include widgets/_slider
+
+mixin loader 
+	.loader-wrap&attributes(attributes)
+		.loader
+			div
+		.loader-text Идет загрузка...
 
 
 mixin btn-yellow 
@@ -68,7 +81,13 @@ mixin icon(icon, filler = 'currentColor')
 		when 'checked'
 			svg(viewbox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
 				circle(cx='26.1296' cy='26.1619' r='24.2918' stroke=filler stroke-width='2')
-				path(d='M17.3457 26.1621L24.8278 33.6442L37.7064 20.7657' stroke=filler stroke-width='2' fill=filler) 
+				path(d='M17.3457 26.1621L24.8278 33.6442L37.7064 20.7657' stroke=filler stroke-width='2') 
+
+		when 'plus'
+			svg(viewbox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				rect(x='15.4023' y='0.304688' width='4.78111' height='35.0593' fill=filler)
+				rect(x='35.3223' y='15.4434' width='4.78111' height='35.0593' transform='rotate(90 35.3223 15.4434)' fill=filler)
+
 
 		when 'gift'
 			svg(viewbox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)

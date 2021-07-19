@@ -1,0 +1,23 @@
+footer.footer
+    .footer__ctn.container
+        ul.footer__links-list
+            each link, idx in linksList
+                if idx !== 6
+                    li.footer__list-item(class=`footer__list-item-${idx + 1}`): a.footer__link(href=link.href)!= link.label
+
+        .footer__contacts-block 
+            a.footer__phone(href='tel:+78127483938') 8 812 748 39 38
+            .footer__times Буд. 10–22 | Вых. 9–22
+
+        .footer__socials 
+            a.footer__social-item(href=instLink): +icon('inst')
+            a.footer__social-item(href=vkLink): +icon('vk')
+            a.footer__social-item(href=ytLink): +icon('yt')
+
+        a(href="/").footer__logo: +icon('logo')
+
+        .footer__creds-block
+            a.footer__policy-link(href=privacyLink) Политика конфиденциальности
+            a.footer__handling-link(href=handlingLink) Обработка персональных данных
+
+

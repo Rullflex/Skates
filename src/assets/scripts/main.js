@@ -16,7 +16,14 @@ UIkit.util.ready(function () {
     }
 
     let switcherDrop;
-    let s6Slider;
+
+    const sliders = {
+        s6: undefined,
+        s8: undefined,
+        s9: undefined,
+        s13: undefined,
+    };
+
     app.matchMediaListener(
         app.md,
         () => {
@@ -24,16 +31,34 @@ UIkit.util.ready(function () {
                 mode: 'click',
             });
 
-            s6Slider = UIkit.slider('.s6__slider');
+            sliders.s6 = UIkit.slider('.s6__slider');
+            sliders.s13 = UIkit.slider('.s13__slider');
         },
         () => {
             switcherDrop?.$destroy();
-            s6Slider?.$destroy();
+
+            sliders.s6?.$destroy();
+            sliders.s13?.$destroy();
+        },
+    );
+
+    app.matchMediaListener(
+        app.lg,
+        () => {
+            sliders.s8 = UIkit.slider('.s8__slider');
+            sliders.s9 = UIkit.slider('.s9__slider');
+        },
+        () => {
+            sliders.s8?.$destroy();
+            sliders.s9?.$destroy();
         },
     );
 
     app.sliderSpy('.s6__slider', (idx) => refreshSliderArrowNav('.s6__slider', idx));
     app.sliderSpy('.s8__slider', (idx) => refreshSliderArrowNav('.s8__slider', idx));
+    app.sliderSpy('.s9__slider', (idx) => refreshSliderArrowNav('.s9__slider', idx));
+    app.sliderSpy('.s13__slider', (idx) => refreshSliderArrowNav('.s13__slider', idx));
+    app.sliderSpy('.s18__slider', (idx) => refreshSliderArrowNav('.s18__slider', idx));
 
     function refreshSliderArrowNav(slider, index) {
         document.querySelector(`${slider} .slider-arrow-nav__numbers--current`).innerText = `0${index + 1}`;
@@ -54,6 +79,12 @@ UIkit.util.ready(function () {
                 UIkit.drop('.tab-switcher__tab-drop').hide(0);
             }
         });
+    });
+
+    // app.mapSpy(`.s11__location-map`);
+
+    app.letListClickActive(document.querySelector('.s11__location-nav'), 'active', (el) => {
+        document.querySelector(`.s11__location-map iframe`).setAttribute('src', el.dataset.src);
     });
 
     // app.letListClickActive(document.querySelector(`ul.list`))
