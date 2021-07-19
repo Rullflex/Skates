@@ -14,6 +14,10 @@ block content
 			+icon('triangle-logo', '#FFDC85').s1__triangle-logo.s1__triangle-logo-2
 			+icon('triangle-logo', '#E3B8F4').s1__triangle-logo.s1__triangle-logo-3
 
+			+picture(png, 's1-vidos').s1__vidos.d-none.d-lg-block
+			.s1__vidos-text.d-none.d-lg-block Посмотрите короткое#[br] видео о нас
+			a(href="#_c2pz2mlSfXA" data-app-video).s1__vidos--clickable.d-none.d-lg-block
+
 			.s1__bicycle
 				+icon('triangle', '#D1F0FF').s1__bicycle-triangle
 				+picture(png, 's1-bicycle').s1__bicycle-img
@@ -141,12 +145,29 @@ block content
 								'Посмотрите видео-обзор <br/>нашей школы',
 							]
 
+						
+
 						each capture, idx in captures
+							mixin s6-slider-item-content
+								.s6__slider-item-image
+									+picture(jpg, `s6-slider-image-${idx + 1}`)
+								.s6__slider-item-capture!= capture
+
 							li.s6__slider-item
-								.s6__slider-item-wrap
-									.s6__slider-item-image
-										+picture(jpg, `s6-slider-image-${idx + 1}`)
-									.s6__slider-item-capture!= capture
+
+								if idx === captures.length - 1
+									.s6__slider-item-wrap
+
+										a(href="#_c2pz2mlSfXA" data-app-video).s6__slider-item-image.s6__slider-item-image--video
+											+picture(jpg, `s6-slider-image-${idx + 1}`)
+											+icon('play-grey').s6__slider-item-play
+										.s6__slider-item-capture!= capture
+								else
+									.s6__slider-item-wrap
+										.s6__slider-item-image
+											+picture(jpg, `s6-slider-image-${idx + 1}`)
+										.s6__slider-item-capture!= capture
+										
 
 				+slider-arrow-nav('06').s6__slider-nav.d-md-none
 
@@ -298,7 +319,8 @@ block content
 									|#[br]- Вице-чемпион в Париже на этапе кубка мира и бронзовый призёр по спид-слалому в Париже
 									|#[br]- Серебряный и бронзовый призёр чемпионата Европы по спид-слалому
 									|#[br]- Достижения воспитанников:Самая юная чемпионка Европы и Мира, она же 9ти кратная чемпионка Европы и 6ти кратная чемпионка мира — Софья Богданова, 2 бронзовых призера чемпионата Европы, победители и призеры этапов кубка мира по фристайл-слалому.
-												
+
+			+btn-yellow.s8__btn.d-none.d-lg-flex: span Узнайте подробнее о наших тренерах							
 	section.s9 
 		.s9__ctn.container
 			h2.s9__title За #[span.text-primary 11 лет] мы провели интересные тренировки для более #[span.text-primary 10.000 детей] 
@@ -308,19 +330,12 @@ block content
 
 				.s9__slider-container.uk-slider-container 
 					ul.s9__slider-items.uk-slider-items 
-						li.s9__slider-item
-							.s9__slider-item-wrap
-								+picture(jpg, 's9-slider-image').s9__slider-item-image
-						li.s9__slider-item
-							.s9__slider-item-wrap
-								+picture(jpg, 's9-slider-image').s9__slider-item-image
-						li.s9__slider-item
-							.s9__slider-item-wrap
-								+picture(jpg, 's9-slider-image').s9__slider-item-image
-						li.s9__slider-item
-							.s9__slider-item-wrap
-								+picture(jpg, 's9-slider-image').s9__slider-item-image
-
+						- for(let i = 1; i <= 4; i++)
+							li.s9__slider-item
+								a(href="#_c2pz2mlSfXA" data-app-video).s9__slider-item-wrap
+									+picture(jpg, 's9-slider-image').s9__slider-item-image
+									+icon('play-transparent').s9__slider-item-play
+						
 				+slider-arrow-nav('04').s9__slider-nav
 
 			button.s9__btn-more.btn-outline-dark Еще отзывы наших учеников

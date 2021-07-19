@@ -46,19 +46,18 @@ mixin header-menu
 
 mixin header-logo
     a(href="/").header__logo: +icon('logo')
+
 //- Template
 
 header.header 
     .container 
         //- SM
         .header__row.d-md-none
-            +header-menu.header__menu 
-
-            .header__vert-divider
-
             +header-logo
 
             button.btn-solid-primary.header__btn Записаться
+
+            +header-menu.header__menu 
 
         //- MD
         .header__row.d-none.d-md-block
