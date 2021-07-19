@@ -1,6 +1,7 @@
-mixin tab-switcher(labelSet = [])
+mixin tab-switcher(labelSet = [], label)
+    .tab-switcher__label= label
     .tab-switcher&attributes(attributes)
-        button.tab-switcher__btn-drop.btn-solid-primary(type="button").d-md-none
+        button.tab-switcher__btn-drop.d-md-none(type="button")
             span= labelSet[0]
             +icon('angle-down').tab-switcher__btn-drop-angle
 

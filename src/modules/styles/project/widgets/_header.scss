@@ -5,12 +5,13 @@
         height: 3.125rem;
     }
 
-    &__menu {}
+    &__menu {
+    }
 
     &__vert-divider {
         width: 0.0625rem;
         height: 1.875rem;
-        background: #B7B7B7;
+        background: #b7b7b7;
         margin: auto 0.625rem;
     }
 
@@ -31,7 +32,6 @@
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
-    
     .header {
         &__row {
             height: 7.5rem;
@@ -58,21 +58,26 @@
                 display: block;
                 width: 100vw;
                 height: 1px;
-                background: #EDEDED;
+                background: #ededed;
                 @include center-item-x;
             }
 
-            &::after {top: 0}
-            &::before {bottom: 0}
+            &::after {
+                top: 0;
+            }
+            &::before {
+                bottom: 0;
+            }
         }
-    
-        &__menu {}
-    
+
+        &__menu {
+        }
+
         &__vert-divider {
             height: 2.0625rem;
             margin: auto 1.3rem;
         }
-        
+
         &__logo-block {
             display: flex;
             align-items: center;
@@ -82,6 +87,11 @@
             margin-right: 0;
             svg {
                 width: 7.8125rem;
+                transition: $transition--hover;
+
+                &:hover {
+                    filter: drop-shadow(0 0 5px $primary);
+                }
             }
         }
 
@@ -90,8 +100,9 @@
             font-size: 0.75rem;
             line-height: 1.21;
         }
-    
-        &__btn {}
+
+        &__btn {
+        }
 
         &__links-list {
             height: 100%;
