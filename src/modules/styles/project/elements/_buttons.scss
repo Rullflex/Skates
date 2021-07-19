@@ -106,10 +106,17 @@
 }
 
 @mixin btn-yellow {
+    @include btn;
+
+    line-height: 4.0625rem;
+
     background: #ffba0c;
     box-shadow: 0px 0.25rem 0px #ff922f;
     border-radius: 0.4375rem;
+
     color: $text-light;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .btn {

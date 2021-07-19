@@ -3,23 +3,27 @@
         display: none;
     }
     &-icon {
-        width: 1.125rem;
+        width: 1.875rem;
         display: block;
         position: relative;
+
         i {
-            height: 0.1875rem;
+            height: 0.25rem;
             width: 100%;
             display: block;
             background: $primary;
             transition: $transition--fast;
+
             &:not(:nth-child(3)) {
-                margin-bottom: 0.1875rem;
+                margin-bottom: 0.25rem;
             }
+
             &:last-child {
-                @include center-item-y("absolute");
+                @include center-item-y('absolute');
             }
         }
-        &[aria-expanded=true]{
+
+        &[aria-expanded='true'] {
             i {
                 &:nth-child(1) {
                     opacity: 0;
@@ -36,6 +40,7 @@
             }
         }
     }
+
     &-drop {
         display: none;
         min-width: 200px;

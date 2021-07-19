@@ -26,17 +26,38 @@
     display: flex;
     justify-content: space-between;
     pointer-events: none;
+
     &__item {
     }
+
     &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         pointer-events: initial;
-        color: $primary;
+        width: 51px;
+        height: 51px;
+        background: #ffba0c;
+        border-radius: 7px;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            border: 1px solid #d1d1d1;
+            background: transparent;
+        }
+
         &--prev {
         }
         &--next {
         }
     }
+
     &__icon {
+        width: 0.9375rem;
+        color: white;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            color: $primary;
+        }
     }
 }
 

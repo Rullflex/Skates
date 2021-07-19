@@ -4,6 +4,7 @@ import { app, form } from '../../modules/scripts/_core';
 UIkit.util.ready(function () {
     app.init();
 
+    app.dynamicVideo();
     // FORM
     form.init(`form`);
 

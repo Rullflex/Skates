@@ -66,12 +66,20 @@ mixin quiz
 
 mixin icon(icon, filler = 'currentColor')
 	case icon
+		when 'slider-angle-left'
+			svg(viewbox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				path(d='M13.9434 24.8936L1.99658 12.9468L13.9434 1' stroke=filler stroke-width='2.7591')
+
+		when 'slider-angle-right'
+			svg(viewbox='0 0 15 26' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				path(d="M1.05273 24.8936L12.9995 12.9468L1.05274 1" stroke=filler stroke-width="2.7591")
+
 		when 'arrow-left'
-			svg(viewbox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+			svg(viewbox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
 				path(d='M0.292892 6.96867C-0.0976315 7.3592 -0.0976315 7.99236 0.292892 8.38289L6.65685 14.7468C7.04738 15.1374 7.68054 15.1374 8.07107 14.7468C8.46159 14.3563 8.46159 13.7232 8.07107 13.3326L2.41421 7.67578L8.07107 2.01893C8.46159 1.6284 8.46159 0.995238 8.07107 0.604713C7.68054 0.214189 7.04738 0.214189 6.65685 0.604713L0.292892 6.96867ZM21 6.67578L1 6.67578V8.67578L21 8.67578V6.67578Z' fill=filler)
 		
 		when 'arrow-right'
-			svg(viewbox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+			svg(viewbox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
 				path(d='M20.7071 8.38289C21.0976 7.99236 21.0976 7.3592 20.7071 6.96867L14.3431 0.604713C13.9526 0.214189 13.3195 0.214189 12.9289 0.604713C12.5384 0.995238 12.5384 1.6284 12.9289 2.01893L18.5858 7.67578L12.9289 13.3326C12.5384 13.7232 12.5384 14.3563 12.9289 14.7468C13.3195 15.1374 13.9526 15.1374 14.3431 14.7468L20.7071 8.38289ZM20 6.67578L0 6.67578V8.67578L20 8.67578V6.67578Z' fill=filler)
 
 		when 'angle-down'
@@ -153,7 +161,17 @@ mixin icon(icon, filler = 'currentColor')
 			svg( viewbox='0 0 89 89' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
 				circle(cx='44.4465' cy='44.1521' r='43.9865' fill=filler)
 				path(fill-rule='evenodd' clip-rule='evenodd' d='M44.4478 84.6929C66.8377 84.6929 84.9883 66.5423 84.9883 44.1523C84.9883 21.7624 66.8377 3.61182 44.4478 3.61182C22.0578 3.61182 3.90723 21.7624 3.90723 44.1523C3.90723 66.5423 22.0578 84.6929 44.4478 84.6929ZM33.5321 63.0571L66.2764 44.1523L33.5321 25.2474L33.5321 63.0571Z' fill=filler)
-
+		
+		when 'play-grey'
+			svg(viewbox='0 0 58 57' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				circle(cx='28.8145' cy='28.5' r='28.5' fill='white')
+				path(fill-rule='evenodd' clip-rule='evenodd' d='M28.8141 54.7674C43.3211 54.7674 55.0813 43.0071 55.0813 28.5001C55.0813 13.9932 43.3211 2.23291 28.8141 2.23291C14.3071 2.23291 2.54688 13.9932 2.54688 28.5001C2.54688 43.0071 14.3071 54.7674 28.8141 54.7674ZM21.7423 40.7495L42.9581 28.5006L21.7423 16.2516L21.7423 40.7495Z' fill=filler)
+		
+		when 'play-transparent'
+			svg(viewbox='0 0 87 88' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				circle(cx='43.5405' cy='44.5405' r='40.5405' fill=filler)
+				circle(cx='43.5' cy='44.4731' r='42' stroke='white' stroke-width='3')
+				path(d='M34.9508 29.6651L60.5996 44.4735L34.9508 59.2818L34.9508 29.6651Z' stroke='white' stroke-width='3')
 
 		when 'point'
 			svg( viewbox='0 0 11 17' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
