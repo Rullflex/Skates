@@ -489,15 +489,14 @@
         position: absolute;
         right: -1.25rem;
         bottom: 0;
+        pointer-events: none;
     }
 
     &__switcher {
     }
 
     &__switcher-item {
-        &-1 {
-            padding-bottom: 14.2875rem;
-        }
+        padding-bottom: 14.2875rem;
     }
 
     &__list-block {
@@ -577,9 +576,7 @@
         }
 
         &__switcher-item {
-            &-1 {
-                padding-bottom: 3.1875rem;
-            }
+            padding-bottom: 3.1875rem;
         }
 
         &__img-girl {
