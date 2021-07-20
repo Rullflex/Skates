@@ -1,5 +1,5 @@
 .form-lead {
-    padding: 2.8125rem 1.25rem;
+    padding: 2.8125rem 1.25rem 3.2rem;
     width: 20rem;
     background: white;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08);
@@ -32,10 +32,10 @@
         width: 5.5rem;
         height: 2.3125rem;
 
-        border: 0.0625rem solid #DEDEDE;
+        border: 0.0625rem solid #dedede;
         border-radius: 0.4375rem;
 
-        color: #CACACA;
+        color: #cacaca;
         font-size: 0.75rem;
 
         svg {
@@ -56,19 +56,19 @@
 
         &--mobile {
             &.active {
-                background: linear-gradient(180deg, #C277DF 0%, #8A4FA2 100%);
+                background: linear-gradient(180deg, #c277df 0%, #8a4fa2 100%);
             }
         }
 
         &--whatsapp {
             &.active {
-                background: linear-gradient(180deg, #A0E79F 0%, #57BB55 100%);
+                background: linear-gradient(180deg, #a0e79f 0%, #57bb55 100%);
             }
         }
 
         &--telegram {
             &.active {
-                background: linear-gradient(180deg, #5CA7FF 0%, #0A85DE 100%);
+                background: linear-gradient(180deg, #5ca7ff 0%, #0a85de 100%);
             }
         }
     }
@@ -80,9 +80,9 @@
     &__input {
         width: 100%;
         height: 4.0625rem;
-        background: #F5F5F5;
+        background: #f5f5f5;
         border-radius: 0.4375rem;
-        
+
         text-align: center;
         font-weight: 300;
         font-size: 0.875rem;
@@ -91,7 +91,7 @@
     &__submit-btn {
         width: 100%;
         line-height: 4.0625rem;
-        
+
         @include btn-yellow;
 
         margin-bottom: 2.2rem;
@@ -108,7 +108,7 @@
             align-items: center;
             width: 0.9375rem;
             height: 0.9375rem;
-            background: #ECECEC;
+            background: #ececec;
             border-radius: 0.1875rem;
             position: relative;
 
@@ -137,7 +137,7 @@
             font-weight: 300;
             font-size: 0.8125rem;
             line-height: 1.125rem;
-            color: #A9A9A9;
+            color: #a9a9a9;
         }
 
         &-text-link {
@@ -152,40 +152,41 @@
         width: 31.25rem;
         height: 33.75rem;
         @include center-item-x('relative');
-    
+
         &__title {
             font-size: 1.5rem;
             margin-bottom: 1.0625rem;
         }
-    
+
         &__label {
             margin-bottom: 0.8125rem;
         }
-    
+
         &__options {
             width: 19.0625rem;
         }
-    
+
         &__options-button {
             width: 5.9375rem;
             font-size: 0.8125rem;
         }
-    
+
         &__input-wrap {
             margin-bottom: 0.875rem;
         }
-    
+
         &__input {
             padding-left: 1.8125rem;
             text-align: left;
             margin-bottom: 0.9375rem;
         }
-    
+
         &__submit-btn {
             margin-bottom: 0.9375rem;
         }
-    
+
         &__agreement {
+            margin-left: 0.5rem;
             &-text {
                 width: unset;
             }
