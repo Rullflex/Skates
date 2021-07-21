@@ -3307,6 +3307,10 @@
 @media (min-width: map-get($grid-breakpoints, md)) {
 }
 
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  
+}
+
 .s14 {
     @include bg(#edeef0);
 
