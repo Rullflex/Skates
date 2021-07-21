@@ -62,7 +62,7 @@ block content
 									.s20__prices-table-cell(class=`${cellIdx === 0 ? 's20__prices-table-cell--first' : 's20__prices-table-cell--last'}`)= cell
 							
 	section.s21
-		.s12__ctn.container 
+		.s21__ctn.container 
 			h2.s21__title Стоимость занятий
 
 			+tab-switcher([
@@ -72,18 +72,74 @@ block content
 
 				+tab-switcher-item.s21__switcher-item.s21__switcher-item-1
 					.s21__switcher-content 
-						.s21__switcher-content-item
-							.s21__switcher-content-number 1600 ₽
-							.s21__switcher-content-times 1 занятие 60 минут 
-						.s21__switcher-content-item
-							.s21__switcher-content-number 8600 ₽
-							.s21__switcher-content-times Абонемет 6 занятий
+						.s21__switcher-image 	
+							+picture-min(jpg, 's17-i1')
+
+						.s21__switcher-descr
+							.s21__switcher-descr-title Индивидуальные занятия с инструктором для детей и взрослых
+							.s21__switcher-descr-text Идеально подойдут для любителей свободного графика и особенной программы. Совместно с тренером ученик может составить супер график тренировок и не зависеть от внешних обстоятельств. А также занятия рекомендованы для детей до 4 лет.
+
+						.s21__switcher-bottom-section
+							.s21__switcher-timing
+								.s21__switcher-timing-title Записаться можно на #[br.d-md-none]любое #[br.d-none.d-md-inline.d-lg-none]время:
+								.s21__switcher-timing-time Будние c 10-22 #[br]Выходные дни c 9-22
+
+							.s21__switcher-cost-block
+								.s21__switcher-cost-title Стоимость:
+								.s21__switcher-cost-price 1 700₽/час
 
 					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
 
 				+tab-switcher-item.s21__switcher-item.s21__switcher-item-2
+					.s21__switcher-content 
+						.s21__switcher-image 	
+							+picture-min(jpg, 's17-i1')
+
+						.s21__switcher-descr
+							.s21__switcher-descr-title Групповые занятия 
+							.s21__switcher-descr-text Подходят для детей и взрослых, которые хотят заниматься в компании единомышленников по фиксированному расписанию. Все группы деляться по возрасту и уровню катания, что помогает достигать высоких результатов в изучении навыков.
+
+						.s21__switcher-bottom-section
+							.s21__switcher-timing
+								.s21__switcher-timing-title Записаться можно на #[br.d-md-none]любое #[br.d-none.d-md-inline.d-lg-none]время:
+								.s21__switcher-timing-time Будние c 10-22 #[br]Выходные дни c 9-22
+
+							.s21__switcher-cost-block
+								.s21__switcher-cost-title Стоимость:
+								.s21__switcher-cost-price 1 700₽/час
 
 					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+
+			-
+				const s21_table_content = [
+					[
+						'<span class="d-md-none">Кат.</span><span class="d-none d-md-inline">Категория</span> <br/>инструктора',
+						'Одно занятие', 
+						'Абонемент на 6 <span class="d-md-none">зан.</span><span class="d-none d-md-inline">занятий</span>',
+					],
+					[
+						'1 кат.', '1 800 ₽', '7 500 ₽',
+					],
+					[
+						'2 кат.', '1 700 ₽', '8 000 ₽',
+					],
+					[
+						'3 кат.', '1 600 ₽', '8 100 ₽',
+					],
+					[
+						'Роман Гордин', '5 000 ₽', '25 000 ₽',
+					],
+					
+				]
+
+			.s21__table
+				each row, rowIdx in s21_table_content
+					.s21__table-row(class=`${rowIdx === 0 ? 's21__table-row--first' : ''}`)
+
+						each cell, cellIdx in row
+							.s21__table-cell: span!= cell
+
+			.s21__table-subdesrc Доплата за каждого последующего: 700 ₽. Продолжительность занятия – 55 минут.
 
 
 	+s10-form-lead
