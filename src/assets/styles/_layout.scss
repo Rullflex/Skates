@@ -1528,16 +1528,18 @@
             }
 
             &-item {
-                width: 22.125rem;
+                width: 22.825rem;
                 padding-right: 0;
-                margin-bottom: 3.9375rem;
+                margin-bottom: 3.1375rem;
                 &-play {
+                    width: 3.75rem;
                     top: 46%;
                 }
             }
 
             &-item-image {
                 height: 28.125rem;
+                margin-bottom: 1.4875rem;
             }
         }
     }
@@ -1998,7 +2000,7 @@
             position: relative;
 
             &--important {
-                padding: 2.3rem 0.85rem 3.0375rem 2.3rem;
+                padding: 2.3rem 2.05rem 3.0375rem 2.3rem;
                 color: #ffffff;
                 background: $primary;
             }
@@ -2242,7 +2244,7 @@
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s8 {
         &__ctn {
-            padding-top: 7.8rem;
+            padding-top: 7.5rem;
             padding-bottom: 5.2rem;
         }
 
@@ -2319,7 +2321,7 @@
 
         &__btn {
             width: 418px;
-            margin: 54px auto 0;
+            margin: 47px auto 0;
         }
     }
 }
@@ -2498,11 +2500,9 @@
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s9 {
-        @include bg(#edeef0);
-
         &__ctn {
             padding-top: 5.4125rem;
-            padding-bottom: 3.0625rem;
+            padding-bottom: 5.1625rem;
         }
 
         &__title {
@@ -3472,6 +3472,117 @@
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
+}
+
+.s20 {
+    &__ctn {
+        padding-top: 2.175rem;
+        padding-bottom: 3.125rem;
+    }
+
+    &__title {
+        margin-bottom: 0.5625rem;
+    }
+
+    &__subtitle {
+        font-family: $font-family-headings;
+        font-weight: 500;
+        line-height: 1.25;
+        color: #7a7a7a;
+        margin-bottom: 28.9rem;
+    }
+
+    &__img-dancing {
+        position: absolute;
+        width: 38rem;
+        top: 6.75rem;
+        left: -9.5rem;
+        z-index: -2;
+    }
+
+    &__prices-block {
+    }
+
+    &__prices-head {
+        margin-bottom: 5.5rem;
+
+        &-left-part {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        &-right-part {
+            font-family: $font-family-headings;
+            font-weight: 300;
+            line-height: 1.16;
+        }
+
+        &-days {
+            width: 6.0625rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: $primary;
+            border-radius: 0.3125rem;
+
+            font-family: $font-family-headings;
+            line-height: 2.9375rem;
+            color: #ffffff;
+
+            margin-right: 1.4375rem;
+        }
+
+        &-cost {
+            font-family: $font-family-headings;
+            font-weight: 600;
+            font-size: 2.0625rem;
+            color: #ffba0c;
+        }
+    }
+
+    &__prices-body {
+    }
+
+    &__prices-body-title {
+        font-family: $font-family-headings;
+        font-weight: 600;
+        font-size: 1.5625rem;
+        line-height: 1.16;
+
+        margin-bottom: 1.4rem;
+    }
+
+    &__prices-table {
+    }
+
+    &__prices-table-row {
+        display: flex;
+        border-bottom: 0.031rem solid #cfcfcf;
+
+        color: #595959;
+
+        &--last {
+            border: unset;
+            color: #919191;
+        }
+    }
+
+    &__prices-table-cell {
+        font-size: 0.9375rem;
+        line-height: 3.4rem;
+
+        &--first {
+            width: 14.125rem;
+            border-right: 0.031rem solid #cfcfcf;
+        }
+
+        &--last {
+            padding-left: 0.5625rem;
+            width: 3.5rem;
+        }
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
