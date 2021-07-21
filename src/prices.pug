@@ -1,0 +1,93 @@
+extends modules/layout/_layout
+
+prepend head
+	title Цены
+	meta(name="description", content="Цены")
+
+block content
+	section.s20
+		.s20__ctn.container 
+			h2.s20__title Посещение роллердрома
+			p.s20__subtitle Самостоятельно. Доступно для учеников школы*
+
+			+picture-min(jpg, 's20-dancing').s20__img-dancing
+
+			.s20__prices-block 
+				.s20__prices-head
+					.s20__prices-head-left-part
+						.s20__prices-head-days ПН–ВС
+						.s20__prices-head-cost 400 ₽
+					.s20__prices-head-right-part *Ученики роллер-школы в день #[br]занятия вход не оплачивают
+
+				.s20__prices-body
+					.s20__prices-body-title Прокат
+
+					-
+						const s20_table_content = [
+							[
+								'Ролики*',
+								'250 ₽',
+							],
+							[
+								'Лонгборд, скейтборд',
+								'250 ₽',
+							],
+							[
+								'Беговел',
+								'250 ₽',
+							],
+							[
+								'Защита (кисти, локти колени)',
+								'100 ₽',
+							],
+							[
+								'Отдельный элемент защиты',
+								'50 ₽',
+							],
+							[
+								'Шлем',
+								'50 ₽',
+							],
+							[
+								'*25-46 размеры',
+								'',
+							],
+						]
+
+					.s20__prices-table
+						each row, rowIdx in s20_table_content
+							.s20__prices-table-row(class=`${rowIdx === s20_table_content.length - 1 ? 's20__prices-table-row--last' : ''}`)
+
+								each cell, cellIdx in row
+									.s20__prices-table-cell(class=`${cellIdx === 0 ? 's20__prices-table-cell--first' : 's20__prices-table-cell--last'}`)= cell
+							
+	section.s21
+		.s12__ctn.container 
+			h2.s21__title Стоимость занятий
+
+			+tab-switcher([
+					'Индивидуальные',
+					'Групповые',
+				], 'Выберите тип занятия').s21__switcher
+
+				+tab-switcher-item.s21__switcher-item.s21__switcher-item-1
+					.s21__switcher-content 
+						.s21__switcher-content-item
+							.s21__switcher-content-number 1600 ₽
+							.s21__switcher-content-times 1 занятие 60 минут 
+						.s21__switcher-content-item
+							.s21__switcher-content-number 8600 ₽
+							.s21__switcher-content-times Абонемет 6 занятий
+
+					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+
+				+tab-switcher-item.s21__switcher-item.s21__switcher-item-2
+
+					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+
+
+	+s10-form-lead
+
+	+s11-map
+
+	+s12-faq
