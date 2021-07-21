@@ -2330,8 +2330,8 @@
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s8 {
         &__ctn {
-            padding-top: 7.5rem;
-            padding-bottom: 5.2rem;
+            padding-top: 7.8rem;
+            padding-bottom: 5.4rem;
         }
 
         &__title {
@@ -2340,7 +2340,7 @@
 
         &__subtitle {
             font-family: $font-family-headings;
-            margin-bottom: 0.8rem;
+            margin-bottom: 5.6rem;
             font-size: 1.25rem;
             text-align: center;
         }
@@ -2348,6 +2348,7 @@
         &__slider {
             &-nav {
                 margin: 0 auto 3.225rem;
+                display: none;
             }
 
             &-container {
@@ -2995,7 +2996,7 @@
 
         &__location-map-wrap {
             position: absolute;
-            width: 26.0625rem;
+            width: 50.4125rem;
             transform: unset;
             left: unset;
             right: -1.25rem;
@@ -3091,9 +3092,159 @@
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
+    .s12 {
+        &__ctn {
+            padding-top: 6.3625rem;
+            padding-bottom: 5.225rem;
+        }
+
+        &__title {
+            font-size: 2.4375rem;
+            margin-bottom: 2.5125rem;
+        }
+
+        &__accordion {
+            &-item {
+                margin-top: 0 !important;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.625rem;
+                }
+
+                &.uk-open {
+                    .s12__accordion-icon-close {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            &-title {
+                padding: 1.9375rem 1.0625rem 1.35rem 2.625rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background: #fafafa;
+                border: 1px solid #d7d7d7;
+                border-radius: 0.375rem;
+
+                color: $primary;
+                font-family: $font-family-headings;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+
+                z-index: 2;
+                position: relative;
+
+                &:focus,
+                &:hover {
+                    color: link-hover($primary);
+                }
+            }
+
+            &-icon-close {
+                flex-shrink: 0;
+                width: 2.1875rem;
+                margin-left: 0.625rem;
+                transition: $transition--fast;
+            }
+
+            &-content {
+                padding: 2.35rem 1.0625rem 2.475rem 2.6875rem;
+
+                background: #ffffff;
+                border: 1px solid #d7d7d7;
+                border-top: unset;
+                border-radius: 0.375rem;
+
+                font-family: 'PTSans';
+                font-size: 1.125rem;
+                line-height: 1.3;
+
+                margin-top: -0.5rem;
+            }
+        }
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
+    .s12 {
+        &__ctn {
+            padding-top: 6.3625rem;
+            padding-bottom: 5rem;
+        }
+
+        &__title {
+            font-size: 2.4375rem;
+            margin-bottom: 2.5125rem;
+        }
+
+        &__accordion {
+            max-width: 60.0625rem;
+            margin: 0 auto;
+            &-item {
+                margin-top: 0 !important;
+
+                &:not(:last-child) {
+                    margin-bottom: 0.625rem;
+                }
+
+                &.uk-open {
+                    .s12__accordion-icon-close {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            &-title {
+                padding: 1.9375rem 1.2625rem 1.35rem 2.625rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                background: #fafafa;
+                border: 1px solid #d7d7d7;
+                border-radius: 0.375rem;
+
+                color: $primary;
+                font-family: $font-family-headings;
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+
+                z-index: 2;
+                position: relative;
+
+                &:focus,
+                &:hover {
+                    color: link-hover($primary);
+                }
+            }
+
+            &-icon-close {
+                flex-shrink: 0;
+                width: 2.1875rem;
+                margin-left: 0.625rem;
+                transition: $transition--fast;
+            }
+
+            &-content {
+                padding: 2.55rem 3.0625rem 1.175rem 2.3875rem;
+
+                background: #ffffff;
+                border: 1px solid #d7d7d7;
+                border-top: unset;
+                border-radius: 0.375rem;
+
+                font-family: 'OpenSans';
+                font-size: 1.1875rem;
+                line-height: 1.5;
+
+                margin-top: -0.5rem;
+            }
+        }
+    }
 }
 
 .s13 {
