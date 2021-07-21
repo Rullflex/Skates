@@ -1108,35 +1108,121 @@
 
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .s4 {
+        &__ctn{
+          padding-bottom: 6.55rem;
+        }
+        &__triangle{
+          left: unset;
+          right: -7rem;
+          top: 19.8rem;
+        }
         &__title {
             margin-bottom: 3.3625rem;
         }
         &__numbers-block {
             height: 30rem;
+            border: none;
 
             &-item {
                 border: 1px solid #d7d7d7;
+                &:not(:last-child){
+                  border-bottom: 1px solid #d7d7d7;
+                }
                 &-1 {
-                    width: 36.625rem;
+                    // width: 36.625rem;
+                    // height: 17.625rem;
+                    max-width: 36.625rem;
                     height: 17.625rem;
+                    .s4__numbers-block-list{
+                      margin-left: 14.5rem;
+                      margin-top: -8rem;
+                    }
+                    .s4__numbers-block-number{
+                      margin-top: 1.2rem;
+                      margin-left: 3.8rem;
+                    }
+                    .s4__numbers-block-value{
+                      position: static;
+                      margin-left: 3.3rem;
+                    }
                 }
                 &-2 {
-                    width: 36.625rem;
+                    // width: 36.625rem;
+                    max-width: 36.625rem;
+                    height: 12.3125rem;
+                    order: 4;
+                    border-top: none;
+                    border-right: none;
+                    .s4__numbers-block-text{
+                      margin-top: -0.7rem;
+                      margin-left: 3.3rem;
+                    }
+                    .s4__numbers-block-number{
+                      margin-top: 0.9rem;
+                      margin-left: 3.2rem;
+                      font-size: 5.8875rem;
+                    }
                 }
                 &-3 {
-                    width: 35.875rem;
+                    // width: 35.875rem;
+                    max-width: 35.75rem;
+                    height: 12.3125rem;
+                    order: 5;
+                    border-top: none;
+                    .s4__numbers-block-text{
+                      margin-top: -0.4rem;
+                      margin-left: 4.7rem;
+
+                      width: 100%;
+                    }
+                    .s4__numbers-block-number{
+                      margin-top: 0.8rem;
+                      margin-left: 3.9rem;
+                      font-size: 5.7875rem;
+                    }
                 }
                 &-4 {
-                    width: 18.25rem;
+                    display: block;
+
+                    max-width: 18.125rem;
                     height: 17.625rem;
+
+                    order: 3;
+                    .s4__numbers-block-text{
+                      margin-top: 0;
+                      margin-left: 2rem;
+                    }
+                    .s4__numbers-block-number{
+                      margin-top: 0.9rem;
+                      margin-left: 2.2rem;
+                    }
                 }
                 &-5 {
-                    width: 17.625rem;
+                    // width: 17.625rem;
+                    // height: 17.625rem;
+                    max-width: 17.625rem;
                     height: 17.625rem;
+                    display: block;
+                    order: 2;
+                    border-right: none;
+                    border-left: none;
+                    .s4__numbers-block-text{
+                      position: static;
+                      margin-left: 3.1rem;
+                      margin-top: -0.6rem;
+                    }
+                    .s4__numbers-block-number{
+                      margin-top: 0.9rem;
+                      margin-left: 2.9rem;
+                    }
                 }
             }
             &-number {
                 font-size: 7.1875rem;
+                position: static;
+            }
+            &-text{
+              position: static;
             }
         }
 
@@ -2617,6 +2703,25 @@
     }
 }
 
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .s10 {
+        &__ctn {
+            padding-top: 6.45rem;
+            padding-bottom: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+        &__form{
+          margin-left: 41.5rem;
+        }
+        &__img-group {
+            width: 62.7375rem;
+            left: 15.275rem;
+            top: 7.2rem;
+        }
+    }
+}
+
 .s11 {
     &__ctn {
         padding-top: 3.525rem;
@@ -2817,6 +2922,97 @@
     }
 }
 
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .s11 {
+        &__ctn {
+            padding-top: 5.125rem;
+            padding-bottom: 1.25rem;
+        }
+
+        &__title {
+            text-align: left;
+            margin-bottom: 1.2rem;
+        }
+
+        &__advans-block {
+            display: flex;
+            justify-content: flex-start;
+            padding-right: 2.675rem;
+            margin-bottom: 3rem;
+        }
+
+        &__advans-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            &:last-child{
+              margin-left: 3.8rem;
+            }
+
+            svg {
+                width: 3.125rem;
+                margin-right: 1.4375rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__work-time {
+            font-size: 1.25rem;
+            line-height: 1.35;
+            margin-bottom: 2.8rem;
+        }
+
+        &__choose-location-text {
+            display: none;
+        }
+
+        &__location {
+        }
+
+        &__location-nav {
+            margin-bottom: 2.5rem;
+        }
+
+        &__location-nav-item {
+            padding: 1.3rem 0 0 2rem;
+            width: 19.5rem;
+
+            &.active {
+            }
+
+            &-metro {
+            }
+
+            &-adress {
+            }
+
+            &-phone {
+            }
+        }
+
+        &__location-map-wrap {
+            position: absolute;
+            width: 26.0625rem;
+            transform: unset;
+            left: unset;
+            right: -1.25rem;
+            top: 16.2rem;
+        }
+
+        &__location-map {
+            height: 30.8125rem;
+            @include center-item-x('relative');
+        }
+
+        &__location-map-panel {
+            height: 2.0625rem;
+        }
+    }
+}
+
 .s12 {
     &__ctn {
         padding-top: 1.8625rem;
@@ -2895,6 +3091,10 @@
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  
 }
 
 .s13 {
