@@ -110,3 +110,257 @@
         }
     }
 }
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+  .footer {
+    @include bg(#4e4d66);
+
+    &__ctn {
+        padding-top: 1.6875rem;
+        padding-bottom: 3.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__links-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 3.125rem;
+        width: 15rem;
+        order: 2;
+    }
+
+    &__list-item {
+    }
+
+    &__link {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #ffffff;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                filter: drop-shadow(0 0 5px white);
+            }
+        }
+    }
+
+    &__contacts-block {
+        margin-top: 1.225rem;
+        margin-bottom: 0.8125rem;
+        order: 5;
+    }
+
+    &__phone {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        color: #ffba0c;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                color: link-hover(#ffba0c);
+            }
+        }
+    }
+
+    &__times {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #9291b7;
+    }
+
+    &__socials {
+        display: flex;
+        margin-bottom: 0;
+        order: 3;
+    }
+
+    &__social-item {
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 1.25rem;
+        }
+        svg {
+            color: white;
+            width: 2.5rem;
+            transition: $transition--hover;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    filter: drop-shadow(0 0 5px white);
+                }
+            }
+        }
+    }
+
+    &__logo{
+      order: 1;
+    }
+    &__logo svg {
+        color: white;
+        width: 10.8125rem;
+        transition: $transition--hover;
+
+        &:hover {
+            filter: drop-shadow(0 0 5px white);
+        }
+    }
+
+    &__creds-block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        order: 4;
+    }
+
+    &__policy-link,
+    &__handling-link {
+        font-family: 'PTSans';
+        font-size: 0.8125rem;
+        line-height: 1.35;
+        text-decoration-line: underline;
+        color: #9291b7;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                color: link-hover(#9291b7);
+            }
+        }
+    }
+}
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  .footer {
+    @include bg(#4e4d66);
+
+    &__ctn {
+        padding-top: 2.55rem;
+        padding-bottom: 3.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__links-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 3.125rem;
+        width: 15rem;
+        order: 4;
+    }
+
+    &__list-item {
+    }
+
+    &__link {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #ffffff;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                filter: drop-shadow(0 0 5px white);
+            }
+        }
+    }
+
+    &__contacts-block {
+        margin-top: 0.125rem;
+        margin-bottom: 0;
+        order: 5;
+    }
+
+    &__phone {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        color: #ffba0c;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                color: link-hover(#ffba0c);
+            }
+        }
+    }
+
+    &__times {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #9291b7;
+    }
+
+    &__socials {
+        display: flex;
+        margin-bottom: 0;
+        order: 2;
+        margin-top: 0.9rem;
+    }
+
+    &__social-item {
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 0.625rem;
+        }
+        svg {
+            color: white;
+            width: 2rem;
+            transition: $transition--hover;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    filter: drop-shadow(0 0 5px white);
+                }
+            }
+        }
+    }
+
+    &__logo{
+      order: 1;
+    }
+    &__logo svg {
+        color: white;
+        width: 10.8125rem;
+        transition: $transition--hover;
+
+        &:hover {
+            filter: drop-shadow(0 0 5px white);
+        }
+    }
+
+    &__creds-block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.7rem;
+        order: 3;
+        margin-left: -3.1rem;
+    }
+
+    &__policy-link,
+    &__handling-link {
+        font-family: 'PTSans';
+        font-size: 0.8125rem;
+        line-height: 1.35;
+        text-decoration-line: underline;
+        color: #9291b7;
+        transition: $transition--hover;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            &:hover {
+                color: link-hover(#9291b7);
+            }
+        }
+    }
+}
+}
