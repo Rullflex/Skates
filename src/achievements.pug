@@ -1,8 +1,11 @@
 extends modules/layout/_layout
 
 prepend head
-	title Отзывы
-	meta(name="description", content="Отзывы")
+	title Достижения
+	meta(name="description", content="Достижения")
+
+block header 
+	+header(5)
 
 block content
 	+s10-form-lead

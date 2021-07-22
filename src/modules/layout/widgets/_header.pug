@@ -33,17 +33,20 @@
 mixin header-links-list(activeIndex = 0)
     ul.header__links-list 
         li.header__list-item: a.header__list-link(href="/" class=`${activeIndex === 0 ? 'active' : ''}`)
-            +icon('home').header__list-home-icon
+            +icon('home').header__list-home-icon.d-none.d-lg-block
+            span.d-lg-none Главная
         each link, idx in linksList
             li.header__list-item: a.header__list-link(href=link.href class=`${idx === activeIndex - 1 ? 'active' : ''}`)= link.label
 
 
-mixin header-menu 
+mixin header-menu(activeIndex = 0)
     .menu&attributes(attributes)
         a.menu-icon(href="#") #[i]#[i]#[i]#[i]
         .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
             .container
                 button.menu__btn.btn-solid-white Записаться на занятие
+
+                +header-links-list(activeIndex)
 
 mixin header-logo
     a(href="/").header__logo: +icon('logo')
@@ -58,7 +61,7 @@ mixin header(activeIndex = 0)
 
                 button.btn-solid-primary.header__btn Записаться
 
-                +header-menu.header__menu 
+                +header-menu(activeIndex).header__menu 
 
             //- MD
             .header__row.d-none.d-md-block
@@ -68,7 +71,7 @@ mixin header(activeIndex = 0)
                         .header__vert-divider
                         .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
 
-                    +header-menu.header__menu 
+                    +header-menu(activeIndex).header__menu 
 
 
                 .header__bot-row

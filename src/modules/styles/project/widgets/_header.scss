@@ -30,6 +30,32 @@
         font-size: 0.875rem;
         margin-top: 0.3rem;
     }
+
+    &__links-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 4.5625rem;
+    }
+
+    &__list-item {
+        &:nth-child(1),
+        &:nth-child(4) {
+            width: 5rem;
+        }
+    }
+
+    &__list-link {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #ffffff;
+        transition: $transition--hover;
+    }
+
+    &__links-list {
+        margin: 2.3125rem 0 2.6875rem;
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
