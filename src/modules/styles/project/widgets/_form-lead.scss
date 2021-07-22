@@ -50,25 +50,25 @@
         }
 
         &.active {
-            color: $text-light;
-            border-color: transparent;
+            color: $text-light !important;
+            border-color: transparent !important;
         }
 
         &--mobile {
             &.active {
-                background: linear-gradient(180deg, #c277df 0%, #8a4fa2 100%);
+                background: linear-gradient(180deg, #bf74dd 0%, #8637a6 100%) !important;
             }
         }
 
         &--whatsapp {
             &.active {
-                background: linear-gradient(180deg, #a0e79f 0%, #57bb55 100%);
+                background: linear-gradient(180deg, #2ada72 0%, #119c3f 100%) !important;
             }
         }
 
         &--telegram {
             &.active {
-                background: linear-gradient(180deg, #5ca7ff 0%, #0a85de 100%);
+                background: linear-gradient(180deg, #37aee2 0%, #1e96c8 100%) !important;
             }
         }
     }
@@ -197,5 +197,12 @@
 @media (min-width: map-get($grid-breakpoints, lg)) {
     .form-lead {
         @include center-item-undo;
+
+        &__options-button {
+            &:hover {
+                border-color: #747474;
+                color: #747474;
+            }
+        }
     }
 }

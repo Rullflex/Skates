@@ -12,7 +12,7 @@
             width: 100%;
             display: block;
             background: $primary;
-            transition: $transition--fast;
+            transition: all 100ms $animation-type;
 
             &:not(:nth-child(3)) {
                 margin-bottom: 0.25rem;
@@ -24,7 +24,10 @@
         }
 
         &[aria-expanded='true'] {
+            z-index: 1050;
             i {
+                transition: $transition--fast;
+                background: white;
                 &:nth-child(1) {
                     opacity: 0;
                 }
@@ -44,9 +47,18 @@
     &-drop {
         display: none;
         min-width: 200px;
-        padding: 15px;
-        background: #f8f8f8;
+        padding: 1.25rem 0 2.1875rem;
+        background: $primary;
         color: #666;
         margin: 0;
+        top: 0 !important;
+    }
+
+    &__btn {
+        width: 12.8125rem;
+        line-height: 2.3125rem;
+
+        font-weight: 600;
+        font-size: 0.875rem;
     }
 }

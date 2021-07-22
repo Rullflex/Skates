@@ -50,6 +50,7 @@
             height: 3.1875rem;
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             position: relative;
 
@@ -71,6 +72,11 @@
             &::before {
                 bottom: 0;
             }
+        }
+
+        &__bot-right-block {
+            align-items: center;
+            justify-content: space-between;
         }
 
         &__menu {
@@ -104,9 +110,6 @@
             line-height: 1.21;
         }
 
-        &__btn {
-        }
-
         &__links-list {
             height: 100%;
             display: flex;
@@ -130,6 +133,12 @@
         &__list-home-icon {
             width: 1rem;
             color: $primary;
+        }
+
+        &__btn {
+            width: 12.8125rem;
+            line-height: 2.3125rem;
+            margin-top: 0;
         }
     }
 }

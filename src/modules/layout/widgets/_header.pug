@@ -42,7 +42,8 @@ mixin header-menu
     .menu&attributes(attributes)
         a.menu-icon(href="#") #[i]#[i]#[i]#[i]
         .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
-            block
+            .container
+                button.menu__btn.btn-solid-white Записаться на занятие
 
 mixin header-logo
     a(href="/").header__logo: +icon('logo')
@@ -67,6 +68,11 @@ header.header
                     .header__vert-divider
                     .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
 
+                +header-menu.header__menu 
+
 
             .header__bot-row
                 +header-links-list
+
+                .header__bot-right-block.d-none.d-lg-flex
+                    button.header__btn.btn-solid-primary Записаться на занятие
