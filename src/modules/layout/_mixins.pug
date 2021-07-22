@@ -1,4 +1,5 @@
 //- sections
+include widgets/_header
 include widgets/_s5-hall
 include widgets/_s10-form-lead
 include widgets/_s11-map
@@ -96,6 +97,9 @@ mixin icon(icon, filler = 'currentColor')
 				rect(x='15.4023' y='0.304688' width='4.78111' height='35.0593' fill=filler)
 				rect(x='35.3223' y='15.4434' width='4.78111' height='35.0593' transform='rotate(90 35.3223 15.4434)' fill=filler)
 
+		when 'quotes'
+			svg(viewbox='0 0 67 58' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)
+				path(d='M28.68 0C16.9174 0.871617 0.0092931 2.85203 0 27.145V57.7099H26.2477V25.0077H17.5322C16.9801 16.2756 23.7986 14.0208 31.2134 12.29L28.68 0ZM63.8457 0C52.0831 0.871617 35.1751 2.85209 35.1658 27.145V57.7099H61.4136V25.0077H52.6981C52.1459 16.2756 58.9645 14.0208 66.3793 12.29L63.8457 0Z' fill='#CAEDFF')
 
 		when 'gift'
 			svg(viewbox='0 0 29 30' fill='none' xmlns='http://www.w3.org/2000/svg')&attributes(attributes)

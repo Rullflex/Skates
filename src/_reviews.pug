@@ -4,6 +4,52 @@ prepend head
 	title Отзывы
 	meta(name="description", content="Отзывы")
 
+block header 
+	+header(4)
+
 block content
+	section.s22
+		.s22__ctn.container
+			h2.s22__title #[span.text-primary За 11 лет] мы провели интересные тренировки для #[span.text-primary более 10.000 детей] 
+			p.s22__subtitle Но одно дело – мнение взрослых, и совсем другое – что дети думают на самом деле
+
+			h3.s22__reviews-title Узнайте от них самих, почему они хотят учиться у нас:
+
+			.s22__slider(data-uk-slider)
+				+slider-arrow-nav('02').s22__slider-nav
+
+				.s22__slider-container.uk-slider-container
+
+					ul.s22__slider-items.uk-slider-items 
+						li.s22__slider-item 
+							.s22__slider-item-wrap
+								a(href="#_c2pz2mlSfXA" data-app-video).s22__slider-video 
+									+picture(jpg, `s22-slider-image-1`, 'Sl')
+									.s22__slider-video-play 
+										+icon('play-transparent')
+										p Посмотрите #[br]видео-отзыв ребёнка
+
+								.s22__slider-descr
+									+icon('quotes').s22__slider-descr-quotes
+									p.s22__slider-descr-text Ролики это счастье, ролики это веселье. Когда ты катаешься на роликах, у тебя всегда такое чувство, как будто ты выполняешь движение в танце
+									p.s22__slider-descr-name Халыкова Ясмина, 7 лет
+
+						li.s22__slider-item 
+							.s22__slider-item-wrap
+								a(href="#_c2pz2mlSfXA" data-app-video).s22__slider-video 
+									+picture(jpg, `s22-slider-image-2`, 'Sl')
+									.s22__slider-video-play 
+										+icon('play-transparent')
+										p Посмотрите #[br]видео-отзыв ребёнка
+								
+								.s22__slider-descr
+									+icon('quotes').s22__slider-descr-quotes
+									p.s22__slider-descr-text Ролики для меня это не просто как развлечение, когда я катаюсь на роликах — я отдыхаю, но при этом занимаюсь спортом. Занимаюсь год, получаю от этого большое удовольствие.
+									p.s22__slider-descr-name Лабзовский Максим, 14 лет
+
+
+
+			
+
 	+s10-form-lead
 	+s11-map

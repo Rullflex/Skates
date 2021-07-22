@@ -60,6 +60,7 @@ UIkit.util.ready(function () {
     app.sliderSpy('.s9__slider', (idx) => refreshSliderArrowNav('.s9__slider', idx));
     app.sliderSpy('.s13__slider', (idx) => refreshSliderArrowNav('.s13__slider', idx));
     app.sliderSpy('.s18__slider', (idx) => refreshSliderArrowNav('.s18__slider', idx));
+    app.sliderSpy('.s22__slider', (idx) => refreshSliderArrowNav('.s22__slider', idx));
 
     function refreshSliderArrowNav(slider, index) {
         document.querySelector(`${slider} .slider-arrow-nav__numbers--current`).innerText = `0${index + 1}`;
@@ -82,7 +83,7 @@ UIkit.util.ready(function () {
         });
     });
 
-    // app.mapSpy(`.s11__location-map`);
+    app.mapSpy(`.s11__location-map`);
 
     app.letListClickActive(document.querySelector('.s11__location-nav'), 'active', (el) => {
         document.querySelector(`.s11__location-map iframe`).setAttribute('src', el.dataset.src);
