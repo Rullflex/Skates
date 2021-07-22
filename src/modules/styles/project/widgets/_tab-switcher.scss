@@ -52,14 +52,14 @@
     .tab-switcher {
         &__label {
             text-align: center;
-            margin-bottom: 1.0625rem;
+            margin-bottom: 0.6625rem;
         }
 
         &__tab {
             justify-content: center;
             flex-wrap: wrap;
             align-items: flex-start;
-
+            margin-bottom: 1rem;
             li {
                 margin: 0.3125rem;
 
