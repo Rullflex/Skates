@@ -52,6 +52,24 @@
     }
 }
 
+@mixin btn-solid-white {
+    @include btn;
+
+    background: white;
+    border-radius: 0.4375rem;
+
+    color: $primary;
+
+    &:active,
+    &:focus-visible {
+    }
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        &:hover {
+        }
+    }
+}
+
 @mixin btn-outline-primary {
     @include btn;
 
@@ -122,6 +140,10 @@
 .btn {
     &-solid-primary {
         @include btn-solid-primary;
+    }
+
+    &-solid-white {
+        @include btn-solid-white;
     }
 
     &-outline-primary {

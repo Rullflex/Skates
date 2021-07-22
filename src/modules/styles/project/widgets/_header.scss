@@ -30,6 +30,37 @@
         font-size: 0.875rem;
         margin-top: 0.3rem;
     }
+
+    &__links-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 4.5625rem;
+    }
+
+    &__list-item {
+        &:nth-child(1),
+        &:nth-child(4) {
+            width: 5rem;
+        }
+    }
+
+    &__list-link {
+        font-size: 0.9375rem;
+        line-height: 1.33;
+        color: #ffffff;
+        transition: $transition--hover;
+
+        &.active {
+            pointer-events: none;
+            color: #ffba0c;
+        }
+    }
+
+    &__links-list {
+        margin: 2.3125rem 0 2.6875rem;
+    }
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {
@@ -50,6 +81,7 @@
             height: 3.1875rem;
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             position: relative;
 
@@ -71,6 +103,11 @@
             &::before {
                 bottom: 0;
             }
+        }
+
+        &__bot-right-block {
+            align-items: center;
+            justify-content: space-between;
         }
 
         &__menu {
@@ -104,9 +141,6 @@
             line-height: 1.21;
         }
 
-        &__btn {
-        }
-
         &__links-list {
             height: 100%;
             display: flex;
@@ -119,17 +153,54 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         &__list-link {
             padding: 0.4rem 0.5rem;
             font-size: 0.875rem;
             color: #252525;
+
+            &::after {
+                content: '';
+                display: block;
+                width: calc(100% - 1.7rem);
+                height: 2px;
+                background: $primary;
+                position: absolute;
+                left: 0.85rem;
+                bottom: 0;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.15s cubic-bezier(0.49, 0.44, 0.43, 1);
+                transform-origin: 100% 50%;
+            }
+
+            &:hover {
+                &::after {
+                    transform-origin: 0 50%;
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+
+            &.active {
+                pointer-events: none;
+                color: #252525;
+                &::after {
+                    transform-origin: 0 50%;
+                    transform: scale3d(1, 1, 1);
+                }
+            }
         }
 
         &__list-home-icon {
             width: 1rem;
             color: $primary;
+        }
+
+        &__btn {
+            width: 12.8125rem;
+            line-height: 2.3125rem;
+            margin-top: 0;
         }
     }
 }

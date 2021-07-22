@@ -30,43 +30,62 @@
         },
     ]
 
-mixin header-links-list 
+mixin header-links-list(activeIndex = 0)
     ul.header__links-list 
-        li.header__list-item: a.header__list-link(href="/")
-            +icon('home').header__list-home-icon
+        li.header__list-item: a.header__list-link(href="/" class=`${activeIndex === 0 ? 'active' : ''}`)
+            +icon('home').header__list-home-icon.d-none.d-lg-block
+            span.d-lg-none Главная
         each link, idx in linksList
-            li.header__list-item: a.header__list-link(href=link.href)= link.label
+            li.header__list-item: a.header__list-link(href=link.href class=`${idx === activeIndex - 1 ? 'active' : ''}`)= link.label
 
 
-mixin header-menu 
+mixin header-menu(activeIndex = 0)
     .menu&attributes(attributes)
         a.menu-icon(href="#") #[i]#[i]#[i]#[i]
         .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
-            block
+            .container
+                button.menu__btn.btn-solid-white Записаться на занятие
+
+                +header-links-list(activeIndex)
+
+                
+                .menu__contacts-block 
+                    a.menu__phone(href='tel:+78127483938') 8 812 748 39 38
+                    .menu__times Буд. 10–22 | Вых. 9–22
+
+                .menu__socials 
+                    a.menu__social-item(href=instLink): +icon('inst')
+                    a.menu__social-item(href=vkLink): +icon('vk')
+                    a.menu__social-item(href=ytLink): +icon('yt')
 
 mixin header-logo
     a(href="/").header__logo: +icon('logo')
 
 //- Template
+mixin header(activeIndex = 0)
+    header.header 
+        .container 
+            //- SM
+            .header__row.d-md-none
+                +header-logo
 
-header.header 
-    .container 
-        //- SM
-        .header__row.d-md-none
-            +header-logo
+                button.btn-solid-primary.header__btn Записаться
 
-            button.btn-solid-primary.header__btn Записаться
+                +header-menu(activeIndex).header__menu 
 
-            +header-menu.header__menu 
+            //- MD
+            .header__row.d-none.d-md-block
+                .header__top-row
+                    .header__logo-block
+                        +header-logo
+                        .header__vert-divider
+                        .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
 
-        //- MD
-        .header__row.d-none.d-md-block
-            .header__top-row
-                .header__logo-block
-                    +header-logo
-                    .header__vert-divider
-                    .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
+                    +header-menu(activeIndex).header__menu 
 
 
-            .header__bot-row
-                +header-links-list
+                .header__bot-row
+                    +header-links-list(activeIndex)
+
+                    .header__bot-right-block.d-none.d-lg-flex
+                        button.header__btn.btn-solid-primary Записаться на занятие

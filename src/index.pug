@@ -4,6 +4,9 @@ prepend head
 	title Title your page
 	meta(name="description", content="Описание страницы")
 
+block header 
+	+header(0)
+
 block content
 	section.s1 
 		.container.s1__ctn 
@@ -14,9 +17,9 @@ block content
 			+icon('triangle-logo', '#FFDC85').s1__triangle-logo.s1__triangle-logo-2
 			+icon('triangle-logo', '#E3B8F4').s1__triangle-logo.s1__triangle-logo-3
 
-			+picture(png, 's1-vidos').s1__vidos.d-none.d-lg-block
 			.s1__vidos-text.d-none.d-lg-block Посмотрите короткое#[br] видео о нас
 			a(href="#_c2pz2mlSfXA" data-app-video).s1__vidos--clickable.d-none.d-lg-block
+			+picture(png, 's1-vidos').s1__vidos.d-none.d-lg-block
 
 			.s1__bicycle
 				+icon('triangle', '#D1F0FF').s1__bicycle-triangle
@@ -215,6 +218,9 @@ block content
 			+picture(svg, 's7-skater-2').s7__image-2
 			+picture(svg, 's7-skater-3').s7__image-3
 			+picture(svg, 's7-trophy').s7__image-4
+
+			+picture(svg, 's7-path', 'Sml').s7__image-path
+
 			.s7__item.s7__item-1
 				.s7__item-title Новичек
 				.s7__item-block
