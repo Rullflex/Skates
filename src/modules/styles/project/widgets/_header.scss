@@ -51,6 +51,11 @@
         line-height: 1.33;
         color: #ffffff;
         transition: $transition--hover;
+
+        &.active {
+            pointer-events: none;
+            color: #ffba0c;
+        }
     }
 
     &__links-list {
@@ -179,6 +184,7 @@
 
             &.active {
                 pointer-events: none;
+                color: #252525;
                 &::after {
                     transform-origin: 0 50%;
                     transform: scale3d(1, 1, 1);

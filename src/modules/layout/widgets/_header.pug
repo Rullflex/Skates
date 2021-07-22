@@ -48,6 +48,16 @@ mixin header-menu(activeIndex = 0)
 
                 +header-links-list(activeIndex)
 
+                
+                .menu__contacts-block 
+                    a.menu__phone(href='tel:+78127483938') 8 812 748 39 38
+                    .menu__times Буд. 10–22 | Вых. 9–22
+
+                .menu__socials 
+                    a.menu__social-item(href=instLink): +icon('inst')
+                    a.menu__social-item(href=vkLink): +icon('vk')
+                    a.menu__social-item(href=ytLink): +icon('yt')
+
 mixin header-logo
     a(href="/").header__logo: +icon('logo')
 
