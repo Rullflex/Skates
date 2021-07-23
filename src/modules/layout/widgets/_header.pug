@@ -30,7 +30,7 @@
         },
     ]
 
-mixin header-links-list(activeIndex = 0)
+mixin header-links-list(activeIndex)
     ul.header__links-list 
         li.header__list-item: a.header__list-link(href="/" class=`${activeIndex === 0 ? 'active' : ''}`)
             +icon('home').header__list-home-icon.d-none.d-lg-block
@@ -39,7 +39,7 @@ mixin header-links-list(activeIndex = 0)
             li.header__list-item: a.header__list-link(href=link.href class=`${idx === activeIndex - 1 ? 'active' : ''}`)= link.label
 
 
-mixin header-menu(activeIndex = 0)
+mixin header-menu(activeIndex)
     .menu&attributes(attributes)
         a.menu-icon(href="#") #[i]#[i]#[i]#[i]
         .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
@@ -62,7 +62,7 @@ mixin header-logo
     a(href="/").header__logo: +icon('logo')
 
 //- Template
-mixin header(activeIndex = 0)
+mixin header(activeIndex)
     header.header 
         .container 
             //- SM

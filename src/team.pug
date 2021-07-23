@@ -1,12 +1,13 @@
 extends modules/layout/_layout
 
 prepend head
-	title Услуги
-	meta(name="description", content="Услуги")
+	title Наша команда
+	meta(name="description", content="Наша команда")
 
 block header 
-	+header(3)
+	+header
 
 block content
+	+s8-mentors
 	+s10-form-lead
 	+s11-map
