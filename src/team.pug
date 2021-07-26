@@ -2,12 +2,59 @@ extends modules/layout/_layout
 
 prepend head
 	title Наша команда
-	meta(name="description", content="Наша команда")
+	meta(name="description" content="Наша команда")
 
 block header 
 	+header
 
 block content
-	+s8-mentors
+	+s8-mentors({ hideBtn: true })
+
+	section.s24 
+		.s24__ctn.container 
+			h2.s24__title Наши #[br.d-md-none]инструкторы
+
+			.s24__instructors-block
+				-
+					const s24_items = [
+						{ title: 'Алёна Ефимова', descr: 'Базовые навыки<br/>Обучение детей<br/>Слайды' },
+						{ title: 'Андрей Телегин', descr: 'Базовые навыки<br/>Обучение детей<br/>Слайды' },
+						{ title: 'Роман Ростовцев', descr: 'Базовые навыки<br/>Обучение детей<br/>Слалом' },
+						{ title: 'Никита Тюрин', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Зоя Волкова', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Алексей Шмонов', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Анна Сандарова', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Виталий Федюнин', descr: 'Базовые навыки<br/>Обучение детей<br/>Слалом' },
+						{ title: 'Владимир Докучаев', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Владислав Кузьмин', descr: 'Скейт' },
+						{ title: 'Дарья Крамская', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Евгений Тихонов', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Евгения Зубова ', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Елена Сычева', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Мария Чеботарь', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Никита Артамкин', descr: 'Базовые навыки<br/>Обучение детей<br/>Слалом' },
+						{ title: 'Никита Плотников', descr: 'Скейт' },
+						{ title: 'Нина Полевина', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Олег Атонов', descr: 'Базовые навыки<br/>Обучение детей<br/>Слалом' },
+						{ title: 'Филипп Петров', descr: 'Скейт' },
+						{ title: 'Павел Степанов', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Полина Федулова', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Роман Богрец', descr: 'Базовые навыки<br/>Фрискейтинг' },
+						{ title: 'Сергей Комаров', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Сергей Пантелеев', descr: 'Базовые навыки<br/>Обучение детей' },
+						{ title: 'Юля Игнатьева', descr: 'Базовые навыки<br/>Обучение детей' },
+					]
+
+				each item, idx in s24_items
+					- const { title, descr } = item
+
+					.s24__instructors-item
+						.s24__instructors-item-image
+							+picture(jpg, `s24-i${idx + 1}`)
+						.s24__instructors-item-title!= title
+						.s24__instructors-item-descr!= descr
+
+			button.s24__btn.btn-outline-dark Показать больше инструкторов
+
 	+s10-form-lead
 	+s11-map

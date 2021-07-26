@@ -76,7 +76,7 @@
     border: 1px solid $primary;
     border-radius: 0.4375rem;
 
-    color: #000000;
+    color: $primary;
 
     &:active,
     &:focus-visible {

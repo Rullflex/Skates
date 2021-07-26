@@ -2,7 +2,7 @@ extends modules/layout/_layout
 
 prepend head
 	title Услуги
-	meta(name="description", content="Услуги")
+	meta(name="description" content="Услуги")
 
 block header 
 	+header(1)
@@ -36,47 +36,51 @@ block content
 		.s14__ctn.container
 			h2.s14__title Занимайтесь в удобном Вам режиме
 
-			+tab-switcher([
-					'Индивидуальные',
-					'Групповые',
-					'Профессиональные',
-				], 'Выберите тип занятия').s14__switcher
+			+tab-switcher({
+				labelSet: [ 'Индивидуальные', 'Групповые', 'Профессиональные' ], 
+				label: 'Выберите тип занятия'
+			}).s14__switcher
 				+tab-switcher-item.s14__switcher-item.s14__switcher-item-1
 					.s14__switcher-image-block
 						+picture-min(jpg, 's14-i1')
+					div
+						.s14__switcher-title Индивидуальные занятия с инструктором для детей и взрослых.
+						.s14__switcher-discount-block
+							.s14__switcher-discount-num -50% 
+							.s14__switcher-discount-text на первое #[br]занятие
 
-					.s14__switcher-title Индивидуальные занятия с инструктором для детей и взрослых.
-					.s14__switcher-discount-block
-						.s14__switcher-discount-num -50% 
-						.s14__switcher-discount-text на первое #[br]занятие
-
-					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+						.s14__switcher-btn-wrap
+							+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+							.s14__switcher-btn-descr Записаться можно на любое время в будни с 10 до 22 и в выходные с 9 до 22 по МСК
 
 				+tab-switcher-item.s14__switcher-item.s14__switcher-item-2
 					.s14__switcher-image-block
 						+picture-min(jpg, 's14-i2')
+					div
+						.s14__switcher-title Групповые занятия для детей и взрослых (от 3 человек)
 
-					.s14__switcher-title Групповые занятия для детей и взрослых (от 3 человек)
+						ul.s14__switcher-list
+							li.s14__switcher-list-item группы с комфортным разделением #[br.d-none.d-md-inline]по возрасту и уровню
+							li.s14__switcher-list-item интересные задания
+							li.s14__switcher-list-item много общения
 
-					ul.s14__switcher-list
-						li.s14__switcher-list-item группы с комфортным разделением по возрасту и уровню
-						li.s14__switcher-list-item интересные задания
-						li.s14__switcher-list-item много общения
-					
-					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+						.s14__switcher-btn-wrap
+							+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+							.s14__switcher-btn-descr Записаться можно на любое время в будни с 10 до 22 и в выходные с 9 до 22 по МСК
 
 				+tab-switcher-item.s14__switcher-item.s14__switcher-item-3
 					.s14__switcher-image-block
 						+picture-min(jpg, 's14-i3')
+					div
+						.s14__switcher-title Занятия с тренерами мирового уровня 
 
-					.s14__switcher-title Занятия с тренерами мирового уровня 
-				
-					ul.s14__switcher-list
-						li.s14__switcher-list-item быстрый прогресс
-						li.s14__switcher-list-item подготовка к соревнованиям
-						li.s14__switcher-list-item много общения
+						ul.s14__switcher-list
+							li.s14__switcher-list-item быстрый прогресс
+							li.s14__switcher-list-item подготовка к соревнованиям
 
-					+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]профессиональное занятие
+						.s14__switcher-btn-wrap
+							+btn-yellow.s14__switcher-btn: span Запишитесь на #[br.d-lg-none]профессиональное занятие
+							.s14__switcher-btn-descr Записаться можно на любое время в будни с 10 до 22 и в выходные с 9 до 22 по МСК
 
 	section.s15 
 		.s15__ctn.container 
@@ -89,25 +93,36 @@ block content
 
 			h2.s15__title Вы можете заниматься по абонементу или брать разовые занятия
 
-			+tab-switcher([
-					'Индивидуальные',
-					'Групповые',
-				], 'Выберите тип занятия').s15__switcher
+			+picture(png, 's15-ticket').d-none.d-md-block.s15__image-ticket
+
+			+tab-switcher({
+				labelSet: [ 'Индивидуальные', 'Групповые' ], 
+				label: 'Выберите тип занятия',
+				icons: [ 'man', 'men' ],
+				verticalAligmentMD: true,
+				hideLabelMd: true,
+			}).s15__switcher
 				+tab-switcher-item.s15__switcher-item.s15__switcher-item-1
 					.s15__switcher-content 
 						.s15__switcher-content-item
-							.s15__switcher-content-number 1600 ₽
+							.s15__switcher-content-number 1700 ₽
 							.s15__switcher-content-times 1 занятие 60 минут 
 						.s15__switcher-content-item
 							.s15__switcher-content-number 8600 ₽
 							.s15__switcher-content-times Абонемет 6 занятий
 
-					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-md-none]индивидуальное занятие
 
 				+tab-switcher-item.s15__switcher-item.s15__switcher-item-2
-					
+					.s15__switcher-content 
+						.s15__switcher-content-item
+							.s15__switcher-content-number 1700 ₽
+							.s15__switcher-content-times 1 занятие 60 минут 
+						.s15__switcher-content-item
+							.s15__switcher-content-number 8600 ₽
+							.s15__switcher-content-times Абонемет 6 занятий
 
-					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+					+btn-yellow.s15__switcher-btn: span Запишитесь на #[br.d-md-none]групповое занятие
 
 	section.s16 
 		.s16__ctn.container 
@@ -134,20 +149,22 @@ block content
 	+s5-hall(style="background: #EDEEF0")
 
 	+s10-form-lead
-	
+
 	section.s17 
 		.s17__ctn.container 
 			h2.s17__title Дополнительные услуги
 
-			+tab-switcher([
+			+tab-switcher({
+				labelSet: [
 					'Детские дни рождения',
 					'Городской детский лагерь',
 					'Бесплатные занятия',
 					'Скейт и лонгборд',
 					'Беговелы',
 					'Профессиональный спорт',
-				], 'Выберите тип услуги:').s17__switcher
-
+				], 
+				label: 'Выберите тип услуги:',
+			}).s17__switcher
 				+tab-switcher-item.s17__switcher-item.s17__switcher-item-1
 					.s17__switcher-descr 
 						.s17__switcher-descr-title «Дни рождения»
@@ -210,9 +227,9 @@ block content
 					.s19__review-name Полина Афанасьева
 					.s19__review-date 1 апр 2021 в 10:11
 					.s19__review-text Дочке 5 лет,всегда ходим на каникулах в скейт таун в лагерь! #[br]Очень довольны! Не смотря на то что дочка ещё сама не может переодеть ролики проблем с этим нет некогда-всегда помогут! и отвлечься ,и поиграть , и конечно потренироваться! Тренеры всегда рядом ,всегда помогут!  #[br]Ребенок счастлив и уходить к концу дня не хочет))))
-						
+
 				+btn-yellow.s19__review-btn: span Забронируйте заранее
 				a.s19__review-link-more(href="#") Посмотреть еще отзывы #[+icon('arrow-right')]
 
 	+s11-map
-	
+

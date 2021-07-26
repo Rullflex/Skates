@@ -2,7 +2,7 @@ extends modules/layout/_layout
 
 prepend head
 	title Цены
-	meta(name="description", content="Цены")
+	meta(name="description" content="Цены")
 
 block header 
 	+header(2)
@@ -63,16 +63,15 @@ block content
 
 								each cell, cellIdx in row
 									.s20__prices-table-cell(class=`${cellIdx === 0 ? 's20__prices-table-cell--first' : 's20__prices-table-cell--last'}`)= cell
-							
+
 	section.s21
 		.s21__ctn.container 
 			h2.s21__title Стоимость занятий
 
-			+tab-switcher([
-					'Индивидуальные',
-					'Групповые',
-				], 'Выберите тип занятия').s21__switcher
-
+			+tab-switcher({
+				labelSet: [ 'Индивидуальные', 'Групповые' ], 
+				label: 'Выберите тип занятия:'
+			}).s21__switcher
 				+tab-switcher-item.s21__switcher-item.s21__switcher-item-1
 					.s21__switcher-content 
 						.s21__switcher-image 	
@@ -132,7 +131,7 @@ block content
 					[
 						'Роман Гордин', '5 000 ₽', '25 000 ₽',
 					],
-					
+
 				]
 
 			.s21__table

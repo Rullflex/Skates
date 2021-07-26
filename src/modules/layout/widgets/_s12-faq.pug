@@ -2,7 +2,8 @@ mixin s12-faq
 	section.s12&attributes(attributes)
 		.s12__ctn.container
 			h2.s12__title Вопросы, которые нам часто #[br]задают клиенты
-			ul.s12__accordion(data-uk-accordion)
+
+			+Accordion
 				-
 					const questions = [
 						{
@@ -24,7 +25,6 @@ mixin s12-faq
 					]
 
 				each item, idx in questions
-					li.s12__accordion-item(class=`${idx === 0 ? 'uk-open' : ''}`)
-						a.s12__accordion-title.uk-accordion-title(href="#")!= item.title
-							+icon('plus').s12__accordion-icon-close
-						.s12__accordion-content.uk-accordion-content!= item.content
+					- const { title, content } = item
+
+					+AccordionItem({ title, content, isOpen: idx === 0})

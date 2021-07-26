@@ -1,5 +1,5 @@
-mixin tab-switcher(labelSet = [], label)
-    .tab-switcher__label= label
+mixin tab-switcher({ labelSet = Array, label = String, icons = !Array(), hideLabelMd = Boolean(false), verticalAligmentMD = Boolean(false) } = IProps)
+    .tab-switcher__label(class=hideLabelMd && 'd-md-none')= label
     .tab-switcher&attributes(attributes)
         button.tab-switcher__btn-drop.d-md-none(type="button")
             span= labelSet[0]
@@ -9,9 +9,12 @@ mixin tab-switcher(labelSet = [], label)
             each item in labelSet
                 li: a(href="#")= item
 
-        ul.tab-switcher__tab.d-none.d-md-flex
-            each item in labelSet
-                li: a(href="#")= item
+        ul.tab-switcher__tab.d-none.d-md-flex(class=verticalAligmentMD && 'tab-switcher__tab--vertical')
+            each item, index in labelSet
+                li: a(href="#")
+                    if icons 
+                        +icon(icons[index])
+                    = item
 
         ul.tab-switcher__content-block.uk-switcher
             block

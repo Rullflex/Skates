@@ -1,8 +1,8 @@
-mixin slider-arrow-nav(numbersAll = '06')
+mixin slider-arrow-nav(totalSlidesCount = String)
 	.slider-arrow-nav&attributes(attributes)
 		a.slider-arrow-nav__arrow.slider-arrow-nav__arrow--left(href="#" data-uk-slider-item="previous"): +icon('arrow-left')
 
-		.slider-arrow-nav__numbers #[span.slider-arrow-nav__numbers--current 01] / #[span= numbersAll]
+		.slider-arrow-nav__numbers #[span.slider-arrow-nav__numbers--current 01] / #[span= totalSlidesCount]
 
 		a.slider-arrow-nav__arrow.slider-arrow-nav__arrow--right(href="#" data-uk-slider-item="next"): +icon('arrow-right')
 
@@ -34,7 +34,7 @@ mixin slideshow-slidenav
 
 
 
-mixin slider-thumbnav(length, imgSrc = `${assets}slider-thumb-img-`)
+mixin slider-thumbnav(length = Number, imgSrc = `${assets}slider-thumb-img-`)
 	ul.thumbnav&attributes(attributes)
 		if block 
 			block 
@@ -44,7 +44,7 @@ mixin slider-thumbnav(length, imgSrc = `${assets}slider-thumb-img-`)
 					a.thumbnav__link.ibg(href="#")
 						+picture(jpg, `${imgSrc}${i + 1}`, 'n')
 
-mixin slideshow-thumbnav(length, imgSrc = `${assets}slider-thumb-img-`)
+mixin slideshow-thumbnav(length = Number, imgSrc = `${assets}slider-thumb-img-`)
 	ul.thumbnav&attributes(attributes)
 		if block 
 			block 

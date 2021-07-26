@@ -2,7 +2,7 @@ extends modules/layout/_layout
 
 prepend head
 	title Title your page
-	meta(name="description", content="Описание страницы")
+	meta(name="description" content="Описание страницы")
 
 block header 
 	+header(0)
@@ -58,12 +58,10 @@ block content
 			h2.s3__title Кому подходят наши тренировки?
 			+icon('triangle-logo', '#CCEEFF').s3__triangle-logo.d-none.d-lg-block
 
-			+tab-switcher([
-					'Дети от 3-х лет',
-					'Взрослые с опытом и без',
-					'Профессиональные роллеры',
-				], 'Выберите уровень подготовки:').s3__switcher
-
+			+tab-switcher({
+				labelSet: [ 'Дети от 3-х лет', 'Взрослые с опытом и без', 'Профессиональные роллеры' ], 
+				label: 'Выберите уровень подготовки:'
+			}).s3__switcher
 				-
 					const s3_content = [
 						[
@@ -88,7 +86,7 @@ block content
 						],
 					]
 
-				mixin s3-switcher-item-content(content = ['', '', '', ''])
+				mixin s3-switcher-item-content(content = Array(String))
 					.s3__list-block
 						.s3__list-block-item.s3__list-block-item-1!= content[0]
 							.s3__list-block-item-number.s3__list-block-item-number-1 1
@@ -145,7 +143,7 @@ block content
 				.s4__numbers-block-item.s4__numbers-block-item-5
 					.s4__numbers-block-number 6
 					.s4__numbers-block-text соревнований в год
-			
+
 
 			.s4__gift-block
 				+picture(svg, 's4-gift', 'Sml').s4__gift-block-img
@@ -183,7 +181,7 @@ block content
 								'Посмотрите видео-обзор <br/>нашей школы',
 							]
 
-						
+
 
 						each capture, idx in captures
 							mixin s6-slider-item-content
@@ -205,7 +203,7 @@ block content
 										.s6__slider-item-image
 											+picture(jpg, `s6-slider-image-${idx + 1}`)
 										.s6__slider-item-capture!= capture
-										
+
 
 				+slider-arrow-nav('06').s6__slider-nav.d-md-none
 
@@ -240,7 +238,7 @@ block content
 						li.s7__item-block-list-item съезжать с горки и с поребрика, преодолевать другие препятствия.
 					.s7__item-block-number.s7__item-block-number-2 2
 
-			
+
 			.s7__item.s7__item-important
 				.s7__item-block.s7__item-block--important
 					.s7__item-block-title.s7__item-block-title--important Важно!
@@ -299,7 +297,7 @@ block content
 					.s7__item-block-number.s7__item-block-number-7 7
 
 	+s8-mentors
-						
+
 	section.s9 
 		.s9__ctn.container
 			h2.s9__title За #[span.text-primary 11 лет] мы провели интересные тренировки для более #[span.text-primary 10.000 детей] 
@@ -314,7 +312,7 @@ block content
 								a(href="#_c2pz2mlSfXA" data-app-video).s9__slider-item-wrap
 									+picture(jpg, 's9-slider-image').s9__slider-item-image
 									+icon('play-transparent').s9__slider-item-play
-						
+
 				+slider-arrow-nav('04').s9__slider-nav
 
 			button.s9__btn-more.btn-outline-dark Еще отзывы наших учеников
@@ -324,6 +322,6 @@ block content
 	+s11-map 
 
 	+s12-faq
-	
+
 
 

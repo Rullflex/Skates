@@ -60,6 +60,11 @@
             flex-wrap: wrap;
             align-items: flex-start;
             margin-bottom: 1rem;
+
+            &--vertical {
+                flex-direction: column;
+            }
+
             li {
                 margin: 0.3125rem;
 
@@ -72,6 +77,12 @@
                 @include btn-outline-primary;
                 padding: 0 1.25rem;
                 height: 2.9375rem;
+            }
+
+            svg {
+                width: auto;
+                height: 1.25rem;
+                margin-right: 1.125rem;
             }
         }
     }
