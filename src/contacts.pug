@@ -1,0 +1,42 @@
+extends modules/layout/_layout
+
+prepend head
+	title Контакты
+	meta(name="description" content="Контакты")
+
+block header 
+	+header(7)
+
+block content
+	section.s26 
+		.s26__ctn.container 
+			h2.s26__title Остались вопросы? Напишите нам.
+
+			+form-lead.s26__form
+
+			.s26__contacts-block
+				.s26__contacts-block-item
+					.s26__contacts-block-title Контакты:
+					.s26__contacts-block-descr 
+						a(href="#") 8 812 748 39 38
+						| #[br]Пн-Пт: 10-22 / Сб-Вс: 9-22#[br]
+						a(href="#") info@skatetown.world
+
+				.s26__contacts-block-item
+					.s26__contacts-block-title Реквизиты:
+					.s26__contacts-block-descr 
+						| ООО "СТ" 
+						| #[br]ИНН: 7805774634 
+						| #[br]КПП: 780501001 
+						| #[br]ОГРН: 1217800005290 
+
+				.s26__contacts-block-item
+					.s26__contacts-block-title Мы в социальных сетях:
+					.s26__contacts-block-social
+						a.s26__contacts-block-social-link(href=instLink): +icon('inst-gradient')
+						a.s26__contacts-block-social-link(href=vkLink): +icon('vk')
+						a.s26__contacts-block-social-link(href=ytLink): +icon('yt')
+
+
+	+s11-map
+

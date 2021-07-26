@@ -67,7 +67,7 @@ UIkit.util.ready(function () {
     }
 
     UIkit.switcher(`.tab-switcher__tab`, {
-        connect: `.tab-switcher__content-block`,
+        connect: `~.tab-switcher__content-block`,
         cls: `switcher-active`,
         animation: 'uk-animation-fade',
     });

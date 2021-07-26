@@ -1,4 +1,4 @@
-mixin form-lead
+mixin form-lead({ hasTextArea = Boolean(false) } = IProps)
     form.form-lead&attributes(attributes)
         h3.form-lead__title Запишитесь на первое индивидуальное занятие со&nbsp;скидкой 50%!
         p.form-lead__label Выберите удобный способ связи:
@@ -13,7 +13,7 @@ mixin form-lead
             button(type="button" data-value="Telegram").form-lead__options-button.form-lead__options-button--telegram.active
                 +icon('telegram')
                 span Telegram
-            input(type="hidden" name="Способ сввязи" value="Telegram").form-lead__options-input
+            input(type="hidden" name="Способ связи" value="Telegram").form-lead__options-input
 
         .form-lead__input-wrap.input-wrap
             input.form-lead__input.input(type="text" name="Имя" placeholder="Введите имя")
@@ -21,10 +21,13 @@ mixin form-lead
         .form-lead__input-wrap.input-wrap
             input.form-lead__input.input.phone(type="tel" name="Телефон" placeholder="Ваш номер телефона")
 
+        if hasTextArea
+            .form-lead__input-wrap.input-wrap
+                textarea.form-lead__input.input.phone(name="Развернутый вопрос")
+
         button.form-lead__submit-btn(type="submit") Отправить заявку
 
         label.form-lead__agreement
-            input.form-lead__agreement-check-input(type="checkbox", name="Согласие с условиями политики" checked)
+            input.form-lead__agreement-check-input(type="checkbox" name="Согласие с условиями политики" checked)
             span.form-lead__agreement-check
             span.form-lead__agreement-text я соглашаюсь с условиями #[a.form-lead__agreement-text-link(href=privacyLink) политики конфиденциальности]
-            
