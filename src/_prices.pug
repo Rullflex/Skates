@@ -70,7 +70,9 @@ block content
 
 			+tab-switcher({
 				labelSet: [ 'Индивидуальные', 'Групповые' ], 
-				label: 'Выберите тип занятия:'
+				label: 'Выберите тип занятия:',
+				icons: ['man', 'men'],
+				hideLabelMd: true,
 			}).s21__switcher
 				+tab-switcher-item.s21__switcher-item.s21__switcher-item-1
 					.s21__switcher-content 
@@ -90,7 +92,7 @@ block content
 								.s21__switcher-cost-title Стоимость:
 								.s21__switcher-cost-price 1 700₽/час
 
-					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]индивидуальное занятие
+					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-md-none]индивидуальное занятие
 
 				+tab-switcher-item.s21__switcher-item.s21__switcher-item-2
 					.s21__switcher-content 
@@ -110,12 +112,12 @@ block content
 								.s21__switcher-cost-title Стоимость:
 								.s21__switcher-cost-price 1 700₽/час
 
-					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-lg-none]групповое занятие
+					+btn-yellow.s21__switcher-btn: span Запишитесь на #[br.d-md-none]групповое занятие
 
 			-
 				const s21_table_content = [
 					[
-						'<span class="d-md-none">Кат.</span><span class="d-none d-md-inline">Категория</span> <br/>инструктора',
+						'<span class="d-md-none">Кат.</span><span class="d-none d-md-inline">Категория</span> <br class="d-lg-none"/>инструктора',
 						'Одно занятие', 
 						'Абонемент на 6 <span class="d-md-none">зан.</span><span class="d-none d-md-inline">занятий</span>',
 					],
@@ -147,5 +149,3 @@ block content
 	+s10-form-lead
 
 	+s11-map
-
-	+s12-faq
