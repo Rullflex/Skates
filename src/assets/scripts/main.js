@@ -47,7 +47,7 @@ ready(function () {
         },
     );
 
-    addSliderArrowNav(6, 8, 9, 13, 18, 22);
+    addSliderArrowNav(6, 8, 9, 13, 18, 19, 22);
 
     function addSliderArrowNav(...slidersIds) {
         slidersIds.forEach((sliderId) => {
