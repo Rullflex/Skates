@@ -63,7 +63,7 @@ mixin header-logo
 
 //- Template
 mixin header(activeIndex)
-    header.header 
+    header.header(data-uk-sticky="top: 100vh; animation: uk-animation-slide-top")
         .container 
             //- SM
             .header__row.d-md-none
@@ -81,11 +81,35 @@ mixin header(activeIndex)
                         .header__vert-divider
                         .header__logo-descr Федеральная сеть роллер школ для детей и взрослых
 
+                    .header__map-block.d-none.d-lg-flex
+                        button.header__map-drop-target 
+                            +icon('point').header__map-drop-target-pin
+                            | Санкт-Петербург
+                            +icon('angle-down').header__map-drop-target-angle
+                        .header__map-drop(data-uk-drop="pos: bottom-center; delay-hide: 200;")
+                            .header__map-drop-item ул. Ивана Фомина, 6
+                            .header__map-drop-item Ленинский просп, 140
+                            .header__map-drop-item ул. Тюшина, 11
+                            a.header__map-drop-item.header__map-drop-item--city(href="#")
+                                +icon('point').header__map-drop-target-pin
+                                | Москва
+                            .header__map-drop-item ул. Ивана Фомина, 6
+                            a.header__map-drop-item.header__map-drop-item--link(href="#map-section" data-uk-scroll) Перейти к карте
+
+                        .header__map-towns
+                            .header__map-town ул. Тюшина, 11
+                            .header__map-town Ленинский просп, 140
+                            .header__map-town ул. Ивана Фомина, 6
+
                     +header-menu(activeIndex).header__menu 
+
 
 
                 .header__bot-row
                     +header-links-list(activeIndex)
 
                     .header__bot-right-block.d-none.d-lg-flex
+                        a(href=phoneLink).header__phone-number 
+                            +icon('phone')
+                            = phoneNumber
                         button.header__btn.btn-solid-primary Записаться на занятие
