@@ -5794,6 +5794,114 @@
     }
 }
 
+.s27 {
+    &__ctn {
+        padding-top: 3.5875rem;
+        padding-bottom: 0.1rem;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            padding-top: 75px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 22.825rem;
+        margin-left: 1.5rem;
+        position: relative;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            text-align: left;
+            font-size: 26.6736px;
+            margin-left: 104px;
+            margin-bottom: 635px;
+        }
+
+        svg {
+            width: 2.3125rem;
+            position: absolute;
+            top: -1.125rem;
+            left: -1.5rem;
+            z-index: -1;
+
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 93px;
+                top: -41px;
+                left: -66px;
+            }
+        }
+    }
+
+    &__title-2 {
+        font-weight: 600;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: #a86bc0;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            font-size: 28px;
+            padding-right: 50px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-family-headings;
+        font-weight: 500;
+        color: #595959;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            font-size: 20px;
+            line-height: 1.75;
+        }
+    }
+
+    &__image-photo {
+        width: 20rem;
+        position: absolute;
+        left: 0rem;
+        top: 9.7rem;
+        z-index: -2;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            width: 833px;
+            top: 62px;
+            left: -53px;
+        }
+    }
+
+    &__image-1,
+    &__image-2 {
+        width: 20rem;
+        height: 12.5rem;
+        border-radius: 12.5649px;
+        @include ibg;
+        @include center-item-x('relative');
+        margin-top: 1.25rem;
+        margin-bottom: 1.875rem;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            width: 728px;
+            height: 451px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__descr-block {
+        padding: 0.775rem 0.5875rem 0.9375rem 1.125rem;
+        border: 0.0625rem solid #a86bc0;
+        border-radius: 0.4375rem;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 3.125rem;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            padding: 30px 40px 30px 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 80px;
+        }
+    }
+}
+
 @media (min-width: map-get($grid-breakpoints, md)) {
 }
 

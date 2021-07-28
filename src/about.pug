@@ -1,0 +1,55 @@
+extends modules/layout/_layout
+
+prepend head
+	title Наша команда
+	meta(name="description" content="Наша команда")
+
+block header 
+	+header(3)
+
+block content
+	section.s27 
+		.s27__ctn.container 
+			h2.s27__title 
+				+icon('quotes')
+				| Наполняем жизнь людей радостью, приобщая их к роллер спорту 
+
+			+picture-min(jpg, 's27-photo', 'Sm').s27__image-photo
+
+			h3.s27__title-2 Сеть роллер школ SKATE TOWN — 
+			p.s27__subtitle это не просто коммерческий проект, это – команда единомышленников. Мы искренне любим дело, которым занимаемся, и прикладываем все усилия для того, чтобы каждый ученик смог получить стопроцентный результат. 
+			.s27__image-1
+				+picture-min(jpg, 's27-i1', 'Sm')
+			.s27__descr-block Наставники Skate Town вырастили немало спортсменов международного уровня и продолжают это делать! Также в 2019 году наши тренеры получили официальные дипломы Национальной Лиги Инструкторов. 
+
+
+			h3.s27__title-2 Перед детскими инструкторами стоит особая задача —
+			p.s27__subtitle сделать обучение не только продуктивным, но и интересным. На курсах специальной подготовки наши тренеры изучают особенности общения с детьми и учатся превращать полезные занятия в веселую игру. 
+			.s27__image-2
+				+picture-min(jpg, 's27-i2', 'Sm')
+			.s27__descr-block Многие из наших тренеров – призеры международного и национального уровня. Вся команда регулярно проходит повышение квалификации, в программу которой входят тренинги с разбором упражнений и занятий. 
+
+	section.s18
+		.s18__ctn.container 	
+			h2.s18__title На каникулах мы организуем для детей городской лагерь на роликах
+			h2.s18__subtitle В лагери дети заняты спортивными играми, мастер-классами, танцами и даже актерским мастерством. 
+
+			.s18__slider(data-uk-slider)
+				+picture(svg, 'browser-panel-gray', 'Sml').s18__slider-browser-top
+				.uk-slider-container
+					ul.s18__slider-items.uk-slider-items
+						- for(let i = 1; i <= 3; i++)
+							li.s18__slider-item 
+								.s18__slider-item-wrap
+									+picture(jpg, 's18-slider-image', 'Sml')
+
+				+slider-arrow-nav('03').s18__slider-nav
+				+slider-slidenav.s18__slidenav
+
+			.s18__badge-block
+				.s18__badge-block-title В детском лагере детей ждёт более 60+ часов мастер-классов и тренировок 
+				+picture(svg, 's18-svg', 'Sm').s18__badge-block-img
+
+
+	+s10-form-lead
+	+s11-map
