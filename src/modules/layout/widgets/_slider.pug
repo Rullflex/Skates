@@ -1,6 +1,6 @@
 mixin Slider
 	-
-		const { options, onlyHTML, hasContainer, attrs } = Component(attributes, {
+		const { options, onlyHTML, attrs } = Component(attributes, {
 			options: {
 				type: String,
 				default: '',
@@ -9,23 +9,36 @@ mixin Slider
 				type: Boolean,
 				default: false,
 			},
-			hasContainer: {
-				type: Boolean,
-				default: false,
-			},
 		})
 
 		if (!onlyHTML) attrs['data-uk-slider'] = options
 
 	div&attributes(attrs)
-		div(class = hasContainer && 'uk-slider-container')
-			ul.uk-slider-items
-				block 
+		block 
+
+mixin SliderItems
+	-
+		const { hasContainer, attrs } = Component(attributes, {
+			hasContainer: {
+				type: Boolean,
+				default: true,
+			},
+		})
+
+	div(class = hasContainer && 'uk-slider-container')
+		ul.uk-slider-items&attributes(attrs)
+			block
 
 mixin SliderItem 
-	li.slider-item
-		.slider-item__content&attributes(attributes)
+	li.slider-item&attributes(attributes)
+		.slider-item__content
 			block
+
++Slider 
+	+SliderItems 
+		+SliderItem
+		+SliderItem
+		+SliderItem
 
 mixin slider-arrow-nav(totalSlidesCount = String)
 	.slider-arrow-nav&attributes(attributes)
