@@ -1,0 +1,50 @@
+extends modules/layout/_layout
+
+prepend head
+	title Наши залы
+	meta(name="description", content="Наши залы")
+
+block header 
+	+header(6)
+
+block content
+	section.s23 
+		.s23__ctn.container 
+			h2.s23__title Комфортные большие залы для безопасных тренировок
+			.s23__inner
+				.s23__info
+					.s23__info-title м. Звенигородская
+					.s23__info-street ул. Тюшина д. 11 #[br]#[a(href='rel:+78127483938') 8 812 748-39-38]
+				.s23__video-wrap
+					+picture(svg, 'browser-panel-gray', 'Sml').s23__video-panel
+					a(href="#_c2pz2mlSfXA" data-app-video).s23__video
+						+picture-min(jpg, 's23-video-preview-1')
+						+icon('play').s23__video-play
+
+			.s23__divider
+			
+			.s23__inner
+				.s23__info
+					.s23__info-title м. Ленинский проспект
+					.s23__info-street Ленинский проспект д.140 #[br]#[a(href='rel:+78127483938') 8 812 748-39-38]
+				.s23__video-wrap
+					+picture(svg, 'browser-panel-gray', 'Sml').s23__video-panel
+					a(href="#_c2pz2mlSfXA" data-app-video).s23__video
+						+picture-min(jpg, 's23-video-preview-2')
+						+icon('play').s23__video-play
+
+			.s23__divider
+
+			.s23__inner
+				.s23__info
+					.s23__info-title м. Проспект просвещения
+					.s23__info-street ул. Ивана Фомина д. 6 #[br]#[a(href='rel:+78127483938') 8 812 748-39-38]
+				.s23__video-wrap
+					+picture(svg, 'browser-panel-gray', 'Sml').s23__video-panel
+					a(href="#_c2pz2mlSfXA" data-app-video).s23__video
+						+picture-min(jpg, 's23-video-preview-2')
+						+icon('play').s23__video-play
+
+	+s10-form-lead
+
+	+s11-map
