@@ -84,7 +84,7 @@ mixin header(activeIndex)
                     .header__map-block.d-none.d-lg-flex
                         button.header__map-drop-target 
                             +icon('point').header__map-drop-target-pin
-                            | Санкт-Петербург
+                            span Санкт-Петербург
                             +icon('angle-down').header__map-drop-target-angle
                         .header__map-drop(data-uk-drop="pos: bottom-center; delay-hide: 200;")
                             .header__map-drop-item ул. Ивана Фомина, 6
@@ -92,7 +92,7 @@ mixin header(activeIndex)
                             .header__map-drop-item ул. Тюшина, 11
                             a.header__map-drop-item.header__map-drop-item--city(href="#")
                                 +icon('point').header__map-drop-target-pin
-                                | Москва
+                                span Москва
                             .header__map-drop-item ул. Ивана Фомина, 6
                             a.header__map-drop-item.header__map-drop-item--link(href="#map-section" data-uk-scroll) Перейти к карте
 

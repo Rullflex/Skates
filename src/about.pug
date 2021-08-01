@@ -52,7 +52,10 @@ block content
 
 			.s18__badge-block
 				.s18__badge-block-title Присоединяйтесь к команде SkateTown в Instagram! 
-				+picture(svg, 's18-svg', 'Sm').s18__badge-block-img
+				a(href=instLink).s18__badge-block-link 
+					+icon('inst')
+					| Перейти в Инстаграм
+				+picture(svg, 's18-svg--ext', 'Sml').s18__badge-block-img.s18__badge-block-img--extended
 
 
 	+s10-form-lead

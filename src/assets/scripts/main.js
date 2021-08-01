@@ -8,6 +8,18 @@ ready(function () {
     app.dynamicVideo();
     form.init(`form`);
 
+    document.querySelector('.header__map-drop-item--city').addEventListener('click', (ev) => {
+        ev.preventDefault();
+        // const inner = ev.currentTarget.querySelector('span').innerText;
+        // if (inner === 'Москва') {
+        //     document.querySelector('.header__map-drop-item--city span').innerText = 'Санкт-Петербург';
+        //     document.querySelector('.header__map-drop-target span').innerText = 'Москва';
+        // } else {
+        //     document.querySelector('.header__map-drop-item--city span').innerText = 'Москва';
+        //     document.querySelector('.header__map-drop-target span').innerText = 'Санкт-Петербург';
+        // }
+    });
+
     if ($(`.form-lead`)) {
         $$(`.form-lead__options`).forEach((el) => {
             app.letListClickActive(el, 'active', (item) => {
