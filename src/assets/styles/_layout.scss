@@ -4241,6 +4241,15 @@
 
 .s18 {
     &--extended {
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            padding-top: 4rem;
+            @include bg(#edeef0);
+
+            &::before {
+                height: 70rem;
+            }
+        }
+
         .s18__title,
         .s18__subtitle {
             @media (min-width: map-get($grid-breakpoints, md)) {
@@ -4250,6 +4259,13 @@
 
             @media (min-width: map-get($grid-breakpoints, lg)) {
                 margin-left: 3.125rem;
+            }
+        }
+
+        .s18__subtitle {
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                width: 41.25rem;
+                margin-bottom: 3.125rem;
             }
         }
     }
@@ -6277,11 +6293,12 @@
         padding-bottom: 0.1rem;
 
         @media (min-width: map-get($grid-breakpoints, md)) {
-            padding-top: 75px;
+            padding-top: 4.6875rem;
         }
 
         @media (min-width: map-get($grid-breakpoints, lg)) {
-            padding-top: 80px;
+            padding-top: 5rem;
+            padding-bottom: 2.5rem;
         }
     }
 

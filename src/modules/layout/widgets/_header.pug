@@ -25,6 +25,10 @@
             href: '/halls.html',
         },
         {
+            label: 'Команда',
+            href: '/team.html',
+        },
+        {
             label: 'Контакты',
             href: '/contacts.html',
         },
@@ -88,12 +92,11 @@ mixin header(activeIndex)
                             +icon('angle-down').header__map-drop-target-angle
                         .header__map-drop(data-uk-drop="pos: bottom-center; delay-hide: 200;")
                             .header__map-drop-item ул. Ивана Фомина, 6
-                            .header__map-drop-item Ленинский просп, 140
+                            .header__map-drop-item Ленинский пр, 140
                             .header__map-drop-item ул. Тюшина, 11
                             a.header__map-drop-item.header__map-drop-item--city(href="#")
                                 +icon('point').header__map-drop-target-pin
                                 span Москва
-                            .header__map-drop-item ул. Ивана Фомина, 6
                             a.header__map-drop-item.header__map-drop-item--link(href="#map-section" data-uk-scroll) Перейти к карте
 
                         .header__map-towns

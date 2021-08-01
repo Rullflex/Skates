@@ -4,17 +4,17 @@ mixin s5-hall
 			h2.s5__title Наши занятия проходят в&nbsp;оборудованных и&nbsp;уютных залах
 			.s5__subtitle В летний период — на улице
 
-			.s5__slider(data-uk-slider)
+			.s5__slider
 				+picture(svg, 'browser-panel-gray', 'Sml').s5__slider-browser-top
 				.uk-slider-container
 					ul.s5__slider-items.uk-slider-items
-						- for(let i = 1; i <= 3; i++)
+						- for(let i = 1; i <= 1; i++)
 							li.s5__slider-item 
 								.s5__slider-item-wrap
 									+picture(jpg, 's5-slider-image', 'Sml')
 
-				
-				+slider-slidenav.d-none.d-md-flex.s5__slider-nav
+
+				//- +slider-slidenav.d-none.d-md-flex.s5__slider-nav
 
 			.s5__blocks-scrollable
 				.s5__blocks-set 
