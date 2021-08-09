@@ -6568,6 +6568,75 @@
     }
 }
 
+.s404 {
+    padding: 2.9375rem 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    line-height: 1.2;
+
+    &__title {
+        font-weight: bold;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            font-size: 72px;
+            margin-bottom: 0.625rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-family-headings;
+        font-weight: 500;
+        margin-bottom: 2rem;
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            font-size: 2rem;
+        }
+    }
+
+    &__btn {
+        width: 9.6875rem;
+        line-height: 2.3125rem;
+        margin-bottom: 1.75rem;
+    }
+
+    &__main-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.9375rem;
+
+        &-logo {
+            width: 7.8125rem;
+            color: rgba(118, 50, 135, 1);
+        }
+
+        &-divider {
+            height: 2.0625rem;
+            width: 1px;
+            background: #b7b7b7;
+            margin: auto 0.5rem;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                margin: auto 1.25rem;
+            }
+        }
+
+        &-text {
+            font-size: 0.75rem;
+            line-height: 1.22;
+            color: #484848;
+            text-align: left;
+        }
+    }
+
+    &__image {
+        width: 88.4375rem;
+        max-width: 100%;
+    }
+}
+
 @media (min-width: map-get($grid-breakpoints, md)) {
 }
 

@@ -1,0 +1,22 @@
+extends modules/layout/_layout
+
+prepend head
+	title Что-то пошло не так
+	meta(name="description" content="Что-то пошло не так")
+
+block header 
+block footer
+
+block content
+	section.s404
+		.s404__main-header 
+			+icon('logo').s404__main-header-logo
+			.s404__main-header-divider 
+			.s404__main-header-text Федеральная сеть роллер #[br]школ для детей и взрослых
+
+		h2.s404__title Что-то пошло не так
+		.s404__subtitle Страница не найдена
+
+		a(href="/").s404__btn.btn-solid-primary На главную
+
+		+picture(svg, '404').s404__image
